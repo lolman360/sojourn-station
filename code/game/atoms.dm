@@ -302,11 +302,10 @@ its easier to just keep the beam vertical.
 		else
 			full_name += "oil-stained [name][infix]."
 
-
-	to_chat(user, "\icon[src] This is [full_name] [suffix]")
-
-	if(isturf(src) || istype(src, /atom/movable) || !isobserver(user))
-		user.visible_message("<font size=1>[user.name] looks at [src].</font>")
+	if(isobserver(user))
+		to_chat(user, "\icon[src] This is [full_name] [suffix]")
+	else
+		user.visible_message("<font size=1>[user.name] looks at [src].</font>", "\icon[src] This is [full_name] [suffix]")
 
 	to_chat(user, show_stat_verbs()) //rewrite to show_stat_verbs(user)?
 
