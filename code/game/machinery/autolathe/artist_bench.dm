@@ -147,8 +147,8 @@
 	if(inspiration && user.stats.getPerk(PERK_ARTIST))
 		LStats = inspiration.calculate_statistics()
 
-	var/weight_artwork_statue = 20
-	var/weight_artwork_revolver = 1 + LStats[STAT_VIG] * 2
+	var/weight_artwork_statue = 15
+	var/weight_artwork_gun = 1 + LStats[STAT_VIG] * 2
 	var/weight_artwork_weapon = 1 + max(LStats[STAT_ROB], LStats[STAT_TGH]) * 2
 	var/weight_artwork_oddity = 1 + max(LStats[STAT_COG], LStats[STAT_BIO]) * 2
 	var/weight_artwork_tool = 2 + LStats[STAT_MEC] * 2
@@ -156,10 +156,10 @@
 	var/weight_artwork_gunmod = 2 + LStats[STAT_COG] * 2
 
 	if(ins_used >= 85)//Arbitrary values
-		weight_artwork_revolver += 9
+		weight_artwork_gun += 9
 		weight_artwork_weapon += 9
 	if(ins_used >= 70)
-		weight_artwork_revolver += 4
+		weight_artwork_gun += 4
 		weight_artwork_weapon += 4
 		weight_artwork_oddity += 13
 		weight_artwork_gunmod += 8
@@ -171,7 +171,7 @@
 		weight_artwork_statue += 12
 
 	return pickweight(list(
-		"artwork_revolver" = weight_artwork_revolver,
+		"artwork_gun" = weight_artwork_gun,
 		"artwork_oddity" = weight_artwork_oddity,
 		"artwork_toolmod" = weight_artwork_toolmod,
 		"artwork_statue" = weight_artwork_statue
@@ -193,8 +193,8 @@
 
 	//var/list/LWeights = list(weight_mechanical, weight_cognition, weight_biology, weight_robustness, weight_toughness, weight_vigilance)
 
-	if(full_artwork == "artwork_revolver")
-		var/obj/item/weapon/gun/projectile/revolver/artwork_revolver/R = new(src)
+	if(full_artwork == "artwork_gun")
+
 
 		var/gun_pattern = pickweight(list(
 			"pistol" = 16 + weight_robustness + weight_biology,
@@ -209,18 +209,25 @@
 		switch(gun_pattern)
 
 			if("pistol") //From havelock.dm, Arbitrary Values
-				R.caliber = pick(CAL_PISTOL)
+				var/obj/item/weapon/gun/projectile/automatic/artwork_pistol/R = new(src)
+				R.caliber = pick(CAL_PISTOL, CAL_50, CAL_MAGNUM)
 				R.damage_multiplier = 1.2 + rand(-5,5)/10
 				R.penetration_multiplier = 1.2 + rand(-5,5)/10
-				R.recoil_buildup = 18 + rand(-3,3)
+				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 
 			if("magnum") //From consul.dm, Arbitrary values
+				var/obj/item/weapon/gun/projectile/revolver/artwork_revolver/R = new(src)
 				R.caliber = CAL_MAGNUM
-				R.damage_multiplier = 1.2 + rand(-5,5)/10
-				R.penetration_multiplier = 1.2 + rand(-5,5)/10
-				R.recoil_buildup = 35 + rand(-5,5)
+				R.max_shells += rand(-2,6)
+				R.damage_multiplier = R.damage_multiplier + rand(-5,5)/10
+				R.penetration_multiplier = R.penetration_multiplier + rand(-5,5)/10
+				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 
 			if("shotgun") //From bull.dm, Arbitrary values
+				if(prob(70))
+					var/obj/item/weapon/gun/projectile/automatic/shotgun/pump/artwork_pshotgun/R = new(src)
+				else
+					var/obj/item/weapon/gun/projectile/automatic/shotgun/artwork_shotgun/R = new(src)
 				R.caliber = CAL_SHOTGUN
 				R.damage_multiplier = 0.8 + rand(-2,2)/10
 				R.penetration_multiplier = 0.75 + rand(-3,3)/10
@@ -230,36 +237,28 @@
 				R.fire_sound = 'sound/weapons/guns/fire/shotgunp_fire.ogg'
 
 			if("rifle")
+				var/obj/item/weapon/gun/projectile/automatic/artwork_rifle/R = new(src)
 				R.caliber = pick(CAL_HRIFLE, CAL_LRIFLE, CAL_RIFLE)
-				R.fire_sound = 'sound/weapons/guns/fire/smg_fire.ogg'
-
-			//No gun currently uses CAL_357 far as I know
-			//	if("revolver")
-			//		caliber = pick(CAL_357)
+				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 
 			if("sniper")//From sniper.dm, Arbitrary values
+				var/obj/item/weapon/gun/projectile/automatic/artwork_sniper/R = new(src)
 				R.caliber = CAL_ANTIM
-				R.bulletinsert_sound = 'sound/weapons/guns/interact/rifle_load.ogg'
-				R.fire_sound = 'sound/weapons/guns/fire/sniper_fire.ogg'
 				R.one_hand_penalty = 15 + rand(-3,5) //From sniper.dm, Temporary values
-				R.recoil_buildup = 90 + rand(-10,10)
+				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 
 			if("gyro")//From gyropistol.dm, Arbitrary values
+				var/obj/item/weapon/gun/projectile/automatic/artwork_pistol/R = new(src)
 				R.caliber = CAL_70
 				R.recoil_buildup = 0.1 * rand(1,20)
+				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 
 			if("grenade")
+				/obj/item/weapon/gun/projectile/grenade/artwork_grenade = new(src)
 				R.caliber = CAL_GRENADE
-				R.fire_sound = 'sound/weapons/guns/fire/grenadelauncher_fire.ogg'
-				R.bulletinsert_sound = 'sound/weapons/guns/interact/batrifle_magin.ogg'
 				R.one_hand_penalty = 15 + rand(-2,3)//from sniper.dm, Temporary values
-				R.recoil_buildup = 20 + rand(-5,5) //from projectile_grenade_launcher.dm
+				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 
-		if(R.max_shells == 3 && (gun_pattern == "shotgun"||"rocket"))//From Timesplitters triple-firing RPG far as I know
-			R.init_firemodes = list(
-				list(mode_name="fire one barrel at a time", burst=1, icon="semi"),
-				list(mode_name="fire three barrels at once", burst=3, icon="auto"),
-				)
 		return R
 
 	else if(full_artwork == "artwork_statue")
@@ -327,6 +326,16 @@
 		return
 	artwork.price_tag += ins_used
 	artwork.make_art_review()
+	var/artname
+	var/artdesc
+	artname = input("What do you want to name the artwork? Leave it blank for a random name for the piece.","Naming") as null|anything
+	if(artname)
+		artwork.name = artname
+	artdesc = input("How do you want to describe the artwork? Leave it blank for a random description for the piece.","Naming") as null|anything
+	if(artname)
+		artwork.name = artname
+	if(artdesc)
+		artwork.desc = artdesc
 	artwork.forceMove(get_turf(src))
 
 	consume_materials(art)

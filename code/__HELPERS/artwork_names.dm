@@ -23,7 +23,7 @@ GLOBAL_LIST_INIT(art_types, file2list("strings/artist_strings/descriptors/art_ty
 
 	return "\improper [first_name] [second_name]"
 
-/proc/get_artwork_crew_name(only_first_name = FALSE, only_last_name = FALSE)
+/proc/get_artwork_crew_name()
 	var/list/names = list()
 	var/art_crew_name = "Nadezhda" //Default name. This current will be better then "Who?."
 	for(var/mob/living/carbon/human/H in (GLOB.human_mob_list & GLOB.player_list))
@@ -31,13 +31,7 @@ GLOBAL_LIST_INIT(art_types, file2list("strings/artist_strings/descriptors/art_ty
 			continue
 		if(H.mind && player_is_antag(H.mind))
 			continue
-		//This error'd out and I really couldn't figure out why but disabling it didn't have much of a downside. Commented out for now. TODO: fix this. - Kazkin
-		/*if(only_first_name)
-			names.Add(H.first_name && H.first_name)
-		else if(only_last_name && H.last_name)
-			names.Add(H.last_name)
-		else
-			names.Add(H.real_name)*/
+		names.Add(H.name)
 	if(names.len)
 		art_crew_name = pick(names)
 	return art_crew_name
@@ -57,7 +51,7 @@ GLOBAL_LIST_INIT(art_types, file2list("strings/artist_strings/descriptors/art_ty
 	return name
 
 /proc/get_art_secret_name()
-	var/list/adjectives = list("big", "terrifying", "mysterious", "fantastic", "secret", "haunting", "mysteriouss")
+	var/list/adjectives = list("big", "terrifying", "mysterious", "fantastic", "secret", "haunting", "mysterious")
 	return "the [pick(adjectives)] secret of [get_artwork_crew_name(pick(TRUE, FALSE), pick(TRUE, FALSE))]"
 
 /proc/get_travel_actios()
@@ -66,7 +60,7 @@ GLOBAL_LIST_INIT(art_types, file2list("strings/artist_strings/descriptors/art_ty
 		location = get_art_mob_places()
 	else
 		location = pick(GLOB.art_locations)
-	return "the [get_artwork_crew_name(pick(TRUE, FALSE), pick(TRUE, FALSE))]s [pick("trip","journey")] to the [location]"
+	return "[get_artwork_crew_name(pick(TRUE, FALSE), pick(TRUE, FALSE))]'s [pick("trip","journey")] to the [location]"
 
 /proc/get_art_mob_places()
 	var/list/mobs_places = list("cave", "hideout", "nest")
@@ -88,6 +82,7 @@ GLOBAL_LIST_INIT(art_types, file2list("strings/artist_strings/descriptors/art_ty
 	desc += " A [pick(GLOB.art_styles)] [pick(GLOB.art_types)] [get_sculpting_method()]. [pick("Inspires", "Infuses")] [pick(emotions)] to those who look at it."
 
 /obj/item/weapon/gun/projectile/make_art_review()
+	name = get_weapon_name(capitalize = TRUE)
 	desc += " [get_art_gun_desc(src)]"
 	desc += " Uses [caliber] rounds."
 

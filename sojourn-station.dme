@@ -2455,7 +2455,6 @@
 #include "code\modules\projectiles\guns\projectile\pistol\olivaw.dm"
 #include "code\modules\projectiles\guns\projectile\pistol\silenced.dm"
 #include "code\modules\projectiles\guns\projectile\pistol\silver_eye.dm"
-#include "code\modules\projectiles\guns\projectile\revolver\artwork_revolver.dm"
 #include "code\modules\projectiles\guns\projectile\revolver\capgun.dm"
 #include "code\modules\projectiles\guns\projectile\revolver\deckard.dm"
 #include "code\modules\projectiles\guns\projectile\revolver\detective.dm"
