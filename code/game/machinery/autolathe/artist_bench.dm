@@ -345,7 +345,7 @@
 	artwork.make_art_review()
 	var/artname
 	var/artdesc
-	artname = input(user,"What do you want to name the artwork? Leave it blank for a random name for the piece.","Naming") as null|text
+	artname = input(user,"What do you want to name the [artwork.name]? Leave it blank for a random name for the piece.","Naming") as null|text
 	if(artname)
 		artwork.name = artname
 	artdesc = input(user,"How do you want to describe the artwork? Leave it blank for a random description for the piece.","Naming") as null|text
