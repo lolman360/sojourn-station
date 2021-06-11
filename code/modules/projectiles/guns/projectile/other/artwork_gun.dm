@@ -54,7 +54,6 @@
 	icon = 'icons/obj/guns/projectile/artwork_revolver.dmi'
 	icon_state = "artwork_revolver_1"
 	item_state = "artwork_revolver_1"
-	drawChargeMeter = FALSE
 	max_shells = 6
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4) //Arbitrary values
 	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_WOOD = 6)
@@ -68,9 +67,9 @@
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/artwork_shotgun
 
-var/obj/item/weapon/gun/projectile/automatic/artwork_rifle
+/obj/item/weapon/gun/projectile/automatic/artwork_rifle
 
-var/obj/item/weapon/gun/projectile/automatic/artwork_sniper
+/obj/item/weapon/gun/projectile/automatic/artwork_sniper
 
 /obj/item/weapon/gun/projectile/grenade/artwork_grenade
 
@@ -83,9 +82,9 @@ var/obj/item/weapon/gun/projectile/automatic/artwork_sniper
 		gun_choices = list()
 		for(var/gun_type in typesof(/obj/item/weapon/gun/) - src.type)
 			var/obj/item/weapon/gun/G = gun_type
-			src.gun_choices[initial(G.name)] = gun_type
+			gun_choices[initial(G.name)] = gun_type
 
-	picked = input("Select Appearance", "Select Appearance") as anything in gun_choices
+	var/picked = input("Select Appearance", "Select Appearance") as anything in gun_choices
 
 	if(!ispath(gun_choices[picked]))
 		return
