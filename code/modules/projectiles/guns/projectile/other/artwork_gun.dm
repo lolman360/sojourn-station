@@ -54,9 +54,9 @@
 	icon = 'icons/obj/guns/projectile/artwork_revolver.dmi'
 	icon_state = "artwork_revolver_1"
 	item_state = "artwork_revolver_1"
-	max_shells = 6
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4) //Arbitrary values
-	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_WOOD = 6)
+	load_method = MAGAZINE
+	mag_well = MAG_WELL_PISTOL
+	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_STEEL = 6)
 	price_tag = 1000
 	damage_multiplier = 1 //firefly
 	penetration_multiplier = 1.4
@@ -64,6 +64,20 @@
 	var/finished = 0
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/pump/artwork_pshotgun
+	name = "\"Grizzly\" shotgun"
+	desc = "A common open-source pump-action shotgun, a bastard child of the three primary pump shotguns on the market, all rolled together once their patents expired. Can hold up to 4+1 20mm shells in its tube magazine."
+	icon = 'icons/obj/guns/projectile/shotgun.dmi'
+	icon_state = "shotgun"
+	item_state = "shotgun"
+	max_shells = 4
+	slot_flags = SLOT_BACK
+	caliber = CAL_SHOTGUN
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	load_method = SINGLE_CASING
+	handle_casings = HOLD_CASINGS
+	matter = list(MATERIAL_PLASTEEL = 20, MATERIAL_WOOD = 10)
+	price_tag = 1000
+
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/artwork_shotgun
 

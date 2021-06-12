@@ -231,28 +231,37 @@
 				if(prob(70))
 					var/obj/item/weapon/gun/projectile/automatic/shotgun/pump/artwork_pshotgun/R = new(src)
 					R.caliber = CAL_SHOTGUN
-					R.damage_multiplier = 0.8 + rand(-2,2)/10
-					R.penetration_multiplier = 0.75 + rand(-3,3)/10
-					R.recoil_buildup = 1.2 + rand(-2,2)/10//from sawnoff.dm
-					R.one_hand_penalty = 12 + rand(-2,3)
-					R.bulletinsert_sound = 'sound/weapons/guns/interact/shotgun_insert.ogg'
-					R.fire_sound = 'sound/weapons/guns/fire/shotgunp_fire.ogg'
+					R.damage_multiplier = 1.2 + rand(-5,5)/10 //grizzly
+					R.penetration_multiplier = 1 + rand(-3,3)/10
+					R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)/2
+					R.one_hand_penalty = 10 + rand(-4,4)
 					G = R
 
 				else
-					var/obj/item/weapon/gun/projectile/automatic/shotgun/artwork_shotgun/R = new(src)
+					var/obj/item/weapon/gun/projectile/shotgun/artwork_shotgun/R = new(src)
 					R.caliber = CAL_SHOTGUN
 					R.damage_multiplier = 0.8 + rand(-2,2)/10
 					R.penetration_multiplier = 0.75 + rand(-3,3)/10
 					R.recoil_buildup = 1.2 + rand(-2,2)/10//from sawnoff.dm
 					R.one_hand_penalty = 12 + rand(-2,3)
-					R.bulletinsert_sound = 'sound/weapons/guns/interact/shotgun_insert.ogg'
-					R.fire_sound = 'sound/weapons/guns/fire/shotgunp_fire.ogg'
+					R.load_method = MAGAZINE
+					R.mag_well = MAG_WELL_DRUM
 					G = R
 
 			if("rifle")
 				var/obj/item/weapon/gun/projectile/automatic/artwork_rifle/R = new(src)
-				R.caliber = pick(CAL_HRIFLE, CAL_LRIFLE, CAL_RIFLE)
+				var/cal = pick(CAL_HRIFLE, CAL_LRIFLE, CAL_RIFLE)
+				switch(cal)
+					if(CAL_LRIFLE)
+						R.caliber = cal
+						mag_well = MAG_WELL_STANMAG
+					if(CAL_RIFLE)
+						R.caliber = cal
+						mag_well = MAG_WELL_RIFLE
+					if(CAL_HRIFLE)
+						R.caliber = cal
+						mag_well = MAG_WELL_HRIFLE
+
 				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 				G = R
 
