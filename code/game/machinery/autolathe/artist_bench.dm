@@ -198,12 +198,12 @@
 
 		var/gun_pattern = pickweight(list(
 			"pistol" = 16 + weight_robustness + weight_biology,
-			"magnum" = 8 + weight_vigilance,
+			"magnum" = 16 + weight_vigilance, //pistol weight is the highest
 			"shotgun" = 8 + weight_robustness,
 			"rifle" = 8 + weight_vigilance,
-			"sniper" = 8 + max(weight_vigilance + weight_cognition),
-			"gyro" = 1 + weight_robustness + weight_mechanical,
-			"grenade" = 8 + weight_toughness
+			"sniper" = 4 + max(weight_vigilance + weight_cognition),
+			"gyro" = 2 + weight_robustness + weight_mechanical, //gyro sniper grenade lowest
+			"grenade" = 4 + weight_toughness
 		))
 		var/obj/item/weapon/gun/projectile/G
 		switch(gun_pattern)
@@ -213,6 +213,10 @@
 			if("pistol") //From havelock.dm, Arbitrary Values
 				var/obj/item/weapon/gun/projectile/automatic/artwork_pistol/R = new(src)
 				R.caliber = pick(CAL_PISTOL, CAL_50, CAL_MAGNUM)
+<<<<<<< Updated upstream
+=======
+				R.can_dual = TRUE
+>>>>>>> Stashed changes
 				R.damage_multiplier = 1.2 + rand(-5,5)/10
 				R.penetration_multiplier = 1.2 + rand(-5,5)/10
 				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
@@ -240,8 +244,13 @@
 				else
 					var/obj/item/weapon/gun/projectile/shotgun/artwork_shotgun/R = new(src)
 					R.caliber = CAL_SHOTGUN
+<<<<<<< Updated upstream
 					R.damage_multiplier = 0.8 + rand(-2,2)/10
 					R.penetration_multiplier = 0.75 + rand(-3,3)/10
+=======
+					R.damage_multiplier = 1 + rand(-5,5)/10
+					R.penetration_multiplier = 1 + rand(-3,3)/10
+>>>>>>> Stashed changes
 					R.recoil_buildup = 1.2 + rand(-2,2)/10//from sawnoff.dm
 					R.one_hand_penalty = 12 + rand(-2,3)
 					R.load_method = MAGAZINE
@@ -266,16 +275,29 @@
 				G = R
 
 			if("sniper")//From sniper.dm, Arbitrary values
+<<<<<<< Updated upstream
 				var/obj/item/weapon/gun/projectile/automatic/artwork_sniper/R = new(src)
 				R.caliber = CAL_ANTIM
 				R.one_hand_penalty = 15 + rand(-3,5) //From sniper.dm, Temporary values
+=======
+				var/obj/item/weapon/gun/projectile/boltgun/artwork_sniper/R = new(src)
+				R.caliber = CAL_ANTIM
+				R.damage_multiplier += rand(-5,5)/10
+				R.one_hand_penalty = 80 + rand(-80,20) //From sniper.dm, Temporary values
+>>>>>>> Stashed changes
 				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 				G = R
 
 			if("gyro")//From gyropistol.dm, Arbitrary values
 				var/obj/item/weapon/gun/projectile/automatic/artwork_pistol/R = new(src)
 				R.caliber = CAL_70
+<<<<<<< Updated upstream
 				R.recoil_buildup = 0.1 * rand(1,20)
+=======
+				R.can_dual = TRUE
+				R.damage_multiplier += rand(-5,5)/10
+				R.magazine_type = /obj/item/ammo_magazine/a75
+>>>>>>> Stashed changes
 				R.recoil_buildup += rand(-R.recoil_buildup,R.recoil_buildup)
 				G = R
 

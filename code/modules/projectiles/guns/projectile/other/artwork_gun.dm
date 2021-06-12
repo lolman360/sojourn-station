@@ -7,7 +7,11 @@
 	drawChargeMeter = FALSE
 	max_shells = 6
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4) //Arbitrary values
+<<<<<<< Updated upstream
 	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_WOOD = 6)
+=======
+	matter = list(MATERIAL_PLASTEEL = 6, MATERIAL_WOOD = 6)
+>>>>>>> Stashed changes
 	price_tag = 1000
 	damage_multiplier = 1.4 //From havelock.dm
 	penetration_multiplier = 1.4
@@ -56,7 +60,11 @@
 	item_state = "artwork_revolver_1"
 	load_method = MAGAZINE
 	mag_well = MAG_WELL_PISTOL
+<<<<<<< Updated upstream
 	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_STEEL = 6)
+=======
+	matter = list(MATERIAL_PLASTEEL = 6, MATERIAL_STEEL = 6)
+>>>>>>> Stashed changes
 	price_tag = 1000
 	damage_multiplier = 1 //firefly
 	penetration_multiplier = 1.4
@@ -64,6 +72,7 @@
 	var/finished = 0
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/pump/artwork_pshotgun
+<<<<<<< Updated upstream
 	name = "\"Grizzly\" shotgun"
 	desc = "A common open-source pump-action shotgun, a bastard child of the three primary pump shotguns on the market, all rolled together once their patents expired. Can hold up to 4+1 20mm shells in its tube magazine."
 	icon = 'icons/obj/guns/projectile/shotgun.dmi'
@@ -76,14 +85,51 @@
 	load_method = SINGLE_CASING
 	handle_casings = HOLD_CASINGS
 	matter = list(MATERIAL_PLASTEEL = 20, MATERIAL_WOOD = 10)
+=======
+	name = "Odd Shotgun"
+	desc = "This is an artistically-made shotgun with a limited use chameleon projector."
+	icon = 'icons/obj/guns/projectile/shotgun.dmi'
+	slot_flags = SLOT_BACK
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	matter = list(MATERIAL_PLASTEEL = 10, MATERIAL_WOOD = 50)
+>>>>>>> Stashed changes
 	price_tag = 1000
 
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/artwork_shotgun
+<<<<<<< Updated upstream
 
 /obj/item/weapon/gun/projectile/automatic/artwork_rifle
 
 /obj/item/weapon/gun/projectile/automatic/artwork_sniper
+=======
+	name = "Odd Shotgun"
+	desc = "This is an artistically-made autoshotgun with a limited use chameleon projector."
+	icon = 'icons/obj/guns/projectile/artwork_revolver.dmi'
+	icon_state = "artwork_revolver_1"
+	item_state = "artwork_revolver_1"
+	damage_multiplier = 0.8
+	recoil_buildup = 15
+	one_hand_penalty = 20 //automatic shotgun level
+
+/obj/item/weapon/gun/projectile/automatic/artwork_rifle
+	name = "Odd Rifle"
+	desc = "This is an artistically-made Rifle with a limited use chameleon projector."
+	icon = 'icons/obj/guns/projectile/artwork_revolver.dmi'
+	icon_state = "artwork_revolver_1"
+	item_state = "artwork_revolver_1"
+	load_method = MAGAZINE
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BELT
+	matter = list(MATERIAL_PLASTEEL = 10, MATERIAL_PLASTIC = 6)
+	price_tag = 1000
+	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+	recoil_buildup = 7
+	one_hand_penalty = 9
+
+
+/obj/item/weapon/gun/projectile/boltgun/artwork_sniper
+>>>>>>> Stashed changes
 
 /obj/item/weapon/gun/projectile/grenade/artwork_grenade
 
