@@ -1,4 +1,4 @@
-//
+// DEPRECATED: USE DCS INSTEAD PLEASE I BEG YOU FOR THE LOVE OF GOD
 //	Observer Pattern Implementation
 //
 //	Implements a basic observer pattern with the following main procs:

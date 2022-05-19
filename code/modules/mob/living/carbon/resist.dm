@@ -58,6 +58,7 @@
 
 
 /mob/living/proc/resist_grab()
+	. = FALSE
 	var/resisting = 0
 	for(var/obj/O in requests)
 		requests.Remove(O)
@@ -68,21 +69,27 @@
 		switch(G.state)
 			if(GRAB_PASSIVE)
 				qdel(G)
+				return TRUE
 			if(GRAB_AGGRESSIVE)
 				if(prob(max(60 + ((stats?.getStat(STAT_ROB)) - G.assailant?.stats.getStat(STAT_ROB) ** 0.8), 1))) // same scaling as cooldown increase and if you manage to be THAT BAD, 1% for luck
 					visible_message("<span class='warning'>[src] has broken free of [G.assailant]'s grip!</span>")
 					qdel(G)
+					return TRUE
 			if(GRAB_NECK)
 				var/conditionsapply = (world.time - G.assailant.l_move_time < 30 || !stunned) ? 3 : 1 //If you move when grabbing someone then it's easier for them to break free. Same if the affected mob is immune to stun.
 				if(prob(conditionsapply * max(5+(((stats?.getStat(STAT_ROB)) - G.assailant.stats?.getStat(STAT_ROB)) ** 0.8), 0.5))) // 0.5% chance for mercy
 					visible_message("<span class='warning'>[src] has broken free of [G.assailant]'s headlock!</span>")
 					qdel(G)
+					return TRUE
 	if(resisting)
 		setClickCooldown(20)
 		visible_message("<span class='danger'>[src] resists!</span>")
 
 /mob/living/carbon/resist_grab()
-	return !handcuffed && ..()
+	if(handcuffed)
+		visible_message("<span class='danger'>[src] resists!</span>")
+		return FALSE
+	..()
 
 /mob/living/carbon/process_resist()
 

@@ -73,6 +73,9 @@
 	//Inactive Mutations populated at spawn, meant to reflect integral parts of this creature's DNA
 	var/list/inherent_mutations = list()
 
+	/// Flags that determine the potential of a mob to perform certain actions. Do not change this directly.
+	var/mobility_flags = MOBILITY_FLAGS_DEFAULT
+
 	//Mutations populated through horrendous genetic tampering.
 	var/datum/genetics/genetics_holder/unnatural_mutations
 

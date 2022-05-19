@@ -1,8 +1,12 @@
 /atom/movable
 	layer = OBJ_LAYER
+	///how many times a this movable had movement procs called on it since Moved() was last called
+	var/move_stacks = 0
 	var/last_move = null
 	var/anchored = 0
-	// var/elevation = 2    - not used anywhere
+	var/move_resist = MOVE_RESIST_DEFAULT
+	var/move_force = MOVE_FORCE_DEFAULT
+	var/pull_force = PULL_FORCE_DEFAULT
 	var/move_speed = 10
 	var/l_move_time = 1
 	var/m_flag = 1
@@ -14,9 +18,24 @@
 	var/moved_recently = 0
 	var/mob/pulledby = null
 	var/item_state = null // Used to specify the item state for the on-mob over-lays.
-	var/inertia_dir = 0
+	///Are we moving with inertia? Mostly used as an optimization
+	var/inertia_moving = FALSE
+	/// Things we can pass through while moving. If any of this matches the thing we're trying to pass's [pass_flags_self], then we can pass through.
+	var/pass_flags = NONE
+	/// If false makes [CanPass][/atom/proc/CanPass] call [CanPassThrough][/atom/movable/proc/CanPassThrough] on this type instead of using default behaviour
+	var/generic_canpass = TRUE
+	var/moving_diagonally = 0 //0: not doing a diagonal move. 1 and 2: doing the first/second step of the diagonal move
+
+	/**
+	  * In case you have multiple types, you automatically use the most useful one.
+	  * IE: Skating on ice, flippers on water, flying over chasm/space, etc.
+	  * I reccomend you use the movetype_handler system and not modify this directly, especially for living mobs.
+	  */
+	var/movement_type = GROUND
+
 	var/can_anchor = TRUE
 	var/cant_be_pulled = FALSE //Used for things that cant be anchored, but also shouldnt be pullable
+	var/datum/movement_packet/move_packet
 
 	//spawn_values
 	var/price_tag = 0 // The item price in credits. atom/movable so we can also assign a price to animals and other thing.
@@ -30,6 +49,11 @@
 
 	if(loc)
 		loc.handle_atom_del(src)
+
+	if(move_packet)
+		if(!QDELETED(move_packet))
+			qdel(move_packet)
+		move_packet = null
 
 	forceMove(null)
 	if (pulledby)
@@ -52,6 +76,17 @@
 
 /atom/movable/proc/entered_with_container(var/atom/old_loc)
 	return
+
+/**
+ * meant for movement with zero side effects. only use for objects that are supposed to move "invisibly" (like camera mobs or ghosts)
+ * if you want something to move onto a tile with a beartrap or recycler or tripmine or mouse without that object knowing about it at all, use this
+ * most of the time you want forceMove()
+ */
+/atom/movable/proc/abstract_move(atom/new_loc)
+	var/atom/old_loc = loc
+	move_stacks++
+	loc = new_loc
+	Moved(old_loc)
 
 /atom/movable/proc/forceMove(atom/destination, var/special_event, glide_size_override=0)
 	if(loc == destination)
@@ -97,6 +132,13 @@
 
 	return 1
 
+// Make sure you know what you're doing if you call this, this is intended to only be called by byond directly.
+// You probably want CanPass()
+/atom/movable/Cross(atom/movable/crossed_atom)
+	. = TRUE
+	SEND_SIGNAL(src, COMSIG_MOVABLE_CROSS, crossed_atom)
+	SEND_SIGNAL(crossed_atom, COMSIG_MOVABLE_CROSS_OVER, src)
+	return CanPass(crossed_atom, get_dir(src, crossed_atom))
 
 //called when src is thrown into hit_atom
 /atom/movable/proc/throw_impact(atom/hit_atom, var/speed)
@@ -256,6 +298,16 @@
 		return src.master.attack_hand(a, b, c)
 	return
 
+
+///Sets the anchored var and returns if it was sucessfully changed or not.
+/atom/movable/proc/set_anchored(anchorvalue)
+	SHOULD_CALL_PARENT(TRUE)
+	if(anchored == anchorvalue)
+		return
+	. = anchored
+	anchored = anchorvalue
+	SEND_SIGNAL(src, COMSIG_MOVABLE_SET_ANCHORED, anchorvalue)
+
 /atom/movable/proc/touch_map_edge()
 	if(z in GLOB.maps_data.sealed_levels)
 		return
@@ -312,15 +364,17 @@
 */
 
 //This proc should never be overridden elsewhere at /atom/movable to keep directions sane.
-// Spoiler alert: it is, in moved.dm
 /atom/movable/Move(NewLoc, Dir = 0, step_x = 0, step_y = 0, var/glide_size_override = 0)
 	if (glide_size_override > 0)
 		set_glide_size(glide_size_override)
 
 	// To prevent issues, diagonal movements are broken up into two cardinal movements.
 
+
+	if(SEND_SIGNAL(src, COMSIG_MOVABLE_PRE_MOVE, NewLoc) & COMPONENT_MOVABLE_BLOCK_PRE_MOVE)
+		return
+
 	// Is this a diagonal movement?
-	SEND_SIGNAL(src, COMSIG_MOVABLE_PREMOVE, src)
 	if (Dir & (Dir - 1))
 		if (Dir & NORTH)
 			if (Dir & EAST)

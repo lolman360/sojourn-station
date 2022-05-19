@@ -11,21 +11,6 @@
 	var/colony_friend = FALSE //Are we friendly to the colony? Turrets/Mechs vs Mob
 	var/friendly_to_colony = FALSE //Do we attack colony stuff - Mechs / Turrets regardless of who they are
 
-	movement_handlers = list(
-	/datum/movement_handler/mob/relayed_movement,
-	/datum/movement_handler/mob/death,
-	/datum/movement_handler/mob/conscious,
-	/datum/movement_handler/mob/eye,
-	/datum/movement_handler/mob/delay,
-	/datum/movement_handler/move_relay,
-	/datum/movement_handler/mob/buckle_relay,
-	/datum/movement_handler/mob/stop_effect,
-	/datum/movement_handler/mob/physically_capable,
-	/datum/movement_handler/mob/physically_restrained,
-	/datum/movement_handler/mob/space,
-	/datum/movement_handler/mob/movement
-	)
-
 	var/lastKnownIP = null
 	var/computer_id = null
 

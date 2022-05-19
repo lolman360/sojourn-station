@@ -455,11 +455,10 @@
 	color = "#13BC5E"
 
 /datum/reagent/toxin/aslimetoxin/affect_blood(mob/living/carbon/M, alien, effect_multiplier) // TODO: check if there's similar code anywhere else
-	if(HAS_TRANSFORMATION_MOVEMENT_HANDLER(M))
+	if(M.notransform)
 		return
 	to_chat(M, SPAN_DANGER("Your flesh rapidly mutates!"))
-	ADD_TRANSFORMATION_MOVEMENT_HANDLER(M)
-	M.canmove = 0
+	M.notransform = TRUE
 	M.icon = null
 	M.cut_overlays()
 	M.invisibility = 101

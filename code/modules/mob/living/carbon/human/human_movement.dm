@@ -1,4 +1,14 @@
-/mob/living/carbon/human/movement_delay()
+/mob/living/carbon/human/get_movespeed_modifiers()
+	var/list/considering = ..()
+	if(MOB_FLAGS & IGNORESLOWDOWN)
+		. = list()
+		for(var/id in considering)
+			var/datum/movespeed_modifier/M = considering[id]
+			if(M.flags & IGNORE_NOSLOW || M.multiplicative_slowdown < 0)
+				.[id] = M
+		return
+
+/mob/living/carbon/human/movement_delay() //TODO: Movespeed modifiers this.
 
 	var/tally = ..()
 	if(species.slowdown)
@@ -69,23 +79,6 @@
 
 	return tally
 
-
-/mob/living/carbon/human/allow_spacemove()
-	//Can we act?
-	if(restrained())	return 0
-
-	//Do we have a working jetpack?
-	var/obj/item/tank/jetpack/thrust = get_jetpack()
-
-	if(thrust)
-		if(thrust.allow_thrust(JETPACK_MOVE_COST, src))
-			if (thrust.stabilization_on)
-				return TRUE
-			return -1
-
-	//If no working jetpack then use the other checks
-	return ..()
-
 /mob/living/carbon/human/slip_chance(var/prob_slip = 5)
 	if(!..())
 		return 0
@@ -132,3 +125,8 @@
 /mob/living/carbon/human/proc/calc_momentum()
 	momentum_speed--
 	update_momentum()
+
+/mob/living/carbon/human/Process_Spacemove(movement_dir = 0)
+	if(movement_type & FLYING || HAS_TRAIT(src, TRAIT_FREE_FLOAT_MOVEMENT))
+		return TRUE
+	return ..()

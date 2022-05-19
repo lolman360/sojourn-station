@@ -58,6 +58,9 @@
 #define isdrone(A) istype(A, /mob/living/silicon/robot/drone)
 
 //-----------------Objects
+
+#define ismovable(A) istype(A, /atom)
+
 #define ismovable(A) istype(A, /atom/movable)
 
 #define isobj(A) istype(A, /obj)

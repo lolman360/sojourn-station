@@ -140,16 +140,6 @@
 		var/obj/O = o
 		O.show_message(message,2,deaf_message,1)
 
-/mob/proc/movement_delay()
-	. = 0
-
-	if ((drowsyness > 0) && !MOVING_DELIBERATELY(src))
-		. += 6
-	if(lying) //Crawling, it's slower
-		. += 14 + (weakened)
-	. += move_intent.move_delay
-
-
 /mob/proc/Life()
 	SEND_SIGNAL(src, COMSIG_MOB_LIFE)
 //	if(organStructure)
