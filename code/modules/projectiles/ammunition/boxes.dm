@@ -7,35 +7,6 @@
 	multiple_sprites = 1
 	reload_delay = 30
 	ammo_mag = "box"
-
-/obj/item/ammo_magazine/ammobox/resolve_attackby(atom/A, mob/user)
-	if(isturf(A) && locate(/obj/item/ammo_casing) in A || istype(A, /obj/item/ammo_casing))
-		if(!do_after(user, src.reload_delay, src))
-			to_chat(user, SPAN_WARNING("You stoped scooping ammo into [src]."))
-			return
-		if(collectAmmo(get_turf(A), user))
-			return TRUE
-	..()
-
-/obj/item/ammo_magazine/ammobox/proc/collectAmmo(var/turf/target, var/mob/user)
-	ASSERT(istype(target))
-	. = FALSE
-	for(var/obj/item/ammo_casing/I in target)
-		if(stored_ammo.len >= max_ammo)
-			break
-		if(I.caliber == src.caliber)
-			for(var/j = 1 to I.amount)
-				if(stored_ammo.len >= max_ammo)
-					break
-				. |= TRUE
-				insertCasing(I)
-	if(user)
-		if(.)
-			user.visible_message(SPAN_NOTICE("[user] scoopes some ammo in [src]."),SPAN_NOTICE("You scoop some ammo in [src]."),SPAN_NOTICE("You hear metal clanging."))
-		else
-			to_chat(user, SPAN_NOTICE("You fail to pick anything up with \the [src]."))
-	update_icon()
-
 //// .35 ////
 
 /obj/item/ammo_magazine/ammobox/pistol_35
