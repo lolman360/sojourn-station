@@ -65,4 +65,4 @@
 
 /mob/living/carbon/superior_animal/psi_monster/Initialize()
 	..()
-	stat_to_steal = pick(ALL_STATS_FOR_LEVEL_UP)
+	stat_to_steal = pick(ALL_STATS)

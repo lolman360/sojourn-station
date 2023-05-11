@@ -1419,9 +1419,3 @@ mob/proc/yank_out_object()
 			in_use = 0
 
 
-//SoJ
-
-/mob/proc/give_health_via_stats()
-	if(stats)
-		health += src.stats.getStat(STAT_ANA)
-		maxHealth += src.stats.getStat(STAT_ANA)

@@ -11,7 +11,7 @@
 	price_tag = 1200
 
 /obj/item/device/mental_imprinter/proc/imprint(mob/living/carbon/human/user)
-	var/stat = input(user, "Select stat to boost", "Mental imprinter") as null|anything in ALL_STATS_TO_IMPRINT
+	var/stat = input(user, "Select stat to boost", "Mental imprinter") as null|anything in ALL_STATS
 	if(!stat || spent || user.species.reagent_tag == IS_SYNTHETIC)//If it's spent we won't attempt to use it again
 		return//No synths because of stat meme
 

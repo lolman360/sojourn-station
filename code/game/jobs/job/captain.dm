@@ -14,7 +14,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	difficulty = "Very Hard."
 	selection_color = "#ccccff"
 	req_admin_notify = 1
-	playtimerequired = 2500
+	
 	wage = WAGE_COMMAND
 
 	ideal_character_age = 50 // Old geezer captains ftw
@@ -41,8 +41,6 @@ Treat your command officers with respect, and listen to their council. Try not t
 		STAT_MEC = 15,
 		STAT_VIG = 25,
 		STAT_COG = 15,
-		STAT_VIV = 1,
-		STAT_ANA = 1
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
@@ -80,12 +78,11 @@ Treat your command officers with respect, and listen to their council. Try not t
 	difficulty = "Hard."
 	selection_color = "#ddddff"
 	req_admin_notify = 1
-	playtimerequired = 1200
+	
 	wage = WAGE_COMMAND
 	ideal_character_age = 35
 	minimum_character_age = 25
 
-	health_modifier = 5
 	description = "The Steward is the loyal right-hand of the Premier. Serving as a personal guard, follow him wherever he goes.<br>\
 	Your primary, and perhaps only, responsibility is to ensure the safety of the Premier at all costs - even your own life if necessary.<br>\
 	However, you are an adviser as well as a bodyguard. Discreetly inform him of mistakes. Make sure he follows the law and remains popular.<br>\
@@ -117,8 +114,6 @@ Treat your command officers with respect, and listen to their council. Try not t
 		STAT_BIO = 25,
 		STAT_MEC = 25,
 		STAT_COG = 25,
-		STAT_VIV = 2,
-		STAT_ANA = 2
 	)
 
 /obj/landmark/join/start/pg

@@ -25,7 +25,7 @@
 
 	ideal_character_age = 40
 	minimum_character_age = 30
-	playtimerequired = 1200
+	
 
 	stat_modifiers = list(
 		STAT_BIO = 50,
@@ -124,7 +124,6 @@
 	outfit_type = /decl/hierarchy/outfit/job/medical/recovery_team
 	disallow_species = list(FORM_AGSYNTH, FORM_CHURCHSYNTH, FORM_NASHEF)
 
-	health_modifier = 5
 	perks = list(PERK_MEDICAL_EXPERT, PERK_CHEMIST)
 
 	access = list(

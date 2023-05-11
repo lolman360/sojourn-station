@@ -15,8 +15,8 @@
 	ideal_character_age = 40
 	minimum_character_age = 30
 	department_account_access = TRUE
-	playtimerequired = 2500
-	health_modifier = 25
+	
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_CHURCHSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/smc
@@ -79,8 +79,8 @@
 	ideal_character_age = 40
 	minimum_character_age = 30
 	department_account_access = TRUE
-	playtimerequired = 2500
-	health_modifier = 25
+	
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_CHURCHSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/swo
@@ -141,8 +141,8 @@
 	department_account_access = TRUE
 	wage = WAGE_LABOUR_HAZARD
 	minimum_character_age = 25
-	playtimerequired = 1200
-	health_modifier = 20
+	
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/gunserg
@@ -199,8 +199,8 @@
 	department_account_access = TRUE
 	wage = WAGE_LABOUR_HAZARD
 	minimum_character_age = 25
-	playtimerequired = 1200
-	health_modifier = 20
+	
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/serg
@@ -253,8 +253,8 @@
 	alt_titles = list("Junior Ranger","Detective","Forensics Specialist")
 	selection_color = "#a7bbc6"
 	wage = WAGE_PROFESSIONAL
-	playtimerequired = 1200
-	health_modifier = 5
+	
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/inspector
@@ -312,7 +312,7 @@
 	alt_titles = list("Corpsman Cadet", "Combat Medic")
 	selection_color = "#a7bbc6"
 	wage = WAGE_PROFESSIONAL
-	health_modifier = 5
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/medspec
@@ -368,7 +368,7 @@
 	alt_titles = list("Blackshield Cadet")
 	selection_color = "#a7bbc6"
 	wage = WAGE_LABOUR_HAZARD
-	health_modifier = 10
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/troop
@@ -421,7 +421,7 @@
 	alt_titles = list("Junior Marshal Officer", "Marshal Civil Servant")
 	selection_color = "#a7bbc6"
 	wage = WAGE_LABOUR_HAZARD
-	health_modifier = 10
+	
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/ihoper

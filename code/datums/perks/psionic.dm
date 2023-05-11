@@ -7,12 +7,12 @@
 
 /datum/perk/psion/assign(mob/living/carbon/human/H)
 	..()
-	holder.maxHealth -=20
-	holder.health -=20
+	holder.maxHealth -=10
+	holder.health -=10
 
 /datum/perk/psion/remove()
-	holder.maxHealth +=20
-	holder.health +=20
+	holder.maxHealth +=10
+	holder.health +=10
 	..()
 
 /datum/perk/psi_mania

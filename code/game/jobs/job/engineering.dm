@@ -11,11 +11,10 @@
 	difficulty = "Medium."
 	selection_color = "#c7b97b"
 	req_admin_notify = 1
-	playtimerequired = 1200
+	
 	wage = WAGE_COMMAND
 	ideal_character_age = 50
 	minimum_character_age = 25
-	health_modifier = 5
 
 	disallow_species = list(FORM_UNBRANDED, FORM_SOTSYNTH, FORM_BSSYNTH, FORM_CHURCHSYNTH, FORM_NASHEF)
 	outfit_type = /decl/hierarchy/outfit/job/engineering/exultant

@@ -79,20 +79,20 @@
 /datum/task_master/task/return_to_sender
 	name = "Return To Sender"
 	key = "RETURN_TO_SENDER"
-	desc = "I was dead! Pulled back? Returned to this place this life?!"
+	desc = "I was dead! Pulled back? Returned to this place, this life?!"
 	gain_text = "Walking again?"
 	level_threshholds = 1
 	unlocked = TRUE //Morality
 
 /datum/task_master/task/return_to_sender/activate_affect()
 	forwards_refence.max_nutrition += (level * 15) //415 level 1 -> 445 level 2 -> 490 level 3 ect ect
-	forwards_refence.stats.changeStat(STAT_VIV, (level + 2)) //Exstreamly miner: 3 level 1 -> 7 level 2 -> 13 level 3 ect ect
+	forwards_refence.stats.changeStat(STAT_TGH, (level + 1))
 
 //Huskification
 /datum/task_master/task/rebound_case
 	name = "Rebound Case"
 	key = "REBOUND_CASE"
-	desc = "Alive, dead, alive dead. Put back together time and time again..."
+	desc = "Alive, dead, alive, dead. Put back together time and time again..."
 	gain_text = "Back again."
 	level_threshholds = 2
 	unlocked = TRUE //Immorality
@@ -112,7 +112,7 @@
 	level_threshholds = 3 //Gym has long cooldowns and costs a bit
 
 /datum/task_master/task/gym_goer/activate_affect()
-	forwards_refence.stats.changeStat(STAT_VIV, (level + 2))
+	forwards_refence.stats.changeStat(STAT_TGH, (level + 1))
 	forwards_refence.max_nutrition += (level * 5) //405 level 1 -> 415 level 2 -> 430 level 3 ect ect
 	forwards_refence.vessel.maximum_volume  += 5 //Blood flow is being aided
 
@@ -120,18 +120,19 @@
 /datum/task_master/task/dr_floor
 	name = "Dr. Floor"
 	key = "DR_FLOOR"
-	desc = "Either do to drug withdraw, or hope, its hard to denie that this helps build up resistance."
+	desc = "Either due to drug withdrawal or hope, its hard to deny that this helps build up resistance."
 	gain_text = "Self prescription..."
 	level_threshholds = 5 //Tons of wallet/floor pills
 
 /datum/task_master/task/dr_floor/activate_affect()
-	forwards_refence.stats.changeStat(STAT_VIV, (level + 2))
+	forwards_refence.stats.changeStat(STAT_COG, (level + 1)) //taking floorpills makes you smarter.
+	forwards_refence.stats.changeStat(STAT_TGH, (level + 1))
 
 //For Shoveling AND THEN welding/hammering a crack
 /datum/task_master/task/proper_sealer
 	name = "Proper Sealer"
 	key = "PROPER_SEALER"
-	desc = "Taking the hardway on sealing up borrows leaves tougher hands and more knowings on how to repair."
+	desc = "Sealing up burrows the hard way leaves tougher hands and more knowledge on how to repair things."
 	gain_text = "Making the colony a safer place sure is fulfilling work."
 	level_threshholds = 5 //Theirs so many borrows...
 
@@ -143,7 +144,7 @@
 /datum/task_master/task/tool_breaker
 	name = "Tool Consumer"
 	key = "TOOL_BREAKER"
-	desc = "Sometimes things just break. At lest its a good learning experience..."
+	desc = "Sometimes things just break. At least it's a good learning experience..."
 	gain_text = "Oops."
 	level_threshholds = 2 //This unlike most stat is meant to be leveled up a bit to shine
 
@@ -153,7 +154,7 @@
 /datum/task_master/task/proper_area_smoker
 	name = "Smoking Area"
 	key = "PROPER_AREA_SMOKER"
-	desc = "Do to smoking in the proper area helps make you feel more connected to the community."
+	desc = "Respecting the law makes you feel more connected to the community."
 	gain_text = "Smoking in a proper area is rather soothing."
 	level_threshholds = 10
 

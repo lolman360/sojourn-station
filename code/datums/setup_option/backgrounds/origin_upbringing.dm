@@ -107,7 +107,6 @@
 		STAT_BIO = 6,
 		STAT_MEC = 0,
 		STAT_COG = -5, // Brain fried from drugs
-		STAT_VIV = 5
 	)
 
 /datum/category_item/setup_option/background/bckgrnd/klutz

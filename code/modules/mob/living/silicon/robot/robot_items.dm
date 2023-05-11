@@ -444,8 +444,8 @@
 	degradation = 0
 
 /obj/item/tool/robotic_omni_miner
-	name = "Miner omni tool"
-	desc = "Omni tool for mining borgs and the like has almost everything you need other then a way to drill..."
+	name = "Mining omnitool"
+	desc = "A useful multipurpose tool for mining."
 	icon_state = "engimplant"
 	tool_qualities = list(QUALITY_PRYING = 40,
 						  QUALITY_HAMMERING = 30,
@@ -459,8 +459,8 @@
 	degradation = 0
 
 /obj/item/tool/robotic_omni_sec
-	name = "Security omni tool"
-	desc = "Omni tool for Security borgs, mostly just for cutting up body and clearing borrows."
+	name = "Security omnitool"
+	desc = "Omni tool for Security borgs, mostly just for cutting up body and clearing burrows."
 	icon_state = "engimplant"
 	tool_qualities = list(QUALITY_PRYING = 20,
 						  QUALITY_HAMMERING = 35, //For undoing random things like barrer placements
@@ -474,8 +474,8 @@
 	degradation = 0
 
 /obj/item/tool/robotic_omni_cleaner
-	name = "Borrow Omni tool"
-	desc = "Omni tool for Janitor borgs, mostly just for cutting up body and clearing borrows."
+	name = "Burrow omnitool"
+	desc = "Omni tool for Janitor borgs, mostly just for cutting up body and clearing burrows."
 	icon_state = "engimplant"
 	tool_qualities = list(QUALITY_PRYING = 20,
 						  QUALITY_HAMMERING = 35, //For undoing random things like barrer placements

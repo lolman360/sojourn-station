@@ -13,13 +13,13 @@
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	department_account_access = TRUE
-	health_modifier = 15
+	
 
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_BSSYNTH, FORM_CHURCHSYNTH, FORM_NASHEF)
 
 
 	outfit_type = /decl/hierarchy/outfit/job/foreman
-	playtimerequired = 1200
+	
 	access = list(
 		access_prospector, access_foreman, access_external_airlocks, access_eva, access_heads, access_sec_doors,
 		access_RC_announce, access_keycard_auth, access_maint_tunnels, access_medical_suits //for locating scav team dead bodies
@@ -75,7 +75,7 @@
 	disallow_species = list(FORM_BSSYNTH, FORM_NASHEF)
 	outfit_type = /decl/hierarchy/outfit/job/salv
 
-	health_modifier = 5
+	
 
 	access = list(
 		access_prospector, access_external_airlocks, access_eva, access_maint_tunnels
@@ -123,7 +123,7 @@
 
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_CHURCHSYNTH, FORM_NASHEF)
 	outfit_type = /decl/hierarchy/outfit/job/pro
-	health_modifier = 10
+	
 
 	access = list(
 		access_prospector, access_external_airlocks, access_eva, access_maint_tunnels
