@@ -187,7 +187,7 @@
 			new /obj/plant_spawner/grass(get_turf(src))
 			if(prob(20))
 				new /obj/plant_spawner/towercaps(get_turf(src))
-				to_chat(user, SPAN_NOTICE("Even got a towercap log out of it too!"))
+				to_chat(user, SPAN_NOTICE("Got a towercap log out of it, too!"))
 			qdel(src)
 			return
 		return
