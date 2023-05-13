@@ -994,14 +994,6 @@ For the sake of consistency, I suggest always rounding up on even values when ap
 	.=..()
 	update_firemode()
 
-//TODO: godawful. bad. evil. we need to royally unfuck scopes.
-/obj/item/gun/forceMove(destination, special_event, glide_size_override)
-	if(ishuman(loc))
-		var/mob/living/carbon/human/H = loc
-		if(H.using_scope)
-			toggle_scope(H)
-	update_firemode(FALSE)
-	.=..()
 
 /obj/item/gun/dropped(mob/user)
 	// I really fucking hate this but this is how this is going to work.
