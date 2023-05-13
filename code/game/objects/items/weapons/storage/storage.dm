@@ -490,7 +490,7 @@
 	if(!isturf(target))
 		return
 	. = FALSE
-	var/limiter = 60
+	var/limiter = 90
 	for(var/obj/item/I in target)
 		if(--limiter < 0)
 			break
