@@ -140,13 +140,6 @@
 		add_fingerprint(user)
 	update_icon()
 
-/obj/item/gun/projectile/boltgun/process_chambered()
-	..()
-	if(LAZYLEN(loaded))
-		var/obj/item/ammo_casing/B = loaded[1]
-		if(B.is_caseless && !B.BB)
-			loaded -= B
-			QDEL_NULL(B)
 
 /obj/item/gun/projectile/boltgun/special_check(mob/user)
 	if(bolt_open)

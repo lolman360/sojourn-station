@@ -787,11 +787,11 @@
 	max_ammo = 40
 	multiple_sprites = 1
 
-//// 12mm Heavy Pistol ////
+//// 12.7mm Heavy Pistol ////
 
 /obj/item/ammo_magazine/kurtz_50
 	name = "heavy pistol magazine"
-	desc = "A 10 round magazine marked for 12mm."
+	desc = "A 10 round magazine marked for 12.7mm."
 	icon_state = "kurtz"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
@@ -927,11 +927,11 @@
 	name = "speed loader (10mm Magnum Caustic)"
 	ammo_type = /obj/item/ammo_casing/magnum_40/biomatter
 
-//// 12mm speed loader ////
+//// 12.7mm speed loader ////
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50
-	name = "speed loader (12mm Special)"
-	desc = "A 6 round speed loader marked for 12mm."
+	name = "speed loader (12.7mm Special)"
+	desc = "A 6 round speed loader marked for 12.7mm."
 	icon_state = "slmagnum_base"
 	icon = 'icons/obj/ammo_speed.dmi'
 	caliber = CAL_50
@@ -947,23 +947,23 @@
 		add_overlay("slmagnum_[AC.shell_color]-[count]")
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50/practice
-	name = "speed loader (12mm practice)"
+	name = "speed loader (12.7mm practice)"
 	ammo_type = /obj/item/ammo_casing/kurtz_50/practice
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50/rubber
-	name = "speed loader (12mm rubber)"
+	name = "speed loader (12.7mm rubber)"
 	ammo_type = /obj/item/ammo_casing/kurtz_50/rubber
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50/rubber/pepperball
-	name = "speed loader (12mm pepperball)"
+	name = "speed loader (12.7mm pepperball)"
 	ammo_type = /obj/item/ammo_casing/kurtz_50/rubber/pepperball
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50/lethal
-	name = "speed loader (12mm hollow-point)"
+	name = "speed loader (12.7mm hollow-point)"
 	ammo_type = /obj/item/ammo_casing/kurtz_50/lethal
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50/highvelocity
-	name = "speed loader (12mm high-velocity)"
+	name = "speed loader (12.7mm high-velocity)"
 	ammo_type = /obj/item/ammo_casing/kurtz_50/hv
 
 //////// RIFLE SPEEDLOADERS ////////
@@ -1090,8 +1090,8 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/a75
-	name = "ammo magazine (19mm gyro)"
-	desc = "A 4 magazine in 19mm gyro."
+	name = "ammo magazine (16.5mm gyro)"
+	desc = "A 4 magazine in 16.5mm gyro."
 	icon_state = "gyropistol"
 	icon = 'icons/obj/ammo_mags.dmi'
 	mag_type = MAGAZINE

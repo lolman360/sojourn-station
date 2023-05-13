@@ -317,10 +317,10 @@
 		/datum/design/autolathe/ammo/smg_magnum_40_practice = 0
 		)
 
-// 12mm PISTOLS
+// 12.7mm PISTOLS
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/lamia
-	disk_name = "H&S - 12mm Lamia Handgun"
+	disk_name = "H&S - 12.7mm Lamia Handgun"
 	icon_state = "frozenstar"
 
 	license = 8
@@ -333,7 +333,7 @@
 		)
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/basilisk
-	disk_name = "H&S - 12mm Basilisk Handgun"
+	disk_name = "H&S - 12.7mm Basilisk Handgun"
 	icon_state = "frozenstar"
 
 	license = 8
@@ -346,7 +346,7 @@
 		)
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/socom
-	disk_name = "SF - 12mm \"SOCOM\" Silenced Handgun"
+	disk_name = "SF - 12.7mm \"SOCOM\" Silenced Handgun"
 	icon_state = "solfed"
 
 	license = 8

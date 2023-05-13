@@ -411,10 +411,10 @@
 /obj/item/ammo_casing/flare/green/prespawn
 	amount = 3
 
-// 12mm HEAVY PISTOL
+// 12.7mm HEAVY PISTOL
 
 /obj/item/ammo_casing/kurtz_50
-	desc = "A 12mm bullet casing."
+	desc = "A 12.7mm bullet casing."
 	caliber = CAL_50
 	projectile_type = /obj/item/projectile/bullet/kurtz_50
 	shell_color = "l"
@@ -425,7 +425,7 @@
 	amount = 6
 
 /obj/item/ammo_casing/kurtz_50/rubber
-	desc = "A 12mm rubber bullet casing."
+	desc = "A 12.7mm rubber bullet casing."
 	caliber = CAL_50
 	projectile_type = /obj/item/projectile/bullet/kurtz_50/rubber
 	shell_color = "r"
@@ -433,14 +433,14 @@
 	spent_icon = "lrifle_c_r-spent"
 
 /obj/item/ammo_casing/kurtz_50/rubber/pepperball
-	desc = "A 12mm pepper-ball projectile casing."
+	desc = "A 12.7mm pepper-ball projectile casing."
 	icon_state = "lrifle_c_pepper"
 	spent_icon = "lrifle_c_pepper-spent"
 	shell_color = "l"
 	projectile_type = /obj/item/projectile/bullet/kurtz_50/rubber/pepperball
 
 /obj/item/ammo_casing/kurtz_50/practice
-	desc = "A 12mm practice bullet casing."
+	desc = "A 12.7mm practice bullet casing."
 	caliber = CAL_50
 	projectile_type = /obj/item/projectile/bullet/kurtz_50/practice
 	shell_color = "p"
@@ -448,7 +448,7 @@
 	spent_icon = "lrifle_c_p-spent"
 
 /obj/item/ammo_casing/kurtz_50/hv
-	desc = "A 12mm high-velocity bullet casing."
+	desc = "A 12.7mm high-velocity bullet casing."
 	caliber = CAL_50
 	projectile_type = /obj/item/projectile/bullet/kurtz_50/hv
 	shell_color = "hv"
@@ -456,13 +456,13 @@
 	spent_icon = "lrifle_c_hv-spent"
 
 /obj/item/ammo_casing/kurtz_50/lethal
-	desc = "A 12mm hollow point bullet casing."
+	desc = "A 12.7mm hollow point bullet casing."
 	caliber = CAL_50
 	shell_color = "l"
 	projectile_type = /obj/item/projectile/bullet/kurtz_50/lethal
 
 /obj/item/ammo_casing/kurtz_50/laser
-	desc = "A 12mm laser casing."
+	desc = "A 12.7mm laser casing."
 	caliber = CAL_50
 	projectile_type = /obj/item/projectile/beam/weak/kurtz_50
 
@@ -519,15 +519,15 @@
 /obj/item/ammo_casing/antim/incend/prespawned
 	amount = 5
 
-//// 17mm rolled shot ////
-///obj/item/ammo_casing/ball
-//	name = "shell casing"
-//	desc = "A 17mm rolled shot casing."
-//	icon_state = "ball"
-//	spent_icon = "ball-spent"
-//	caliber = CAL_BALL
-//	projectile_type = /obj/item/projectile/bullet/ball
-//	maxamount = 5
+// 17mm rolled shot ////
+/obj/item/ammo_casing/ball
+	name = "shell casing"
+	desc = "A rolled shot casing."
+	icon_state = "ball"
+	spent_icon = "ball-spent"
+	caliber = CAL_BALL
+	projectile_type = /obj/item/projectile/bullet/ball
+	maxamount = 5
 
 /obj/item/ammo_casing/ball/prespawned
 	amount = 4
@@ -778,7 +778,7 @@
 
 /obj/item/ammo_casing/a75
 	name = "microjet casing"
-	desc = "A 19mm gyrojet rocket."
+	desc = "A 16.5mm gyrojet rocket."
 	caliber = CAL_70
 	projectile_type = /obj/item/projectile/bullet/gyro
 

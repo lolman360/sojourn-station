@@ -14,7 +14,7 @@ This is mostly used for Marshal gun crafting to make it so they can make guns bu
 	build_path = /obj/item/part/gun/frame/colt
 
 /datum/design/autolathe/gun_frame/amnesty
-	name = "12mm amnesty pistol - frame"
+	name = "12.7mm amnesty pistol - frame"
 	build_path = /obj/item/part/gun/frame/amnesty
 
 /datum/design/autolathe/gun_frame/freedom

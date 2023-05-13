@@ -8,8 +8,8 @@ It focuses on spawning large numbers of moderate-to-weak monsters, and includes 
 	id = "infestation"
 	name = "infestation"
 
-	weight = 2
-	//Since it's a large pool of content, infestation has twice the weight of other events
+	weight = 1.5
+	//Since it's a large pool of content, infestation has 1.5x the weight of other events
 
 	event_type = /datum/event/infestation
 	event_pools = list(EVENT_LEVEL_MUNDANE = POOL_THRESHOLD_MUNDANE*1.2,

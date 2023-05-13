@@ -72,7 +72,7 @@
 	var/list/craft_options = list(
 		"ammunition" = materials_ammo,
 		"RPG shell" = materials_rocket,
-		"19mm gyrojet rockets" = materials_rocket,
+		"16.5mm gyrojet rockets" = materials_rocket,
 		//"armor parts" = materials_armorpart, - Not implimented yet.
 //		"barrels" = "4 plasteel for small; 8 plasteel for large; 16 plasteel for heavy",
 //		"mechanisms" ="5 plasteel for small; 10 plasteel for large; 16 plasteel for heavy",
@@ -145,7 +145,7 @@
 			required_resources = materials_rocket
 			items_to_spawn = list("" = /obj/item/ammo_casing/rocket/scrap/prespawned)
 
-		if("19mm gyrojet rocket")
+		if("16.5mm gyrojet rocket")
 			required_resources = materials_rocket
 			items_to_spawn = list("" = /obj/item/ammo_casing/a75)
 
@@ -157,13 +157,13 @@
 					switch(choice)
 						if("Barrels")
 							required_resources = materials_sbarrel
-							choice = input(user) as null|anything in list("9mm barrel", "10mm barrel", "12mm barrel")
+							choice = input(user) as null|anything in list("9mm barrel", "10mm barrel", "12.7mm barrel")
 							switch(choice)
 								if("9mm barrel")
 									items_to_spawn = list("" = /obj/item/part/gun/barrel/pistol)
 								if("10mm barrel")
 									items_to_spawn = list("" = /obj/item/part/gun/barrel/magnum)
-								if("12mm barrel")
+								if("12.7mm barrel")
 									required_resources = materials_lbarrel // Double the cost, making Marshals more efficient
 									items_to_spawn = list("" = /obj/item/part/gun/barrel/kurtz)
 						if("Mechanisms")
@@ -211,7 +211,7 @@
 					choice = input(user, "Which type of part do you want to craft?") as null|anything in list("Barrels", "Mechanisms")
 					switch(choice)
 						if("Barrels")
-							choice = input(user) as null|anything in list("9mm barrel", "10mm barrel", "12mm barrel", "6.5mm barrel", "caseless barrel", "7.62mm barrel", "8.6mm barrel", "Shotgun barrel")
+							choice = input(user) as null|anything in list("9mm barrel", "10mm barrel", "12.7mm barrel", "6.5mm barrel", "caseless barrel", "7.62mm barrel", "8.6mm barrel", "Shotgun barrel")
 							switch(choice)
 								if("9mm barrel")
 									required_resources = materials_sbarrel_steel
@@ -219,7 +219,7 @@
 								if("10mm barrel")
 									required_resources = materials_sbarrel_steel
 									items_to_spawn = list("" = /obj/item/part/gun/barrel/magnum/steel)
-								if("12mm barrel")
+								if("12.7mm barrel")
 									required_resources = materials_lbarrel_steel
 									items_to_spawn = list("" = /obj/item/part/gun/barrel/kurtz/steel)
 								if("6.5mm barrel")

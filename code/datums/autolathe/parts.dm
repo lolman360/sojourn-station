@@ -287,7 +287,7 @@
 	build_path = /obj/item/part/gun/barrel/magnum
 
 /datum/design/autolathe/part/barrel/kurtz
-	name = "firearm 12mm pistol barrel"
+	name = "firearm 12.7mm pistol barrel"
 	build_path = /obj/item/part/gun/barrel/kurtz
 
 /datum/design/autolathe/part/barrel/carbine

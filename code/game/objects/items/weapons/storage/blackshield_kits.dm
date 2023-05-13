@@ -251,7 +251,7 @@
 
 /obj/item/storage/box/bs_kit/mateba
 	name = "\improper Mateba Secondary Kit"
-	desc = "An equipment kit containing a specialized semiautomatic 12mm revolver. Great recoil control and even better stopping power, a flashy weapon of high-ranked officers."
+	desc = "An equipment kit containing a specialized semiautomatic 12.7mm revolver. Great recoil control and even better stopping power, a flashy weapon of high-ranked officers."
 
 	populate_contents()
 		new /obj/item/gun/projectile/revolver/rev10/mateba(src)
@@ -261,7 +261,7 @@
 
 /obj/item/storage/box/bs_kit/argos
 	name = "\"Argos\" Secondary Kit"
-	desc = "A kit containing a highly specialized 12mm pistol with smart-linked optics and stabilizers."
+	desc = "A kit containing a highly specialized 12.7mm pistol with smart-linked optics and stabilizers."
 
 	populate_contents()
 		new /obj/item/gun/projectile/lamia/scoped(src)

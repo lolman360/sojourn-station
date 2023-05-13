@@ -1,4 +1,4 @@
-/obj/item/gun/projectile/automatic/survivalrifle
+/obj/item/gun/projectile/boltgun/survivalrifle
 	name = "\"Bond\" survival rifle"
 	desc = "A \"Bond\" survival rifle manufactured by Hunters Inc, with a fixed adjustable scope. \
 	Compact, lightweight, with high velocity and high penetration. \
@@ -36,13 +36,13 @@
 	init_firemodes = list(
 		SEMI_AUTO_NODELAY)
 
-	gun_parts = list(/obj/item/part/gun = 2, /obj/item/part/gun/grip/black = 1, /obj/item/part/gun/mechanism/autorifle = 1, /obj/item/part/gun/barrel/clrifle = 1)
+	gun_parts = list(/obj/item/part/gun = 2, /obj/item/part/gun/grip/black = 1, /obj/item/part/gun/mechanism/boltgun = 1, /obj/item/part/gun/barrel/clrifle = 1)
 
-/obj/item/gun/projectile/automatic/survivalrifle/Initialize()
+/obj/item/gun/projectile/boltgun/survivalrifle/Initialize()
 	. = ..()
 	update_icon()
 
-/obj/item/gun/projectile/automatic/survivalrifle/update_icon()
+/obj/item/gun/projectile/boltgun/survivalrifle/update_icon()
 	if(wielded_item_state)
 		if(icon_contained)//If it has it own icon file then we want to pull from that.
 			if(wielded)
@@ -61,6 +61,10 @@
 
 	var/iconstring = initial(icon_state)
 	var/itemstring = ""
+	if (bolt_open)
+		iconstring += "_open"
+	else
+		iconstring += "_closed"
 
 	if (silenced)
 		itemstring += "_s"

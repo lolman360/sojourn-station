@@ -62,7 +62,7 @@
 
 /obj/item/gun/projectile/revolver/rev10/mateba
 	name = "\"Mateba\" autorevolver"
-	desc = "The \"Mateba\" autorevolver is a unique semiautomatic revolver chambered in 12mm whose patents were acquired by Seinemetall Defense GmbH for production. \
+	desc = "The \"Mateba\" autorevolver is a unique semiautomatic revolver chambered in 12.7mm whose patents were acquired by Seinemetall Defense GmbH for production. \
 			Its two-part frame is divided between cylinder and barrel, mounted atop rails on the lower grip, effectively reducing muzzle flip \
 			by aligning its bore with the operator's holding point, and sliding the whole mechanism back upon shooting thanks to its potent recoil compensator. \
 			Such a mechanism, sadly, limits the caliber of this gun to the highest bore despite having sported interchangeable barrels at some point."
@@ -92,7 +92,7 @@
 
 /obj/item/part/gun/frame/mateba
 	name = "Mateba frame"
-	desc = "A \"Mateba\" autorevolver frame. A specialized, recoil-absorbing revolver frame for a potent firearm chambered in 12mm."
+	desc = "A \"Mateba\" autorevolver frame. A specialized, recoil-absorbing revolver frame for a potent firearm chambered in 12.7mm."
 	icon_state = "frame_mateba"
 	result = /obj/item/gun/projectile/revolver/rev10/mateba
 	gripvars = list(/obj/item/part/gun/grip/wood)

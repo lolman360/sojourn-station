@@ -687,7 +687,7 @@
 	name = "Fuhrerole"
 	id = "fuhrerole"
 	description = "Harvested from Fuhrer roaches."
-	taste_description = "third reich"
+	taste_description = "cockroach guts and raw meat"
 	reagent_state = LIQUID
 	color = "#a6b85b"
 	overdose = 16

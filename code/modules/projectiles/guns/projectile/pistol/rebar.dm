@@ -1,6 +1,6 @@
 /obj/item/gun/projectile/rebar
 	name = "\"Rebar\" heavy pistol"
-	desc = "A GP heavy pistol that could punch a whole into several layers of plasteel. Uses 12mm rounds. Also has the ablity to have a Master Unmaker integrated into it."
+	desc = "A GP heavy pistol that could punch a whole into several layers of plasteel. Uses 12.7mm rounds. Also has the ablity to have a Master Unmaker integrated into it."
 	icon = 'icons/obj/guns/projectile/rebar.dmi'
 	icon_state = "type_90"
 	item_state = "type_90"

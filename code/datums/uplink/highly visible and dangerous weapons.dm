@@ -31,12 +31,12 @@
 	path = /obj/item/storage/box/syndie_kit/pistol
 
 /datum/uplink_item/item/visible_weapons/socom
-	name = "Silenced 12mm pistol"
+	name = "Silenced 12.7mm pistol"
 	item_cost = 8
 	path = /obj/item/storage/box/syndie_kit/hpistol
 
 /datum/uplink_item/item/visible_weapons/painrevolver
-	name = "12mm Hornet Revolver"
+	name = "12.7mm Hornet Revolver"
 	item_cost = 8
 	path = /obj/item/storage/box/syndie_kit/painrevolver
 

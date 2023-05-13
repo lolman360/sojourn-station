@@ -417,31 +417,31 @@
 
 
 
-// 12mm Kurtz mags and speed loaders
+// 12.7mm Kurtz mags and speed loaders
 //mags
 
 /datum/design/autolathe/ammo/kurtz_rubber
-	name = "magazine (12mm rubber)"
+	name = "magazine (12.7mm rubber)"
 	build_path = /obj/item/ammo_magazine/kurtz_50/rubber
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz
-	name = "magazine (12mm)"
+	name = "magazine (12.7mm)"
 	build_path = /obj/item/ammo_magazine/kurtz_50
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz_lethal
-	name = "magazine (12mm hollow point)"
+	name = "magazine (12.7mm hollow point)"
 	build_path = /obj/item/ammo_magazine/kurtz_50/lethal
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz_practice
-	name = "magazine (12mm practice)"
+	name = "magazine (12.7mm practice)"
 	build_path = /obj/item/ammo_magazine/kurtz_50/practice
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz_hv
-	name = "magazine (12mm high-velocity)"
+	name = "magazine (12.7mm high-velocity)"
 	build_path = /obj/item/ammo_magazine/kurtz_50/hv
 	materials = list(MATERIAL_STEEL = 2)
 
@@ -449,53 +449,53 @@
 //speed loaders
 
 /datum/design/autolathe/ammo/slkurtz_rubber
-	name = "speed loader (12mm rubber)"
+	name = "speed loader (12.7mm rubber)"
 	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_50/rubber
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz
-	name = "speed loader (12mm Kurtz)"
+	name = "speed loader (12.7mm Kurtz)"
 	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_50
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz_lethal
-	name = "speed loader (12mm hollow point)"
+	name = "speed loader (12.7mm hollow point)"
 	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_50/lethal
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz_practice
-	name = "speed loader (12mm practice)"
+	name = "speed loader (12.7mm practice)"
 	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_50/practice
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz_hv
-	name = "speed loader (12mm high-velocity)"
+	name = "speed loader (12.7mm high-velocity)"
 	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_50/highvelocity
 	materials = list(MATERIAL_STEEL = 1)
 
-//12mm Kurtz boxes
+//12.7mm Kurtz boxes
 /datum/design/autolathe/ammo/kurtz_ammobox
-	name = "ammunition box (12mm)"
+	name = "ammunition box (12.7mm)"
 	build_path = /obj/item/ammo_magazine/ammobox/kurtz_50
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_rubber
-	name = "ammunition box (12mm rubber)"
+	name = "ammunition box (12.7mm rubber)"
 	build_path = /obj/item/ammo_magazine/ammobox/kurtz_50/rubber
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_practice
-	name = "ammunition box (12mm practice)"
+	name = "ammunition box (12.7mm practice)"
 	build_path = /obj/item/ammo_magazine/ammobox/kurtz_50/practice
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_hv
-	name = "ammunition box (12mm high-velocity)"
+	name = "ammunition box (12.7mm high-velocity)"
 	build_path = /obj/item/ammo_magazine/ammobox/kurtz_50/hv
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_lethal
-	name = "ammunition box (12mm hollow point)"
+	name = "ammunition box (12.7mm hollow point)"
 	build_path = /obj/item/ammo_magazine/ammobox/kurtz_50/lethal
 	materials = list(MATERIAL_STEEL = 12)
 

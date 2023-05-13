@@ -69,10 +69,10 @@
 			"7 points: EMPTY 10mm pistol magazine" = list(7, /obj/item/ammo_magazine/magnum_40/empty)
 			),
 		CAL_50 = list(
-			"8 points, 6 ammo: 12mm ammo pile" = list(8, /obj/item/ammo_casing/kurtz_50/prespawned),
-			"8 points: EMPTY 12mm heavy pistol magazine" = list(8, /obj/item/ammo_magazine/kurtz_50/empty),
-			"10 points, 6 ammo: 12mm speedloader" = list(10, /obj/item/ammo_magazine/speed_loader_kurtz_50),
-			"26 points, 24 ammo: 12mm ammo box" = list(26, /obj/item/ammo_magazine/ammobox/kurtz_50) // Same price for all packets, except 4 less ammo
+			"8 points, 6 ammo: 12.7mm ammo pile" = list(8, /obj/item/ammo_casing/kurtz_50/prespawned),
+			"8 points: EMPTY 12.7mm heavy pistol magazine" = list(8, /obj/item/ammo_magazine/kurtz_50/empty),
+			"10 points, 6 ammo: 12.7mm speedloader" = list(10, /obj/item/ammo_magazine/speed_loader_kurtz_50),
+			"26 points, 24 ammo: 12.7mm ammo box" = list(26, /obj/item/ammo_magazine/ammobox/kurtz_50) // Same price for all packets, except 4 less ammo
 			),
 		CAL_SHOTGUN = list(
 			"3 points, 5 ammo: Scrap beanbags pile" = list(3, /obj/item/ammo_casing/shotgun/beanbag/scrap/prespawned),
@@ -138,12 +138,12 @@
 			"2 points: blue flare x1" = list(2, /obj/item/ammo_casing/flare/blue),
 			"2 points: green flare x1" = list(2, /obj/item/ammo_casing/flare/green)
 			),
-		//CAL_BALL = list(
-		//	"1 point, 4 ammo: 17mm ball ammo pile" = list(1, /obj/item/ammo_casing/ball/prespawned),
-		//	"15 points, 30 ammo: 17mm ball ammo box" = list(15, /obj/item/ammo_magazine/ammobox/ball)
-		//	),
+		CAL_BALL = list(
+			"1 point, 4 ammo: musket ball ammo pile" = list(1, /obj/item/ammo_casing/ball/prespawned),
+			"15 points, 30 ammo: musket ball ammo box" = list(15, /obj/item/ammo_magazine/ammobox/ball)
+			),
 		CAL_70 = list(
-			"26 points: EMPTY 19mm Gyrojet magazine" = list(26, /obj/item/ammo_magazine/a75/empty)
+			"26 points: EMPTY 16.5mm Gyrojet magazine" = list(26, /obj/item/ammo_magazine/a75/empty)
 			)
 		)
 

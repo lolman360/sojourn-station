@@ -1,6 +1,6 @@
 /obj/item/gun/projectile/basilisk
 	name = "\"Basilisk\" heavy pistol"
-	desc = "A distant relative of the Lamia produced by Holland & Sullivan. Robust and straight, this is a gun for a leader, not just an officer. Uses 12mm."
+	desc = "A distant relative of the Lamia produced by Holland & Sullivan. Robust and straight, this is a gun for a leader, not just an officer. Uses 12.7mm."
 	icon = 'icons/obj/guns/projectile/basilisk.dmi'
 	icon_state = "basilisk"
 	item_state = "basilisk"

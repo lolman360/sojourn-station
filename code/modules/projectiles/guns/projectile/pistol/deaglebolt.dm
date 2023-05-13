@@ -46,6 +46,6 @@
 	else if (caliber == CAL_MAGNUM)
 		caliber = CAL_50
 		fire_sound = initial(fire_sound)
-		visible_message(SPAN_NOTICE("\The [usr] clicks a button on \the [src], a beep and a metallic whirr are heard before it changes to 12mm heavy pistol caliber!"), \
+		visible_message(SPAN_NOTICE("\The [usr] clicks a button on \the [src], a beep and a metallic whirr are heard before it changes to 12.7mm heavy pistol caliber!"), \
 		SPAN_NOTICE("You hear something metallic whirr and beep."))
 	refresh_upgrades()

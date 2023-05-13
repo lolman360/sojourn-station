@@ -10,7 +10,7 @@
 	id = "spider_infestation"
 	name = "spider infestation"
 
-	weight = 0.6
+	weight = 0.3
 
 	event_type = /datum/event/spider_infestation
 	event_pools = list(EVENT_LEVEL_MODERATE = POOL_THRESHOLD_MODERATE*1.1)

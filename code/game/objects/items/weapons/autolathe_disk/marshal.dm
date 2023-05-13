@@ -170,10 +170,10 @@
 		/datum/design/autolathe/ammo/smg_magnum_40_practice = 0
 		)
 
-// 12mm Heavy Pistol
+// 12.7mm Heavy Pistol
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/amnesty
-	disk_name = "NM - 12mm Amnesty Handgun"
+	disk_name = "NM - 12.7mm Amnesty Handgun"
 	icon_state = "marshal"
 
 	license = 8
