@@ -162,6 +162,22 @@
 		list(QUALITY_ADHESIVE, 10, "time" = 60)
 	)
 
+/datum/craft_recipe/storage/quickdraw_sheath
+	name = "quickdraw sheath"
+	result = /obj/item/storage/pouch/small_generic/leather
+	icon_state = "clothing"
+	steps = list(
+		list(CRAFT_MATERIAL, 3, MATERIAL_STEEL, "time" = 60),
+		list(QUALITY_CUTTING, 10, "time" = 50),
+		list(/obj/item/stack/cable_coil, 10, "time" = 20),
+		list(QUALITY_WIRE_CUTTING, 10, 30),
+		list(CRAFT_MATERIAL, 6, MATERIAL_LEATHER, "time" = 30),
+		list(QUALITY_CUTTING, 10, "time" = 50),
+		list(QUALITY_ADHESIVE, 10, "time" = 60)
+	)
+
+/obj/item/clothing/accessory/holster/saber/greatsword
+
 /datum/craft_recipe/storage/backpack/militia
 	name = "blackshield backpack"
 	result = /obj/item/storage/backpack/militia
