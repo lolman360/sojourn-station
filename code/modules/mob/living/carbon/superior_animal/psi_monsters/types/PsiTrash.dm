@@ -54,7 +54,7 @@
 	leach_on_odds = 30
 	can_leach = TRUE
 	steal_odds = 10
-	stat_to_steal = STAT_VIV
+	stat_to_steal = STAT_COG
 	steal_amount = -2
 
 /mob/living/carbon/superior_animal/psi_monster/pus_maggot/summoned
