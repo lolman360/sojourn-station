@@ -108,28 +108,36 @@
 	bolt_open = !bolt_open
 	if(bolt_open)
 		var/print_string = "You work the bolt open."
-		if(loaded.len)
+		if(contents.len || loaded.len)
 			if(chambered)
-				if(eject_animatio && loaded.len) // Our bullet animation check
+				if(eject_animatio && loaded.len) //Are bullet amination check
 					if(silenced)
 						flick("bullet_eject_s", src)
 					else
 						flick("bullet_eject", src)
+				if(chambered.is_caseless && !chambered.BB)
+					loaded -= chambered
+					QDEL_NULL(chambered)
+				else
 					print_string = "You work the bolt open, ejecting [chambered]!"
 					chambered.forceMove(get_turf(src))
 					loaded -= chambered
 					chambered = null
 			else
-				if(eject_animatio && loaded.len) // Our bullet animation check
+				if(eject_animatio && loaded.len) //Are bullet amination check
 					if(silenced)
 						flick("bullet_eject_s", src)
 					else
 						flick("bullet_eject", src)
 				if(LAZYLEN(loaded))
 					var/obj/item/ammo_casing/B = loaded[loaded.len]
-					print_string = "You work the bolt open, ejecting [B]!"
-					B.forceMove(get_turf(src))
-					loaded -= B
+					if(B.is_caseless && !B.BB)
+						loaded -= B
+						QDEL_NULL(B)
+					else
+						print_string = "You work the bolt open, ejecting [B]!"
+						B.forceMove(get_turf(src))
+						loaded -= B
 
 		to_chat(user, SPAN_NOTICE(print_string))
 	else
