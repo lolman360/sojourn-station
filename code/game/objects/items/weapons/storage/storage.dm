@@ -487,9 +487,10 @@
 			to_chat(usr, "[src] now picks up one item at a time.")
 
 /obj/item/storage/proc/collectItems(var/turf/target, var/mob/user)
-	ASSERT(istype(target))
+	if(!isturf(target))
+		return
 	. = FALSE
-	var/limiter = 15
+	var/limiter = 60
 	for(var/obj/item/I in target)
 		if(--limiter < 0)
 			break
