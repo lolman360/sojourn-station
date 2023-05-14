@@ -156,23 +156,6 @@
 				"crayongreen" = 2,\
 				"crayonblue" = 2,\
 				"crayonpurple" = 2))
-
-// Used in admin testing so I don't have to constantly var edit myself to be nearsighted
-/obj/item/device/camera/crayon_mage
-	desc = "Why is the flash on the back...?"
-	name = "camera"
-	pictures_left = 0
-
-/obj/item/device/camera/crayon_mage/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/device/camera_film))
-		to_chat(user, "<span class='warning'>Strange. The film seems to keep popping out.</span>")
-
-/obj/item/device/camera/crayon_mage/attack_self(mob/user)
-	if(user)
-		to_chat(user, "The camera goes off in your face!")
-		playsound(loc, pick('sound/items/polaroid1.ogg', 'sound/items/polaroid2.ogg'), 75, 1, -3)
-		user.disabilities|=NEARSIGHTED
-
 // BLOOD FONT!!!
 /obj/structure/sink/basion/crayon
 	name = "blood basin"
@@ -315,7 +298,7 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 /obj/effect/decal/cleanable/crayon/attackby(obj/item/I, mob/living/carbon/human/M)
 	..()
 	if(istype(I, /obj/item/oddity/common/book_unholy) || istype(I, /obj/item/oddity/common/book_omega))
-		if(M.disabilities&NEARSIGHTED && is_rune && M.species?.reagent_tag != IS_SYNTHETIC)
+		if(is_rune && M.species?.reagent_tag != IS_SYNTHETIC)
 			//Anti-Death check
 			if(M.maxHealth <= 30)
 				to_chat(M, "<span class='info'>You try to do as the book describes but your frail body condition physically prevents you from even mumbling a single word out of its pages.</span>")
@@ -414,7 +397,7 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 
 // Ritual Knife spell procs
 	if(istype(I, /obj/item/tool/knife/ritual) || istype(I, /obj/item/tool/knife/neotritual))
-		if(M.disabilities&NEARSIGHTED && is_rune && M.species?.reagent_tag != IS_SYNTHETIC)
+		if(is_rune && M.species?.reagent_tag != IS_SYNTHETIC)
 
 			//Anti-Death check
 			if(M.maxHealth <= 30)
@@ -535,11 +518,11 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	M.add_language(LANGUAGE_CULT)
 	to_chat(M, "<span class='warning'>Your head throbs like a maddening heartbeat, eldritch knowledge gnawing open the doors of your psyche and crawling inside, granting you a glimpse of languages older than time itself. The heart pounds in synchrony, making up for the price of blood in exchange.</span>")
 	playsound(M, 'sound/effects/singlebeat.ogg', 100)
-	M.maxHealth -= 20
-	M.health -= 20
+	M.apply_effect(20, STUTTER)
+	M.adjustOxyLoss(60)
 	B.remove_self(50)
 	M.sanity.changeLevel(-5)
-	M.unnatural_mutations.total_instability += 15
+	M.unnatural_mutations.total_instability += 10
 	return
 
 // Ignorance: Basically become impervious to telepathic messages from psions.
@@ -547,8 +530,8 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	var/datum/reagent/organic/blood/B = M.get_blood()
 	M.psi_blocking_additive = 50
 	to_chat(M, "<span class='warning'>Your mind feels like an impenetrable fortress against psionic assaults. Your heart is beating like a drum, exerting itself to recover the blood paid for your boon.</span>")
-	M.maxHealth -= 5
-	M.health -= 5
+	M.apply_effect(20, DIZZY)
+	M.adjustBrainLoss(5)
 	B.remove_self(50)
 	M.sanity.changeLevel(-35)
 	return
@@ -567,8 +550,8 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 			greater.faction = "Living Dead"
 			greater.maxHealth *= 0.5
 			greater.health *= 0.5
-			M.maxHealth -= 25
-			M.health -= 25
+			M.maxHealth -= 10
+			M.health -= 10
 			B.remove_self(70)
 			M.sanity.changeLevel(-10)
 			return
@@ -583,8 +566,8 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 			lesser.faction = "Living Dead"
 			lesser.maxHealth *= 0.5
 			lesser.health *= 0.5
-			M.maxHealth -= 25
-			M.health -= 25
+			M.maxHealth -= 10
+			M.health -= 10
 			B.remove_self(50)
 			M.sanity.changeLevel(-10)
 			return
@@ -603,7 +586,6 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	return
 
 // Sight: Removes your Nearsighted and blind disabilities, if you have them
-// You will be unable to use crayon magic again unless you somehow gain it through mutations/genetics
 /obj/effect/decal/cleanable/crayon/proc/sight_spell(mob/living/carbon/human/M)
 	var/datum/reagent/organic/blood/B = M.get_blood()
 	if(M.disabilities&NEARSIGHTED)
@@ -634,7 +616,6 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	return
 
 // The End: Removes your nearsighted disability, but also your knowledge of cult and occult languages
-// Basically wiping yourself clean of everything caused by crayon magic, but making you unable to cast spells again
 /obj/effect/decal/cleanable/crayon/proc/end_spell(mob/living/carbon/human/M)
 	var/datum/reagent/organic/blood/B = M.get_blood()
 	to_chat(M, "<span class='warning'>The truth of the universe flashes before your eyes at a sickening speed, eldritch knowledge being forcefully vacuumed out of your psyche. The light! It burns! IT BURNS!!!</span>")
@@ -645,12 +626,8 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	for(var/datum/language/L in M.languages)
 		if(L.name == LANGUAGE_CULT)
 			M.remove_language(LANGUAGE_CULT)
-			M.maxHealth += 5 // Give us a small amount of health back too
-			M.health += 5
 		if(L.name == LANGUAGE_OCCULT)
 			M.remove_language(LANGUAGE_OCCULT)
-			M.maxHealth += 5
-			M.health += 5
 	return
 
 // Flux: Causes additional bluespace entropy upon the world. Truly devilish.
@@ -705,8 +682,8 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	if(M.stats.getPerk(PERK_SCRIBE))
 		to_chat(M, SPAN_WARNING("The paths of the Alchemist and the Scribe are mutually exclusive."))
 		return
-	M.maxHealth -= 25
-	M.health -= 25
+	M.Weaken(3)
+	M.adjustToxLoss(25)
 	B.remove_self(50)
 	M.stats.addPerk(PERK_ALCHEMY)
 	M.sanity.changeLevel(15)
@@ -716,8 +693,8 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 // Bees: NOT THE BEES!! Invokes a gigantic bee per funflower on a five-tiles radius around the spell circle
 /obj/effect/decal/cleanable/crayon/proc/bees_spell(mob/living/carbon/human/M)
 	var/datum/reagent/organic/blood/B = M.get_blood()
-	M.maxHealth -= 10
-	M.health -= 10
+	M.adjustToxLoss(10)
+	M.take_overall_damage(10)
 	for(var/obj/item/reagent_containers/food/snacks/grown/G in oview(5))
 		if(G.name == "sunflower") // Apply all costs ONLY if the plant is the correct one!!!
 			to_chat(M, "<span class='info'>Distant voices scream in agony from every direction: NOT THE BEES!</span>")
@@ -734,7 +711,7 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	for(var/obj/item/storage/pill_bottle/dice/frodo in oview(1))
 		B.remove_self(50)
 		M.sanity.changeLevel(-50) //not always going to break you. But will tank your sanity.
-		to_chat(M, "<span class='warning'>The dice bag gives a loud pop.</span>")
+		to_chat(M, "<span class='warning'>The dice bag pops.</span>")
 		new /obj/item/crayon_pouch(frodo.loc)
 		qdel(frodo)
 	return
@@ -753,8 +730,8 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 		M.stats.addPerk(PERK_SCRIBE)
 		M.sanity.changeLevel(20)
 		B.remove_self(100)
-		M.maxHealth -= 25
-		M.health -= 25
+		M.Weaken(3)
+		M.take_organ_damage(40)
 		to_chat(M, "<span class='warning'>Your head throbs like a heartbeat, the sudden insight of knowledge on how to pen down your dissasociated thoughts into scrolls fogs your eyes, until you can see no more.</span>")
 		qdel(P)
 	return
@@ -765,21 +742,19 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	var/datum/reagent/organic/blood/B = M.get_blood()
 	for(var/obj/item/tool/knife/ritual/knifey in oview(1)) // No ascending church knives
 		if(istype(knifey, /obj/item/tool/knife/ritual) && !istype(knifey, /obj/item/tool/knife/ritual/sickle) && !istype(knifey, /obj/item/tool/knife/ritual/blade))
-			to_chat(M, "<span class='warning'>Your weapon twists its form, metal bending as if it were flesh with a sickening crunch!</span>")
+			to_chat(M, "<span class='warning'>The ritual knife explodes into a cloud of metal fragments, blasting you with shrapnel! The sickle reconstitutes shortly afterwards, pulling the embedded metal out of your body.</span>")
 			playsound(loc, 'sound/items/biotransform.ogg', 50)
 			new /obj/item/tool/knife/ritual/sickle(knifey.loc)
 			B.remove_self(100)
-			M.maxHealth -= 5
-			M.health -= 5
+			M.take_overall_damage(40)
 			M.sanity.changeLevel(-5)
 			qdel(knifey)
 		if(istype(knifey, /obj/item/tool/knife/ritual/sickle) && !istype(knifey, /obj/item/tool/knife/ritual/blade))
-			to_chat(M, "<span class='warning'>Your weapon twists its form, metal bending as if it were flesh with a sickening crunch as is ascends into its final form!</span>")
+			to_chat(M, "<span class='warning'>The ritual knife explodes into a cloud of small, jagged fragments, blasting you with shrapnel! The knife reconstitutes and ascends shortly afterwards, pulling the embedded metal out of your body.</span>")
 			playsound(loc, 'sound/items/biotransform.ogg', 50)
 			new /obj/item/tool/knife/ritual/blade(knifey.loc)
 			B.remove_self(100)
-			M.maxHealth -= 5
-			M.health -= 5
+			M.take_overall_damage(100)
 			M.sanity.changeLevel(-10)
 			qdel(knifey)
 	return
@@ -844,10 +819,10 @@ obj/item/scroll/attackby(obj/item/I, mob/living/carbon/human/M)
 	M.add_language(LANGUAGE_OCCULT)
 	to_chat(M, "<span class='warning'>Your head throbs like a maddening heartbeat, eldritch knowledge gnawing open the doors of your psyche and crawling inside, granting you a glimpse of languages older than time itself. The heart pounds in synchrony, making up for the price of blood in exchange.</span>")
 	playsound(M, 'sound/effects/singlebeat.ogg', 80)
-	M.maxHealth -= 20
-	M.health -= 20
+	M.apply_effect(20, STUTTER)
+	M.adjustOxyLoss(80)
 	B.remove_self(50)
-	M.unnatural_mutations.total_instability += 15
+	M.unnatural_mutations.total_instability += 10
 	M.sanity.changeLevel(-20)
 	return
 
@@ -1186,7 +1161,7 @@ obj/item/scroll/proc/example_spell(mob/living/carbon/human/M) //testing spell
 	light_rune.desc = "A bright rune giving off vibrant light."
 	light_rune.color = "#FFFF00"
 	B.remove_self(20)
-	bluespace_entropy(20, get_turf(src), TRUE) //high entropy cost. Low blood cost.
+	bluespace_entropy(5, get_turf(src), TRUE) //low entropy cost. Low blood cost.
 	ScrollBurn()
 
 // Mightier: Invokes throwing crayons whose strength gets higher the lower our max HP is.

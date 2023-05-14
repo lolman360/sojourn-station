@@ -22,9 +22,9 @@
 			/obj/item/reagent_containers/food/snacks/cube/roach/roachling = custom_good_amount_range(list(1, 5)),
 			/obj/item/reagent_containers/food/snacks/cube/roach = custom_good_amount_range(list(1, 5)),
 			/obj/item/reagent_containers/food/snacks/cube/roach/jager = custom_good_amount_range(list(1, 5)),
-			/obj/item/reagent_containers/food/snacks/cube/roach/seuche = custom_good_amount_range(list(1, 5)),
-			/obj/item/reagent_containers/food/snacks/cube/roach/panzer = custom_good_amount_range(list(1, 5)),
-			/obj/item/reagent_containers/food/snacks/cube/roach/grestrahlte = custom_good_amount_range(list(1, 5))
+			/obj/item/reagent_containers/food/snacks/cube/roach/seuche = custom_good_amount_range(list(1, 4)),
+			/obj/item/reagent_containers/food/snacks/cube/roach/panzer = custom_good_amount_range(list(1, 2)),
+			/obj/item/reagent_containers/food/snacks/cube/roach/grestrahlte = custom_good_amount_range(list(1, 4))
 		),
 		"Roach Toxins" = list(
 			/obj/item/reagent_containers/glass/bottle/trade/blattedin = good_data("blattedin bottle", list(-1, 2), 600),

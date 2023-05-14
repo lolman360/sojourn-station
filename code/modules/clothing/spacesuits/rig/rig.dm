@@ -41,17 +41,12 @@
 	obscuration = LIGHT_OBSCURATION
 	tool_qualities = list(QUALITY_ARMOR = 100)
 	max_upgrades = 1
-	blacklist_upgrades = list(
-							/obj/item/tool_upgrade/augment = TRUE,
-							/obj/item/tool_upgrade/refinement = TRUE,
-							/obj/item/gun_upgrade = TRUE, // No tacticool rigs
-							/obj/item/tool_upgrade/artwork_tool_mod = TRUE)
 	var/interface_path = "hardsuit.tmpl"
 	var/ai_interface_path = "hardsuit.tmpl"
 	var/interface_title = "Hardsuit Controller"
 	var/wearer_move_delay //Used for AI moving.
 	var/ai_controlled_move_delay = 10
-	var/aimove_power_usage = 200							  // Power usage per tile traveled when suit is moved by AI in IIS. In joules.
+	var/aimove_power_usage = 8							  // Power usage per tile traveled when suit is moved by AI in IIS. In joules.
 	var/drain = 1											  // Power drained per tick when the suit is sealed. In 10 joule steps.
 
 

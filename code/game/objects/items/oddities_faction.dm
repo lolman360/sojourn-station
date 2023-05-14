@@ -467,6 +467,7 @@ No more of that.
 	var/flash_cooldown = 1 MINUTES
 	var/last_use = 0
 
+
 /obj/item/tool/sword/crusader/nt_sword_truth/wield(mob/living/user)
 	..()
 	set_light(l_range = 4, l_power = 3)
@@ -492,6 +493,9 @@ No more of that.
 	..()
 
 /obj/item/tool/sword/crusader/nt_sword_truth/attack_self(mob/user)
+	if(isBroken)
+		to_chat(user, SPAN_WARNING("\The [src] is broken."))
+		return
 	if(!wielded)
 		to_chat(user, SPAN_WARNING("You cannot use [src] special ability with one hand!"))
 		return

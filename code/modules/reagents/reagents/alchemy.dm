@@ -1,8 +1,8 @@
 /datum/reagent/iron_skin_brew
 	name = "Ironskin draught"
 	id = "iron_skin_brew"
-	description = "A mix of metals and salts boiled into one another, said to be able to make people take more physical punishment, \
-				   with the drawback of making your metallic coating more vulnerable to fire. It also makes breathing harder..."
+	description = "A mix of metals and salts boiled into one another, said to be able to make people take more physical punishment. \
+				The conductivity of metal makes one much more vulnerable to heat and flame, however. It also hardens the di "
 	taste_description = "salt of metal"
 	reagent_state = LIQUID
 	color = "#4e3f3f"
@@ -201,9 +201,9 @@
 /datum/reagent/harms/on_mob_add(mob/living/L)
 	. = ..()
 	if(!ishuman(L))
-		L.damage_through_armor(230, BRUTE, attack_flag = ARMOR_BIO)
+		L.damage_through_armor(230, BRUTE, attack_flag = ARMOR_MELEE)
 		return
-	L.damage_through_armor(20, BRUTE, attack_flag = ARMOR_BIO)
+	L.damage_through_armor(20, BRUTE, attack_flag = ARMOR_MELEE)
 
 /datum/reagent/harms/affect_touch(mob/living/L)
 	on_mob_add(L)

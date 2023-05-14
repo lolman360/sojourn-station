@@ -164,7 +164,7 @@
 	category = CAT_TOOLS
 
 /datum/design/research/item/drill_s_adv
-	name = "Long-nose Hand Drill"
+	name = "Advanced Hand Drill"
 	build_path = /obj/item/tool/surgicaldrill/adv/si
 	category = CAT_TOOLS
 

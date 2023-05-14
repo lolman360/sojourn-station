@@ -17,7 +17,7 @@
 	recommendations_needed = 1
 	inventory = list(
 		"Scientific Surplus" = list(
-			/obj/item/storage/deferred/slime = custom_good_amount_range(list(1, 3)),
+			/obj/item/storage/deferred/slime = good_data("xenobiology starter kit", list(1, 2), 2400),
 			/obj/item/storage/deferred/xenobotany = custom_good_amount_range(list(1, 3)),
 			/obj/item/storage/deferred/rnd = custom_good_amount_range(list(-1, 2)),
 			/obj/item/storage/part_replacer/mini,
