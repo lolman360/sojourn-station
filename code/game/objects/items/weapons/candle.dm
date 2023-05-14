@@ -8,7 +8,7 @@
 	light_color = COLOR_LIGHTING_ORANGE_DARK
 	var/wax = 2000
 	var/endless_burn = FALSE
-	var/lit_sanity_damage = -0.5
+	var/lit_sanity_damage = -0.6
 
 /obj/item/flame/candle/New()
 	wax = rand(800, 1000) // Enough for 27-33 minutes. 30 minutes on average.

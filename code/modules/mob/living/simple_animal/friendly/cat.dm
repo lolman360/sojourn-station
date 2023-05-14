@@ -287,11 +287,11 @@
 //Trilby
 
 /mob/living/simple_animal/cat/runtime
-	name = "Trilby"
-	real_name = "Trilby"
+	name = "Runtime"
+	real_name = "Runtime"
 	desc = "A bluespace denizen that purrs its way into our dimension when the very fabric of reality is teared apart."
-	icon_state = "runtimecat"
-	item_state = "runtimecat"
+	icon_state = "cat"
+	item_state =  "cat"
 	density = 0
 
 	status_flags = GODMODE // Bluespace cat

@@ -27,7 +27,7 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/fuhrer
 	meat_amount = 6
 
-	sanity_damage = 1
+	sanity_damage = 0.5
 
 	inherent_mutations = list(MUTATION_ROACH_BLOOD, MUTATION_ROACH_FRIEND, MUTATION_DEAF, MUTATION_TOURETTES, MUTATION_EPILEPSY)
 

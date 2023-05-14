@@ -11,7 +11,7 @@
 	icon_state = "tomato"
 
 	// AI activation for players is handled in sanity , if it has sanity damage it activates AI.
-	sanity_damage = 0.5
+	sanity_damage = 0.05
 
 	var/eating_time = 900
 

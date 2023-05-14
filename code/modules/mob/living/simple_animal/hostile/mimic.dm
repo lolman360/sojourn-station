@@ -20,7 +20,7 @@
 	melee_damage_upper = 20
 	attacktext = "attacked"
 	attack_sound = 'sound/weapons/bite.ogg'
-	sanity_damage = 1
+	sanity_damage = 1 //scary
 
 	min_oxy = 0
 	max_oxy = 0

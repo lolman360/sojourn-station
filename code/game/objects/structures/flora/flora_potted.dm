@@ -250,7 +250,7 @@
 	needs_to_maintain = FALSE
 
 /obj/structure/flora/pottedplant/clockcult
-	name = "crafted tesla bolb plant"
+	name = "crafted teslabulb plant"
 	desc = "A handmade plant-like structure of brass and lifelike bulbs, it runs on a perpetual motion mechanism that makes a strange ticking sound..."
 	icon_state = "plant-40"
 	light_range = 2

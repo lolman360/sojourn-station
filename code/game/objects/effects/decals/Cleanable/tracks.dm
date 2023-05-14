@@ -47,7 +47,7 @@ var/global/list/image/fluidtrack_cache=list()
 	var/coming_state="blood1"
 	var/going_state="blood2"
 	var/updatedtracks=0
-	sanity_damage = 0.05
+	sanity_damage = 0.005
 
 	// dir = id in stack
 	var/list/setdirs=list(

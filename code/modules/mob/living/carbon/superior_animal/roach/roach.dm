@@ -47,7 +47,7 @@
 	randpixel = 12
 	overkill_gib = 16
 
-	sanity_damage = 0.5
+	sanity_damage = 0.05
 
 	fleshcolor = "#666600"
 	bloodcolor = "#666600"

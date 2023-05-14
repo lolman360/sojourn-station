@@ -41,7 +41,7 @@ Has ability of every roach.
 
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/kaiser
 	meat_amount = 15
-	sanity_damage = 3
+	sanity_damage = 1
 	has_special_parts = TRUE
 	special_parts = list(/obj/item/animal_part/kingly_pheromone_gland)
 	ranged = TRUE // RUN, COWARD!

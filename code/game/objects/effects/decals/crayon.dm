@@ -5,7 +5,7 @@
 	layer = TURF_DECAL_LAYER
 	anchored = TRUE
 	random_rotation = 0
-	sanity_damage = 4
+	sanity_damage = 0.04
 	var/is_rune = FALSE
 
 // Mist rune, invoked by Scribe scrolls, doesn't allow laser beams to pass through it.

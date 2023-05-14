@@ -31,7 +31,7 @@
 	response_help  = "pets"
 	response_disarm = "shoos"
 	response_harm   = "stomps on"
-	sanity_damage = 3
+	sanity_damage = 0
 
 	var/emagged = 0
 	var/obj/item/held_item = null //Storage for single item they can hold.

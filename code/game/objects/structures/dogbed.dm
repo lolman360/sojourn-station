@@ -88,8 +88,6 @@
 	icon_state = "cardboard_box_empty"
 
 	if(sitting)
-		if(istype(sitting, /mob/living/simple_animal/cat/runtime))
-			add_overlay("trilby_sit")
 		else if(istype(sitting, /mob/living/simple_animal/cat/fluff)) // Not making another overlay for just one pixel of an eye, sorry Bones!
 			add_overlay("runtime_sit")
 		else
