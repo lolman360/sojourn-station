@@ -302,7 +302,7 @@
 	build_path = /obj/item/gun/projectile/revolver/judge
 
 /datum/design/autolathe/gun/trouble_shooter
-	name = "GP 7.62x39mm \"Trouble Shooter\""
+	name = "GP 7.62x39mm \"Troubleshooter\""
 	build_path = /obj/item/gun/projectile/trouble_shooter
 
 // . 4 0 8 H E A V Y  R I F L E S
@@ -403,7 +403,7 @@
 /datum/design/autolathe/gun/energygun_martin
 	name = "H&S PDW E \"Martin\""
 	build_path = /obj/item/gun/energy/gun/martin
-	
+
 /datum/design/autolathe/gun/ntpistol
 	name = "NT LP \"Serenity\""
 	build_path = /obj/item/gun/energy/ntpistol

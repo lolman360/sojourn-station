@@ -355,3 +355,11 @@
 
 /datum/genetics/mutation_recipe/combination/panther/get_result()
 	return new /datum/genetics/mutation/copy_mob(/mob/living/simple_animal/hostile/panther, "panther")
+
+//fratellis
+/datum/genetics/mutation_recipe/combination/frat
+	required_mutations = list(MUTATION_GIGANTISM)
+	required_on_clone_types = list(/mob/living/carbon/superior_animal/lodge/tatonka)
+
+/datum/genetics/mutation_recipe/combination/frat/get_result()
+	return new /datum/genetics/mutation/copy_mob(/mob/living/carbon/superior_animal/genetics/fratellis, "large mutant")
