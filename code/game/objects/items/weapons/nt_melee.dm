@@ -90,6 +90,9 @@
 	has_alt_mode = FALSE
 
 /obj/item/tool/sword/nt/scourge/attack_self(mob/user)
+	if(isBroken)
+		to_chat(user, SPAN_WARNING("\The [src] is broken."))
+		return
 	if(extended)
 		unextend()
 	else
@@ -151,6 +154,9 @@
 		embed_mult = 0.2
 	else
 		embed_mult = initial(embed_mult)
+	if(isBroken)
+		force = WEAPON_FORCE_NORMAL
+		throwforce = WEAPON_FORCE_HARMLESS
 
 /obj/item/tool/sword/nt/spear/dropped(mob/living/W)
 	embed_mult = 600
@@ -197,6 +203,9 @@
 		return
 	if(CI.power < 20)
 		to_chat(user, SPAN_WARNING("You do not have enough power to light up the beacon!"))
+		return
+	if(isBroken)
+		to_chat(user, SPAN_WARNING("The [src] is broken."))
 		return
 	if(glowing)
 		to_chat(user, SPAN_WARNING("The flanged mace is still lit up."))

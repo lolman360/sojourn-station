@@ -18,7 +18,7 @@
 	suitable_cell = /obj/item/cell/small
 
 /obj/item/tool/surgicaldrill/adv
-	name = "long-nose hand drill"
+	name = "advanced hand drill"
 	desc = "A handheld drill with a longer and more durable drill, for precision drilling."
 	icon_state = "longdrill"
 	force = WEAPON_FORCE_ROBUST

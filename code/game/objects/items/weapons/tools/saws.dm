@@ -22,11 +22,11 @@
 
 /obj/item/tool/saw/onestar_saw
 	name = "Greyson Positronic saw"
-	desc = "A rather robust hand saw for cutting down trees quickly and cleanly."
+	desc = "A robust hand saw for cutting down trees quickly and cleanly."
 	icon_state = "one_star_metal_saw"
 	force = WEAPON_FORCE_PAINFUL
 	tool_qualities = list(QUALITY_SAWING = 60, QUALITY_CUTTING = 45, QUALITY_WIRE_CUTTING = 25)
-	degradation = 2
+	degradation = 0.6
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_PLASTIC = 1, MATERIAL_PLATINUM = 2)
 	max_upgrades = 2
 	workspeed = 1.2

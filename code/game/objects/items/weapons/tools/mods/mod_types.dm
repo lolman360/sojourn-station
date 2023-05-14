@@ -69,7 +69,7 @@
 	UPGRADE_FORCE_MOD = 1,
 	UPGRADE_PRECISION = -5,
 	UPGRADE_BULK = 1)
-	I.prefix = "reinforced"
+	I.prefix = "plated"
 	I.required_qualities = list(QUALITY_BOLT_TURNING, QUALITY_PULSING, QUALITY_PRYING, QUALITY_WELDING, QUALITY_SCREW_DRIVING, QUALITY_WIRE_CUTTING, QUALITY_SHOVELING, QUALITY_DIGGING, QUALITY_EXCAVATION, QUALITY_CLAMPING, QUALITY_CAUTERIZING, QUALITY_RETRACTING, QUALITY_DRILLING, QUALITY_HAMMERING, QUALITY_SAWING, QUALITY_CUTTING)
 
 /obj/item/tool_upgrade/reinforcement/guard
@@ -137,7 +137,7 @@
 	UPGRADE_HEALTH_THRESHOLD = 40
 	)
 	I.required_qualities = list(QUALITY_CUTTING, QUALITY_DRILLING, QUALITY_SAWING, QUALITY_DIGGING, QUALITY_EXCAVATION, QUALITY_WELDING, QUALITY_HAMMERING)
-	I.prefix = "rubber-wrapped"
+	I.prefix = "mesh-wrapped"
 
 // 	 PRODUCTIVITY: INCREASES WORKSPEED
 //------------------------------------------------
@@ -377,7 +377,7 @@
 		GUN_UPGRADE_RECOIL = 1.3,
 		GUN_UPGRADE_FIRE_DELAY_MULT = 1.3
 		)
-	I.prefix = "plasma-fueled"
+	I.prefix = "plasma-injected"
 	I.req_fuel_cell = REQ_FUEL
 	I.gun_loc_tag = GUN_BARREL
 	I.req_gun_tags = list(GUN_ENERGY)
@@ -409,7 +409,7 @@
 		GUN_UPGRADE_RECOIL = 1.5,
 		GUN_UPGRADE_FIRE_DELAY_MULT = 0.8
 		)
-	I.prefix = "rocket-assisted "
+	I.prefix = "rocket-assisted"
 	I.req_fuel_cell = REQ_FUEL_OR_CELL
 	I.gun_loc_tag = GUN_MECHANISM
 	I.req_gun_tags = list(GUN_PROJECTILE)
@@ -493,36 +493,37 @@
 	UPGRADE_PRECISION = 10
 	)
 	I.required_qualities = list(QUALITY_SCREW_DRIVING, QUALITY_BOLT_TURNING, QUALITY_CLAMPING, QUALITY_BONE_SETTING, QUALITY_PULSING, QUALITY_SHOVELING, QUALITY_DIGGING)
-	I.prefix = "magnetic tipped"
+	I.prefix = "magnetic"
 
 /obj/item/tool_upgrade/refinement/ported_barrel // Faster tool but more costly, stronger gun but more unwieldy
-	name = "composite barrel"
-	desc = "A barrel extension for a welding tool (or gun) which increases gas pressure on either torch or gun. When attached to a gun it allows for greater stopping power at the cost of recoil control and firerate."
+	name = "ported barrel"
+	desc = "A barrel extension for a welding tool (or gun) which helps manage gas pressure and keep the torch (or barrel) steady. When attached to a gun it allows for greater recoil control and a smaller flash at the cost of stopping power."
 	icon_state = "ported_barrel"
 	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTEEL = 2)
 	preloaded_reagents = list("aluminum" = 9, "iron" = 9)
 	price_tag = 100
 
+
 /obj/item/tool_upgrade/refinement/ported_barrel/New()
 	..()
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.tool_upgrades = list(
-		UPGRADE_WORKSPEED = 0.35,
-		UPGRADE_POWERCOST_MULT = 1.05,
-		UPGRADE_FUELCOST_MULT = 1.05,
-		UPGRADE_DEGRADATION_MULT = 1.15,
-		UPGRADE_BULK = 1)
+	UPGRADE_PRECISION = 12,
+	UPGRADE_DEGRADATION_MULT = 1.15,
+	UPGRADE_BULK = 1,
+	UPGRADE_HEALTH_THRESHOLD = 10
+	)
 	I.weapon_upgrades = list(
-		GUN_UPGRADE_DAMAGE_MULT = 1.1, // Think of the guild's heavy barrel as a direct upgrade of this, as it's part of its recipe.
-		GUN_UPGRADE_FIRE_DELAY_MULT = 1.2,
-		GUN_UPGRADE_STEPDELAY_MULT = 1.1,
-		GUN_UPGRADE_RECOIL = 1.2,
-		UPGRADE_BULK = 1
+		GUN_UPGRADE_FIRE_DELAY_MULT = 0.95,
+		GUN_UPGRADE_STEPDELAY_MULT = 0.95,
+		GUN_UPGRADE_MUZZLEFLASH = 0.8,
+		GUN_UPGRADE_RECOIL = 0.8,
+		GUN_UPGRADE_DAMAGE_MULT = 0.9
 		)
 	I.req_gun_tags = list(GUN_PROJECTILE)
 	I.gun_loc_tag = GUN_MUZZLE
 	I.required_qualities = list(QUALITY_WELDING)
-	I.prefix = "composite barreled"
+	I.prefix = "ported"
 
 /obj/item/tool_upgrade/refinement/compensatedbarrel // More accurate tool but slower, faster gun but less hitting
 	name = "gravity compensated barrel"
@@ -536,10 +537,10 @@
 	..()
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.tool_upgrades = list(
-	UPGRADE_PRECISION = 15,
-	UPGRADE_DEGRADATION_MULT = 0.90,
-	UPGRADE_WORKSPEED = -0.5,
-	UPGRADE_HEALTH_THRESHOLD = 10,
+	UPGRADE_PRECISION = 20,
+	UPGRADE_DEGRADATION_MULT = 1.15,
+	UPGRADE_POWERCOST_MULT = 1.05,
+	UPGRADE_FUELCOST_MULT = 1.05,
 	UPGRADE_BULK = 1
 	)
 	I.weapon_upgrades = list(
@@ -572,7 +573,6 @@
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_RECOIL = 0.5,
 		UPGRADE_BULK = 0.5,
-		GUN_UPGRADE_PEN_MULT = 0.7
 	)
 	I.gun_loc_tag = GUN_GRIP
 	I.required_qualities = list(QUALITY_CUTTING, QUALITY_WIRE_CUTTING, QUALITY_SCREW_DRIVING, QUALITY_WELDING ,QUALITY_PULSING, QUALITY_CLAMPING, QUALITY_CAUTERIZING, QUALITY_BONE_SETTING, QUALITY_LASER_CUTTING, QUALITY_BONE_GRAFTING)
@@ -600,7 +600,7 @@
 	UPGRADE_HEALTH_THRESHOLD = -10,
 	UPGRADE_CELLPLUS = 1
 	)
-	I.prefix = "large-socketed"
+	I.prefix = "large-cell"
 	I.req_fuel_cell = REQ_CELL
 
 /obj/item/tool_upgrade/augment/cell_adapt
@@ -624,7 +624,7 @@
 	I.weapon_upgrades = list(
 	GUN_UPGRADE_CELLMINUS = 1,
 	UPGRADE_BULK = -2)
-	I.prefix = "small-socketed"
+	I.prefix = "small-cell"
 	I.req_fuel_cell = REQ_CELL
 	I.req_gun_tags = list(GUN_ENERGY)
 	I.gun_loc_tag = GUN_MECHANISM
@@ -665,7 +665,7 @@
 	UPGRADE_HEALTH_THRESHOLD = -10,
 	UPGRADE_MAXFUEL = 600
 	)
-	I.prefix = "holding"
+	I.prefix = "bluespace-expanded"
 	I.req_fuel_cell = REQ_FUEL
 	item_flags |= BLUESPACE
 	bluespace_entropy(5, get_turf(src))

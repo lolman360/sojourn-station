@@ -72,6 +72,7 @@
 	//Vars for tool upgrades
 	var/precision = 0	//Subtracted from failure rates
 	var/workspeed = 1	//Worktimes are divided by this
+	var/isBroken = FALSE
 
 
 /******************************
@@ -166,6 +167,9 @@
 	if(istype(C, suitable_cell) && !cell && insert_item(C, user))
 		src.cell = C
 		update_icon()
+		return
+	if(isBroken)
+		to_chat(user, SPAN_WARNING("\The [src] is broken."))
 		return
 	.=..()
 
@@ -516,8 +520,6 @@
 		to_chat(user, SPAN_DANGER("Your [src] broke!"))
 		new /obj/item/material/shard/shrapnel(user.loc)
 		playsound(get_turf(src), 'sound/effects/impacts/thud1.ogg', 50, 1 -3)
-		user.unEquip(src)
-		qdel(src)
 		return
 
 	new /obj/item/material/shard/shrapnel(get_turf(src))
@@ -525,7 +527,6 @@
 		var/obj/machinery/door/airlock/AD = loc
 		AD.take_out_wedged_item()
 	playsound(get_turf(src), 'sound/effects/impacts/thud1.ogg', 50, 1 -3)
-	qdel(src)
 
 /******************************
 	/* Tool Failure */
@@ -1030,6 +1031,9 @@
 
 //Triggers degradation and resource use upon attacks
 /obj/item/tool/resolve_attackby(atom/A, mob/user, params)
+	if(isBroken)
+		to_chat(user, SPAN_WARNING("\The [src] is broken."))
+		return
 	.=..()
 	//If the parent return value is true, then there won't be an attackby
 	//If there will be an attackby, we'll handle it there

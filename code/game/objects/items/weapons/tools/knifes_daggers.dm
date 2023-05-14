@@ -3,7 +3,7 @@
 
 /obj/item/tool/knife
 	name = "kitchen knife"
-	desc = "A general purpose Chef's Knife made by the Lonestar Shipping Solutions, LLC. Guaranteed to stay sharp for years to come."
+	desc = "A general purpose Chef's Knife made by Lonestar Shipping Solutions, LLC. Guaranteed to stay sharp for years to come."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "knife"
 	flags = CONDUCT
@@ -187,7 +187,7 @@
 
 /obj/item/tool/knife/dagger/ceremonial
 	name = "ceremonial dagger"
-	desc = "Given to high ranking officers as a signature of office, while it isn't meant to be a weapon it certainly does the job."
+	desc = "Given to high ranking officers as a signature of office. While it isn't meant to be a weapon, it certainly does the job."
 	icon_state = "fancydagger"
 	item_state = "fancydagger"
 	matter = list(MATERIAL_PLASTEEL = 3, MATERIAL_PLASTIC = 2, MATERIAL_GOLD = 1, MATERIAL_SILVER = 1)
