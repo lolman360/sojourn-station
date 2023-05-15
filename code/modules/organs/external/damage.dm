@@ -80,12 +80,11 @@
 
 			//Check edge eligibility
 			var/edge_eligible = 0
-			if(edge)
-				if(istype(used_weapon,/obj/item))
-					var/obj/item/W = used_weapon
-					if(W.w_class >= w_class)
-						edge_eligible = 1
-				else
+			if(isitem(used_weapon))
+				var/obj/item/I = used_weapon
+				if(I.w_class >= w_class && I.sharp)
+					edge_eligible = 1
+				if(I.edge)
 					edge_eligible = 1
 
 			switch(damage_type)
@@ -96,8 +95,6 @@
 						droplimb(FALSE, DROPLIMB_BLUNT)
 					else if((amount + prev_brute) >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
 						droplimb(FALSE, DROPLIMB_EDGE)
-					else if(brute_dam && BP_IS_ROBOTIC(src))
-						droplimb(prob(50), pick(DROPLIMB_EDGE, DROPLIMB_BLUNT))
 				if(BURN)
 					if(edge_eligible && (amount + prev_burn) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
 						droplimb(TRUE, DROPLIMB_EDGE_BURN)

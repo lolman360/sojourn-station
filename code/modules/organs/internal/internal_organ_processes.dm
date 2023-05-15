@@ -153,7 +153,9 @@
 			to_chat(src, SPAN_WARNING("Your organs feel extremely heavy"))
 	else
 		status_flags &= ~BLEEDOUT
-
+	
+	var/turf/T = get_turf(src)
+	to_chat(world, "Human at [loc] [ADMIN_JMP(T)] is processing heartwise with: heart efficiency of [heart_efficiency], blood oxygenation of [blood_oxygenation], raw bloodvol of [blood_volume_raw], %age bloodvol of [round((blood_volume_raw/species.blood_volume)*100)], effective bloodvol of [blood_volume], blood_safe of [blood_safe], blood_okay of [blood_okay], blood_bad of [blood_bad], total_blood_req of [total_blood_req]")
 	if(blood_volume < 1)
 		eye_blurry = max(eye_blurry,6)
 		adjustOxyLoss(20)
@@ -161,12 +163,12 @@
 			to_chat(src, SPAN_WARNING("You feel extremely [pick("dizzy","woosey","faint")]"))
 	else if(blood_volume < blood_bad)
 		eye_blurry = max(eye_blurry,6)
-		adjustOxyLoss(2)
+		adjustOxyLoss(3)
 		if(prob(15))
 			to_chat(src, SPAN_WARNING("You feel very [pick("dizzy","woosey","faint")]"))
 	else if(blood_volume < blood_okay)
 		eye_blurry = max(eye_blurry,6)
-		adjustOxyLoss(1.5)
+		adjustOxyLoss(2.5)
 		if(prob(15))
 			Weaken(rand(1,3))
 			to_chat(src, SPAN_WARNING("You feel very [pick("dizzy","woosey","faint")]"))
@@ -174,7 +176,7 @@
 		if(prob(1))
 			to_chat(src, SPAN_WARNING("You feel [pick("dizzy","woosey","faint")]"))
 		if(getOxyLoss() < 10)
-			adjustOxyLoss(1)
+			adjustOxyLoss(2)
 
 	// Blood loss or heart damage make you lose nutriments
 	if(blood_volume < blood_safe || heart_efficiency < BRUISED_2_EFFICIENCY)

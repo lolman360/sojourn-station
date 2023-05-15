@@ -469,7 +469,7 @@
 	// Were we able to breathe?
 	var/failed_breath = failed_inhale || failed_exhale
 	if (!failed_breath)
-		adjustOxyLoss(-5)
+		adjustOxyLoss(-1)
 
 	handle_temperature_effects(breath)
 

@@ -206,7 +206,7 @@
 			for(var/A in C.reagents.reagent_list)
 				var/datum/reagent/R = A
 				if(R.scannable)
-					reagentdata["[R.id]"] = span("highlight", "    [round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name]")
+					reagentdata["[R.id]"] = span("highlight", "    [round(C.reagents.get_reagent_amount(R.id), 0.01)]u [R.name]")
 				else
 					unknown++
 			if(reagentdata.len)
