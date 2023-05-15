@@ -42,7 +42,7 @@
 	path = /obj/item/gun_upgrade/muzzle/silencer
 
 /datum/uplink_item/item/stealthy_weapons/pain_maker
-	name = "SA \"PainMaker\" muzzle"
+	name = "SA \"Painmaker\" muzzle"
 	item_cost = 2
 	path = /obj/item/gun_upgrade/muzzle/pain_maker
 

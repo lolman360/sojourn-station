@@ -27,10 +27,10 @@
 	I.prefix = "silenced"
 
 /obj/item/gun_upgrade/muzzle/pain_maker
-	name = "SA \"PainMaker\" muzzle"
-	desc = "A threaded barrel that can be attached to the muzzle of most projectile guns. \
-	Threaded barrel device made of a coil sensor and heater. As bullets pass the device they are slowed down and heated up by the coil, causing them to deform when hitting a target and imparting all their painful energy. \
-	Typically used when taking a hostages or kidnapping."
+	name = "SA \"Painmaker\" muzzle"
+	desc = "A muzzle device that can be attached to most projectile guns. \
+	The device is a simple magnetic brake, which slows down the projectiles significantly. This rapid braking heats the projectiles, which causes extreme pain on impact. \
+	Typically used when taking hostages or kidnapping."
 	matter = list(MATERIAL_PLASTEEL = 3, MATERIAL_PLASTIC = 1)
 	icon_state = "silencer"
 	price_tag = 100
@@ -50,7 +50,7 @@
 		)
 	I.gun_loc_tag = GUN_MUZZLE
 	I.req_gun_tags = list(GUN_PROJECTILE)
-	I.prefix = "LTL"
+	I.prefix = "agonizing"
 
 
 //Decreases fire delay. Acquired through loot spawns or guild crafting
@@ -69,7 +69,7 @@
 		GUN_UPGRADE_MUZZLEFLASH = 0.75)
 	I.gun_loc_tag = GUN_BARREL
 	I.req_gun_tags = list(GUN_PROJECTILE)
-	I.prefix = "fluted barrel"
+	I.prefix = "forged barrel"
 
 //Makes a gun deal more damage. fire faster but recoil heavy
 /obj/item/gun_upgrade/barrel/bore
@@ -89,7 +89,7 @@
 		)
 	I.gun_loc_tag = GUN_BARREL
 	I.req_gun_tags = list(GUN_PROJECTILE)
-	I.prefix = "polygonal rifled"
+	I.prefix = "heavy barrel"
 
 //Increases penetration multiplier, projectile speed. Increases fire delay. Acquired via science
 /obj/item/gun_upgrade/barrel/mag_accel
@@ -110,7 +110,7 @@
 		)
 	I.gun_loc_tag = GUN_BARREL
 	I.req_gun_tags = list(GUN_PROJECTILE)
-	I.prefix = "magnetic barreled"
+	I.prefix = "magnetic-accelerated"
 
 //Adds +10 burn damage to a bullet, lowers armor penetration, adds a constant projectile offset, increases recoil and fire delay. Acquired via science
 /obj/item/gun_upgrade/barrel/overheat
@@ -132,7 +132,7 @@
 		)
 	I.gun_loc_tag = GUN_BARREL
 	I.req_gun_tags = list(GUN_PROJECTILE)
-	I.prefix = "barrel heated"
+	I.prefix = "inductive"
 
 //Meme mod that swaps the firing sound for a bike horn noises at the cost of making every single thing about the gun shitty. Too funny not to put in, takes 2 minutes to remove since its a prank item.
 /obj/item/gun_upgrade/mechanism/bikehorn
@@ -218,7 +218,7 @@
 		GUN_UPGRADE_FORCESAFETY = FALSE,
 		)
 	I.gun_loc_tag = GUN_TRIGGER
-	I.prefix = "trigger feathered"
+	I.prefix = "feather-trigger"
 
 //Disables the ability to toggle the safety, toggles the safety permanently on, takes 2 minutes to remove (yikes). Acquired through loot spawns
 /obj/item/gun_upgrade/trigger/cop_block
@@ -237,7 +237,7 @@
 	I.removal_time *= 10
 	I.gun_loc_tag = GUN_TRIGGER
 	I.breakable = FALSE
-	I.prefix = "Locked"
+	I.prefix = "locked"
 
 /obj/item/gun_upgrade/trigger/dnalock
 	name = "Soteria \"DNA lock\" Finger Imprinter Trigger"
@@ -325,7 +325,7 @@
 		)
 	I.req_gun_tags = list(GUN_PROJECTILE, GUN_CALIBRE_12MM)
 	I.gun_loc_tag = GUN_MECHANISM
-	I.prefix = "kitted"
+	I.prefix = "refined"
 
 // Rare Bluecross spawn clock cult brass kit that will make any 12.7mm cal gun into something worth ya know... using...
 // Todo make Cult spawn with this and the clockwork block
@@ -351,7 +351,7 @@
 		)
 	I.req_gun_tags = list(GUN_PROJECTILE, GUN_CALIBRE_12MM)
 	I.gun_loc_tag = GUN_MECHANISM
-	I.prefix = "brass kitted"
+	I.prefix = "ticking"
 
 //Lets any revolver be made into a fully automatic weapon, but increases recoil. Acquirable through guild crafters.
 /obj/item/gun_upgrade/mechanism/weintraub
@@ -887,7 +887,7 @@
 	I.removal_time *= rand(10, 14)/10
 	I.removal_difficulty *= rand(5, 15)/10
 	I.gun_loc_tag = GUN_MECHANISM
-	I.prefix = "trigger feathered"
+	I.prefix = ""
 
 #define TRASH_GUNMODS list(/obj/item/gun_upgrade/trigger/faulty, /obj/item/gun_upgrade/barrel/faulty, \
 		/obj/item/gun_upgrade/muzzle/faulty, /obj/item/gun_upgrade/mechanism/faulty, \
