@@ -236,12 +236,13 @@ var/list/flooring_types
 		if(M.stats.getPerk(PERK_SURE_STEP))
 			return
  // The art of calculating the vectors required to avoid tripping on the metal beams requires big quantities of brain power
-		if(prob(50 - our_trippah.stats.getStat(STAT_COG))) //50 cog makes you unable to trip
+		if(prob(20 - (our_trippah.stats.getStat(STAT_COG)/2)) ) //40 cog makes you unable to trip
 			if(!our_trippah.back)
-				to_chat(our_trippah, SPAN_WARNING("You would have tripped if you didn't balance."))
 				return
 			our_trippah.adjustBruteLoss(5)
-			our_trippah.trip(src, 6)
+			M.slip(null, 6)
+			playsound(M, 'sound/effects/bang.ogg', 50, 1)
+			to_chat(M, SPAN_WARNING("You tripped!"))
 			return
 
 //============HULL PLATING=========\\

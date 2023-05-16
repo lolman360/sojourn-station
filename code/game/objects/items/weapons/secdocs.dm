@@ -77,3 +77,6 @@
 	if(istype(owner))
 		to_chat(owner, SPAN_NOTICE("You have valuable scientific data on your person. Do not let it fall into the wrong hands."))
 
+/obj/item/oddity/secdocs/attack_hand(mob/user)
+	. = ..()
+	to_chat(user, SPAN_NOTICE("You have valuable scientific data on your person. Do not let it fall into the wrong hands."))

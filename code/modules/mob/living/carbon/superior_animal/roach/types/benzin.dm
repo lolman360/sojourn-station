@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/benzin
 	name = "Benzin Roach"
-	desc = "A monstrous, dog-sized cockroach. This one smells like welding fuel and will likely explode when shot!."
+	desc = "A monstrous, dog-sized cockroach. This one smells like welding fuel and will likely explode when shot!"
 	icon_state = "boomroach"
 	turns_per_move = 4
 	maxHealth = 25
@@ -28,10 +28,12 @@
 		explosion(src.loc, 0,1,2) //slightly weaker radius than a plasma spider, still hurts like a bitch
 
 /mob/living/carbon/superior_animal/roach/benzin/attackby(obj/item/I, mob/living/user, params)
+	if(I.is_refillable())
+		return FALSE //so we can refill them via their afterattack.
 	if(user.a_intent == I_HELP && istool(I))
 		var/obj/item/tool/T = I
 		if(T.use_fuel_cost)
-			return FALSE
+			return FALSE //so we can refill them via their afterattack.
 	. = ..()
 
 /mob/living/carbon/superior_animal/roach/benzin/fire_act()

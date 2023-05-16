@@ -18,7 +18,7 @@
 	price_tag = 400
 	damage_multiplier = 0.5 //makeshift laser
 	init_recoil = HANDGUN_RECOIL(0.2)
-	init_offset = 7 //makeshift laser
+	init_offset = 2 //first shot is fairly accurate
 	projectile_type = /obj/item/projectile/beam
 	suitable_cell = /obj/item/cell/medium
 	charge_cost = 25 // 4 bursts with a 800m cell
@@ -69,3 +69,7 @@
 	else if(istype(cell, /obj/item/cell/medium))
 		overlays += image(icon, "guild_cell")
 
+/obj/item/gun/energy/lasersmg/epic
+	name = "Disco Vazer \"Lasblender\" Mk.II"
+	init_recoil = EMBEDDED_RECOIL(-2)
+	init_offset = 20 //first shot is inaccurate
