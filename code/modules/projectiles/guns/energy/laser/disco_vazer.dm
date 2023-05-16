@@ -17,15 +17,15 @@
 	matter = list(MATERIAL_PLASTEEL = 11, MATERIAL_STEEL = 13, MATERIAL_PLASTIC = 2, MATERIAL_SILVER = 1, MATERIAL_GLASS = 2)
 	price_tag = 400
 	damage_multiplier = 0.5 //makeshift laser
-	init_recoil = HANDGUN_RECOIL(0.2)
+	init_recoil = HANDGUN_RECOIL(1)
 	init_offset = 2 //first shot is fairly accurate
 	projectile_type = /obj/item/projectile/beam
 	suitable_cell = /obj/item/cell/medium
 	charge_cost = 25 // 4 bursts with a 800m cell
 	gun_tags = list(GUN_LASER, GUN_ENERGY)
 	init_firemodes = list(
-		BURST_8_ROUND,
-		FULL_AUTO_300
+		BURST_8_ROUND_NOLOSS,
+		FULL_AUTO_600_NOLOSS
 		)
 	serial_type = "INDEX"
 	serial_shown = FALSE
@@ -68,8 +68,3 @@
 
 	else if(istype(cell, /obj/item/cell/medium))
 		overlays += image(icon, "guild_cell")
-
-/obj/item/gun/energy/lasersmg/epic
-	name = "Disco Vazer \"Lasblender\" Mk.II"
-	init_recoil = EMBEDDED_RECOIL(-2)
-	init_offset = 20 //first shot is inaccurate

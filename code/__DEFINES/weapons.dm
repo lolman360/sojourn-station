@@ -70,12 +70,16 @@ Fire delay 15 = 40 rounds per minute
 #define FULL_AUTO_150		list(mode_name = "full auto",    mode_desc = "150 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 4  , icon="auto", damage_mult_add = -0.2)
 #define FULL_AUTO_200		list(mode_name = "full auto",    mode_desc = "200 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 3  , icon="auto", damage_mult_add = -0.2)
 #define FULL_AUTO_300		list(mode_name = "full auto",    mode_desc = "300 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 2  , icon="auto", damage_mult_add = -0.2)
-#define FULL_AUTO_600		list(mode_name = "fuller auto",  mode_desc = "600 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 1  , icon="fuller", damage_mult_add = -0.2)
+#define FULL_AUTO_600		list(mode_name = "full auto",  mode_desc = "600 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 1  , icon="full", damage_mult_add = -0.2)
+#define FULL_AUTO_800		list(mode_name = "fuller auto",  mode_desc = "800 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 0.8  , icon="fuller", damage_mult_add = -0.2)
+#define FULL_AUTO_1200		list(mode_name = "fullest auto",  mode_desc = "1200 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 0.5,   icon="fuller", damage_mult_add = -0.2)
 
 #define FULL_AUTO_150_NOLOSS		list(mode_name = "full auto",    mode_desc = "150 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 4  , icon="auto")
 #define FULL_AUTO_200_NOLOSS		list(mode_name = "full auto",    mode_desc = "200 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 3  , icon="auto")
 #define FULL_AUTO_300_NOLOSS		list(mode_name = "full auto",    mode_desc = "300 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 2  , icon="auto")
-#define FULL_AUTO_600_NOLOSS		list(mode_name = "fuller auto",  mode_desc = "600 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 1,   icon="fuller")
+#define FULL_AUTO_600_NOLOSS		list(mode_name = "full auto",  mode_desc = "600 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 1,   icon="fuller")
+#define FULL_AUTO_800		list(mode_name = "fuller auto",  mode_desc = "800 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 0.8  , icon="fuller")
+#define FULL_AUTO_1200_NOLOSS		list(mode_name = "fullest auto",  mode_desc = "1200 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 0.5,   icon="fuller")
 
 #define SEMI_AUTO_NODELAY	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", burst=1, fire_delay=0, move_delay=null, icon="semi")
 #define SEMI_AUTO_SOMEDELAY	list(mode_name = "semiauto",  mode_desc = "Small Delay with chambering before fire", burst=1, fire_delay=1, move_delay=null, icon="semi")
