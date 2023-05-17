@@ -29,8 +29,8 @@
 	if(build_path)
 		var/delete_atom = FALSE
 		if(!temp_atom)
-			temp_atom = Fabricate(null, 1, null)
-			delete_atom = TRUE
+			temp_atom = new build_path(null)
+			temp_atom.Created()
 		AssembleDesignName(temp_atom)
 		AssembleDesignMaterials(temp_atom)
 		if(delete_atom)
