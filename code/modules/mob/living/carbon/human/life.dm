@@ -768,8 +768,11 @@
 
 		var/total_plasmaloss = 0
 		for(var/obj/item/I in src)
+			if(!is_worn())
+				return
 			if(I.contaminated)
 				total_plasmaloss += vsc.plc.CONTAMINATION_LOSS
+				
 		if(!(status_flags & GODMODE))
 			bloodstr.add_reagent("plasma", total_plasmaloss)
 
