@@ -9,28 +9,29 @@
 		)
 	unacidable = 1 //No longer shall our kind be foiled by lone chemists with spray bottles!
 	armor_list = list(
-		melee = 40,
+		melee = 50,
 		bullet = 40,
-		energy = 20,
-		bomb = 25,
+		energy = 65,
+		bomb = 40,
 		bio = 100,
 		rad = 90
 	)
 	siemens_coefficient = 0.7
 	price_tag = 3000
+	obscuration = MEDIUM_OBSCURATION
 
 /obj/item/clothing/suit/space/void/wizard
 	icon_state = "rig-wiz"
 	name = "gem-encrusted voidsuit"
 	desc = "A bizarre gem-encrusted suit that radiates strange energy readings."
 	item_state = "wiz_voidsuit"
-	slowdown = 1
+	slowdown = 0
 	unacidable = 1
 	armor_list = list(
-		melee = 40,
+		melee = 50,
 		bullet = 40,
-		energy = 20,
-		bomb = 25,
+		energy = 65,
+		bomb = 40,
 		bio = 100,
 		rad = 90
 	)
