@@ -39,7 +39,7 @@
 	)
 
 /datum/craft_recipe/alchemy/flask_alchemy
-	name = "Alembic Phial"
+	name = "Alchemical Phial"
 	result = /obj/item/reagent_containers/glass/beaker/flask_alchemy
 	steps = list(
 		list(/obj/item/stack/ore/glass, 3), // One per unit

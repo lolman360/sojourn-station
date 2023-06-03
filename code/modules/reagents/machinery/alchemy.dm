@@ -6,7 +6,7 @@
 /obj/structure/alchemy
 	name = "Alembic"
 	desc = "An archaic type of alchemical still, bonding and condensing different liquids together. Knowledge on how it synthesizes materials has been lost to time, yet it somehow can still be used by the chemistry savvy."
-	description_info = "Insert an alembic phial, then Ctrl+Shift click on it to start a chemical reaction. Alt+click removes the phial from the alembic, if any."
+	description_info = "Insert an alchemical phial, then Ctrl+Shift click on it to start a chemical reaction. Alt+click removes the phial from the alembic, if any."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "magic_flask_thing"
 	density = FALSE //Its a small thing thats meant to go on tables
@@ -19,7 +19,7 @@
 
 /obj/structure/alchemy/examine(mob/user)
 	..()
-	to_chat(user, "<span class='info'>Insert an alembic phial, then hold Ctrl+Shift and click on it to start a chemical reaction. \n \
+	to_chat(user, "<span class='info'>Insert an alchemical phial, then hold Ctrl+Shift and click on it to start a chemical reaction. \n \
 					Holding Alt and clicking on it removes the phial from the alembic, if any.</span>")
 
 /obj/structure/alchemy/verb/do_mixing()
@@ -108,7 +108,7 @@
 
 // The phial that goes inside of the alembic, and the only reagent container in which we can mix our newly found chems
 /obj/item/reagent_containers/glass/beaker/flask_alchemy
-	name = "alembic phial"
+	name = "alchemical phial"
 	desc = "A thick, bulb-like glass bottle that can't hold much liquid and doesn't seem to allow any mixing or reacting within, unless used on an alembic."
 	icon_state = "flasky_the_flask"
 	matter = list(MATERIAL_GLASS = 1)
