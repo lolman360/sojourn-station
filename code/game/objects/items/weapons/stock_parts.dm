@@ -452,9 +452,4 @@
 
 //Blackshield stock parts
 
-/obj/item/stock_parts/blackshield/stskit
-	name = "blackshield conversion kit"
-	icon_state = "bs_kit"
-	desc = "A parts kit developed from the commissioned STS-30s from Blackshield, for the purpose of converting more to the pattern."
-	matter = list(MATERIAL_PLASTEEL = 5, MATERIAL_PLASTIC = 3)
-	price_tag = 100
+

@@ -82,7 +82,7 @@ var/global/blackshield_max_energy //Maximaum combined energy of all teleporters
 		/obj/item/storage/firstaid/surgery/traitor = 250, //Advanced tools inside
 		/obj/item/computer_hardware/hard_drive/portable/design/blackshield = 500,
 		/obj/item/storage/firstaid/blackshield/large = 500,
-		/obj/item/stock_parts/blackshield/stskit = 750 //For making STS PARAs
+		/obj/item/stskit = 750 //For making STS PARAs
 		)
 	var/entropy_value = 1 //It is still bluespace
 
@@ -304,3 +304,10 @@ var/global/blackshield_max_energy //Maximaum combined energy of all teleporters
 		return
 	current_user = user
 	nano_ui_interact(user)
+
+/obj/item/stskit
+	name = "blackshield conversion kit"
+	icon_state = "bs_kit"
+	desc = "A parts kit developed from the commissioned STS-30s from Blackshield, for the purpose of converting more to the pattern."
+	matter = list(MATERIAL_PLASTEEL = 5, MATERIAL_PLASTIC = 3)
+	price_tag = 100

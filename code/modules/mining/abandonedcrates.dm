@@ -75,7 +75,7 @@
 		if(65 to 68)
 			var/t = rand(4,7)
 			for(var/i = 0, i < t, ++i)
-				var/newitem = pick(typesof(/obj/item/stock_parts) - /obj/item/stock_parts - /obj/item/stock_parts/subspace - /obj/item/stock_parts/blackshield/stskit)
+				var/newitem = pick(subtypes(/obj/item/stock_parts) - /obj/item/stock_parts/subspace)
 				new newitem(src)
 		if(69 to 72)
 			new/obj/item/tool/pickaxe/drill(src)

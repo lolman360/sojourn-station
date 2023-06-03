@@ -350,7 +350,7 @@
 		/obj/item/gun/energy/stunrevolver,
 		/obj/item/gun/energy/ntpistol,
 		/obj/item/gun/energy/zwang,
-		/obj/item/gun/energy/captain/zapper,
+		/obj/item/gun/energy/captain,
 		/obj/item/gun/energy/floragun,
 		/obj/item/gun/energy/taser,
 		/obj/item/gun/energy/slimegun,
