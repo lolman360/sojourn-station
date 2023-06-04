@@ -768,7 +768,7 @@
 
 		var/total_plasmaloss = 0
 		for(var/obj/item/I in src)
-			if(!I.is_worn())
+			if(!.is_worn())
 				return
 			if(I.contaminated)
 				total_plasmaloss += vsc.plc.CONTAMINATION_LOSS
