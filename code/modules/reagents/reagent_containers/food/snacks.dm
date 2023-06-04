@@ -67,6 +67,8 @@
 	
 	if(cooked)
 		sanity_gain_per_bite += base_sanity_gain_per_bite * 0.2
+	if(junk_food)
+		sanity_gain_per_bite * 0.1
 	var/table = FALSE
 	var/companions = FALSE
 	var/view_death = FALSE
