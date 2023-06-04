@@ -55,13 +55,18 @@
 	if(!base_sanity_gain_per_bite)
 		message = "This food does not help calm your nerves."
 		return  list(0, SPAN_WARNING(message))
-	var/sanity_gain_per_bite = base_sanity_gain_per_bite
-	message = "This food helps you relax."
+	var/sanity_gain_per_bite = max(0, 0.1 * log(food_quality)) * base_sanity_gain_per_bite
+	message = "This food helps you relax"
+	switch(0.1 * log(food_quality))
+		if(0 to 1)
+			message += ", even though it isn't very good."
+		if(1 to 1.1999)
+			message += ". It's very tasty!"
+		if(1.2 to 1.5)
+			message += ". It's a masterfully-cooked meal, and a transcandental eating experience."
+	
 	if(cooked)
 		sanity_gain_per_bite += base_sanity_gain_per_bite * 0.2
-	if(junk_food || !cooked)
-		message += " However, only healthy food will help you rest."
-		return  list(sanity_gain_per_bite, SPAN_NOTICE(message))
 	var/table = FALSE
 	var/companions = FALSE
 	var/view_death = FALSE
@@ -82,10 +87,10 @@
 			companions = TRUE
 	if(companions)
 		sanity_gain_per_bite += base_sanity_gain_per_bite * 0.3
-		message += " The food tastes much better in the company of others."
+		message += " The food tastes much better in the company of others!"
 		if(view_death && !eater.stats.getPerk(PERK_NIHILIST))
 			message = "Your gaze falls on the cadaver. Your food doesn't taste so good anymore."
-			sanity_gain_per_bite = 0
+			sanity_gain_per_bite = 0.1
 			return list(sanity_gain_per_bite, SPAN_WARNING(message))
 
 	return list(sanity_gain_per_bite, SPAN_NOTICE(message))
@@ -235,7 +240,10 @@
 				var/amount_eaten = min(reagents.total_volume, bitesize)
 				reagents.trans_to_mob(mob, amount_eaten, CHEM_INGEST)
 				if(istype(human))
-					human.sanity.onEat(src, amount_eaten)
+					var/list/san_info = get_sanity_gain(human)
+					var/snack_sangain = san_info[1]
+					var/snack_message = san_info[2]
+					human.sanity.onEat(src, snack_sangain, snack_message, amount_eaten)
 				bitecount++
 				On_Consume(mob, user)
 			return 1
