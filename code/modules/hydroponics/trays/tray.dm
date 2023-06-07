@@ -8,7 +8,7 @@
 	volume = 100
 	price_tag = 150 //Mostly just to have a price for the beacon, but I guess you could sell them if you were REALLY desperate?
 
-	blue_ink_tk_blocker = TRUE //Removes bugs with teleportion
+	blocks_tk = TRUE //Removes bugs with teleportion
 
 	var/mechanical = 1         // Set to 0 to stop it from drawing the alert lights.
 	var/base_name = "tray"

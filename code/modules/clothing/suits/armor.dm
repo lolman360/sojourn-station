@@ -901,7 +901,7 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	armor_list = list(
 		melee = 40,
-		bullet = 35,
+		bullet = 40,
 		energy = 40,
 		bomb = 30,
 		bio = 0,

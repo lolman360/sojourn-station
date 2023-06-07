@@ -253,6 +253,10 @@
 	occupant = null
 	update_icon()
 
+/obj/machinery/recharge_station/attack_ai(mob/user)
+	go_out()
+	return
+
 /obj/machinery/recharge_station/verb/move_eject()
 	set category = "Object"
 	set name = "Eject Recharger"

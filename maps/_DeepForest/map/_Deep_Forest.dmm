@@ -442,7 +442,9 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "West APC";
-	pixel_x = -28
+	pixel_x = -28;
+	coverlocked = 0;
+	locked = 0
 	},
 /obj/structure/cable,
 /obj/item/circuitboard/apc,
@@ -4961,10 +4963,6 @@
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
-"fyx" = (
-/obj/random/mob/undergroundmob,
-/turf/simulated/floor/asteroid/dirt/dark,
-/area/colony/exposedsun/crashed_shop/outsider)
 "fze" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/asteroid/dirt,
@@ -6024,6 +6022,10 @@
 /obj/structure/flora/big/bush2,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/meadow)
+"gEC" = (
+/obj/item/device/lighting/glowstick/flare/torch,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/colony/exposedsun/crashed_shop/outsider)
 "gFk" = (
 /obj/effect/gibspawner/human,
 /obj/random/gun_cheap/low_chance,
@@ -8327,6 +8329,11 @@
 /obj/structure/wire_splicing,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/dungeon/outside/prepper/vault/floor4)
+"jdr" = (
+/obj/structure/boulder,
+/obj/structure/barricade,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/colony/exposedsun/crashed_shop/outsider)
 "jdV" = (
 /obj/structure/flora/small/busha3,
 /obj/random/traps/low_chance,
@@ -11642,6 +11649,17 @@
 "mIL" = (
 /obj/effect/decal/cleanable/rubble,
 /obj/machinery/light_construct,
+/obj/random/gun_energy_cheap,
+/obj/random/gun_energy_cheap,
+/obj/structure/table/rack/shelf,
+/obj/item/device/manual_charger/improv,
+/obj/item/device/manual_charger/improv,
+/obj/item/cell/medium,
+/obj/random/powercell/medium_safe_lonestar,
+/obj/random/powercell/medium_safe_lonestar,
+/obj/random/powercell/small_safe_lonestar,
+/obj/random/powercell/small_safe_lonestar,
+/obj/item/cell/small/depleted,
 /turf/simulated/floor/plating/under,
 /area/colony/exposedsun/crashed_shop/outsider)
 "mIR" = (
@@ -11756,6 +11774,7 @@
 	icon_state = "cargoshwall16";
 	tag = "icon-cargoshwall16"
 	},
+/obj/structure/barricade,
 /turf/simulated/floor/asteroid/dirt/dark,
 /area/colony/exposedsun/crashed_shop/outsider)
 "mMP" = (
@@ -18948,9 +18967,10 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "ujn" = (
-/obj/landmark/join/start/outsider,
-/turf/simulated/floor/asteroid/grass,
-/area/nadezhda/outside/meadow)
+/obj/effect/decal/cleanable/rubble,
+/obj/structure/barricade,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/colony/exposedsun/crashed_shop/outsider)
 "ukp" = (
 /obj/machinery/light,
 /turf/simulated/floor/carpet,
@@ -20771,11 +20791,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/meadow)
-"wbJ" = (
-/obj/landmark/join/start/outsider,
-/obj/structure/bed/chair,
-/turf/simulated/floor/asteroid/grass,
-/area/nadezhda/outside/meadow)
 "wbZ" = (
 /obj/structure/barricade,
 /obj/random/spider_trap_burrowing/low_chance,
@@ -20882,13 +20897,6 @@
 /obj/item/remains/deer,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/dungeon/outside/zoo)
-"wiR" = (
-/obj/landmark/join/start/outsider,
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/simulated/floor/asteroid/grass,
-/area/nadezhda/outside/meadow)
 "wiU" = (
 /turf/simulated/shuttle/wall/cargo{
 	icon_state = "cargoshwall29";
@@ -54416,9 +54424,9 @@ daI
 daI
 daI
 daI
-nja
-mCD
-nja
+jdr
+jWe
+jdr
 oMD
 daI
 daI
@@ -54618,7 +54626,7 @@ nja
 cfa
 vGA
 nja
-cfa
+ujn
 daI
 daI
 daI
@@ -54826,7 +54834,7 @@ vGA
 cfa
 mCD
 mCD
-cfa
+ujn
 nja
 cfa
 nja
@@ -57141,7 +57149,7 @@ daI
 daI
 daI
 cfa
-fyx
+mCD
 daI
 daI
 qpz
@@ -57764,7 +57772,7 @@ aZN
 mCD
 cfa
 mCD
-mCD
+gEC
 cfa
 daI
 daI
@@ -95801,7 +95809,7 @@ eOY
 tMk
 hRL
 hRL
-wiR
+cPv
 hRL
 nPq
 qxe
@@ -97882,7 +97890,7 @@ naj
 naj
 vpk
 usG
-wbJ
+fit
 hRL
 wFt
 qrg
@@ -99565,7 +99573,7 @@ wFt
 wFt
 hRL
 hRL
-ujn
+hRL
 naj
 naj
 naj

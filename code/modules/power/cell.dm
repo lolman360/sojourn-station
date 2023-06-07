@@ -25,7 +25,7 @@
 	var/autorecharge_rate = 0.03
 	var/recharge_time = 4 //How often nuclear cells will recharge
 	var/charge_tick = 0
-	var/charge_delay = 10
+	var/charge_delay = 4
 	var/last_charge_status = -1 //used in update_icon optimization
 	//Used for depleted cells, basiclly makes it so map/newly spawned cells can start not at full for mapping or code
 	var/starts_max_charge = TRUE

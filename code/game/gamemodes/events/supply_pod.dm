@@ -8,7 +8,7 @@
 	including quite a few rares
 
 :TODO: Make this target the jungle not the colony
-
+*/
 /datum/storyevent/supply_pod
 	id = "supply_pod"
 	name = "supply pod"
@@ -18,9 +18,10 @@
 
 	tags = list(TAG_DESTRUCTIVE, TAG_POSITIVE, TAG_COMBAT, TAG_EXTERNAL)
 
-*/
+
 ///////////////////////////////////////////////////////
 /datum/event/supply_pod
+	var/list/viable_turfs = list()
 	var/turf/epicentre = null
 	var/list/pod_contents = list()
 	startWhen = 1
@@ -36,39 +37,40 @@
 		auto_open = TRUE
 
 /datum/event/supply_pod/proc/find_dropsite()
-	var/attempts = 100
+	var/attempts = 4
 	//Lets find a place to drop our pod
 	var/done = FALSE
-	var/turf/T
+	var/turf/podturf
 	while(!done)
 		attempts--
 		if (attempts <= 0)
 			done = TRUE
+				//We'll pick space tiles which have windows nearby
+		//This means that carp will only be spawned in places where someone could see them
+		var/area/forest = locate(/area/nadezhda/outside/forest) in world
+		if(attempts < 2)
+			//Deep Jungel
+			forest = locate(/area/nadezhda/outside/meadow) in world
+			deep_forests = TRUE
+		for (var/turf/T in forest)
+			if (!(T.z in GLOB.maps_data.station_levels) && !deep_forests)
+				continue
 
-		var/area/A = random_ship_area(TRUE, TRUE, TRUE)
-		if (!A)
-			//Something is horribly wrong
-			kill()
-			break
+			if (locate(/obj/effect/shield) in T)
+				continue
 
-		T = A.random_space()
-		if (!T)
-			continue
+			//The number of windows near each tile is recorded
+			var/numgrass
+			for (var/turf/simulated/floor/asteroid/grass/W in view(4, T))
+				numgrass++
 
-		var/nearspace = FALSE
-		//We'll try not to cause breaches by dropping it somewhere sufficiently far from space
-		for (var/u in trange(5, T))
-			//We test each tile within a radius of 4
-			var/turf/U = u
-			if (turf_is_external(U))
-				nearspace = TRUE
-				break
+			//And the square of it is entered into the list as a weight
+			if (numgrass)
+				viable_turfs[T] = numgrass*numgrass
 
-		//If no external tiles were found within the radius, we are good to go!
-		if (!nearspace)
-			done = TRUE
 
-	if (T)
+	podturf = pickweight_mult(viable_turfs, 1)
+	if (podturf)
 		epicentre = T
 	else
 		//Something is horribly wrong

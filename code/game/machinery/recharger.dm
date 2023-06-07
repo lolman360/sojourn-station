@@ -18,7 +18,7 @@
 		/obj/item/gun/energy, /obj/item/tool/baton, /obj/item/modular_computer,
 	)
 	var/portable = TRUE
-	blue_ink_tk_blocker = TRUE //Removes bugs with teleportion and shadow items
+	blocks_tk = TRUE //Removes bugs with teleportion and shadow items
 
 /obj/machinery/recharger/examine(user)
 	..()

@@ -77,6 +77,7 @@
 	preloaded_reagents = list("radium" = 10, "lithium" = 10, "phosphorus" = 5)
 	maxcharge = 14000
 	price_tag = 400
+	charge_delay = 0
 
 /obj/item/cell/large/greyson
 	name = "GP-SI \"Posi-cell 16000L\""
@@ -222,6 +223,7 @@
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 1000
 	price_tag = 200
+	charge_delay = 0
 
 /obj/item/cell/medium/greyson
 	name = "GP-SI \"Posi-cell 1600M\""
@@ -349,6 +351,7 @@
 	preloaded_reagents = list("radium" = 5)
 	maxcharge = 300
 	price_tag = 100
+	charge_delay = 0
 
 /obj/item/cell/small/moebius/pda
 	name = "Soteria \"Atomcell 50S\""
@@ -362,6 +365,7 @@
 	autorecharging = TRUE
 	autorecharge_rate = 0.007
 	recharge_time = 1
+	charge_delay = 0
 	price_tag = 65
 
 /obj/item/cell/small/greyson
@@ -534,8 +538,7 @@
 	matter = list(MATERIAL_STEEL = 30)
 	cell = null
 	suitable_cell = /obj/item/cell
-	var/charge_per_cycle = 30
-	var/inuse = FALSE
+	var/charge_per_cycle = 90
 
 /obj/item/device/manual_charger/attackby(obj/item/I, mob/user)
 	if(istype(I, suitable_cell) && insert_item(I, user) && !cell)
@@ -557,7 +560,6 @@
 	if(inuse)
 		to_chat(user, SPAN_WARNING("You are already charging the cell!"))
 		return
-	inuse = TRUE
 	user.visible_message(SPAN_NOTICE("[user] starts turning the handle on [src]."), SPAN_NOTICE("You start to turn the handle on [src]."))
 	if(do_after(user, 12 + (30 * user.stats.getMult(STAT_TGH, STAT_LEVEL_ADEPT))))
 		if(!cell)
@@ -567,13 +569,9 @@
 			return
 		else
 			cell.charge += min(charge_per_cycle, cell.maxcharge - cell.charge)
-	inuse = FALSE
-
-/obj/item/device/manual_charger/dropped(mob/user)
-	inuse = FALSE
 
 // Improv crank
 /obj/item/device/manual_charger/improv
 	name = "handmade manual recharger"
 	desc = "A handmade manual crank charger. Barely capable of charging cells."
-	charge_per_cycle = 10
+	charge_per_cycle = 30

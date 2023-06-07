@@ -115,7 +115,6 @@ List of powers in this page :
 						/obj/item/tool_upgrade/armor/bullet,
 						/obj/item/tool_upgrade/armor/energy,
 						/obj/item/tool_upgrade/armor/bomb,
-						/obj/item/tool_upgrade/productivity/waxcoat, //Biomatter
 						/obj/item/gun_upgrade/barrel,
 						/obj/item/gun_upgrade/muzzle,
 						/obj/item/gun_upgrade/mechanism,
@@ -193,7 +192,7 @@ List of powers in this page :
 
 	if(stat && pay_power_cost(nano_point_cost))
 		to_chat(owner, "You permanently assign some of your nanites to be databanks.")
-		owner.stats.changeStat(stat, 5)
+		owner.stats.changeStat(stat, 10)
 
 // Spends points for increased food storage
 /obj/item/organ/internal/nanogate/proc/nanite_food_storage()
@@ -209,7 +208,7 @@ List of powers in this page :
 
 	if(pay_power_cost(nano_point_cost))
 		to_chat(owner, "You permanently assign some of your nanites to store additional nutrition.")
-		owner.max_nutrition += 25 //Base is 400
+		owner.max_nutrition += 50 //Base is 400
 
 // Allows you to drink metals for food
 /obj/item/organ/internal/nanogate/proc/nanite_metal_drinker()

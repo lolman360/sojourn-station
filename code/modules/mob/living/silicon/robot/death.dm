@@ -5,8 +5,6 @@
 	..()
 
 /mob/living/silicon/robot/death(gibbed)
-	if(camera)
-		camera.status = 0
 	if(module)
 		for (var/obj/item/gripper/G in module)
 			G.drop_item()

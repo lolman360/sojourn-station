@@ -29,7 +29,7 @@
 	var/serial_type = ""
 
 	//Cares about having modular gun parts or not (i.e can take different barrels to make same gun ect)
-	var/nra = TRUE
+	var/respect_parts_for_finalproduct = TRUE
 
 /obj/item/part/gun/frame/New(loc, ...)
 	. = ..()
@@ -161,7 +161,7 @@
 	if(!InstalledBarrel)
 		to_chat(user, SPAN_WARNING("\the [src] does not have a barrel!"))
 		return
-	if(nra)
+	if(respect_parts_for_finalproduct)
 		if(check_legal(user))
 			return
 	var/obj/item/gun/G = new result(T)

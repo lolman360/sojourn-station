@@ -108,7 +108,7 @@
 	desc = "For cutting, sawing, prying, and throwing at targets mid back-flip."
 	icon_state = "sec_tomahawk"
 	wielded_icon = "sec_tomahawk"
-	force = WEAPON_FORCE_ROBUST + 4 // Better than the cheap axe
+	force = WEAPON_FORCE_ROBUST + 4
 	throwforce = WEAPON_FORCE_LETHAL // Meant to be a throwing weapon
 	slot_flags = SLOT_BELT|SLOT_BACK
 	tool_qualities = list(QUALITY_CUTTING = 30, QUALITY_SAWING = 25, QUALITY_PRYING = 15)

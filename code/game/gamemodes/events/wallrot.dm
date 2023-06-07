@@ -9,7 +9,7 @@
 	id = "wallrot"
 	name = "wallrot"
 
-
+	req_eng = 1
 	event_type = /datum/event/wallrot
 	event_pools = list(EVENT_LEVEL_MUNDANE = POOL_THRESHOLD_MUNDANE *0.8)
 	tags = list(TAG_DESTRUCTIVE)

@@ -263,7 +263,7 @@
 		if (!testing)
 			var/mob/living/carbon/human/M = target
 			M.confused += rand(5,8)
-			M.sanity_damage = 8
+			M.sanity.onPsyDamage(12)
 
 /obj/item/projectile/chameleon
 	name = "bullet"
@@ -279,8 +279,14 @@
 	icon_state = "fireball"
 	damage_types = list(BURN = 16)
 	check_armour = ARMOR_MELEE
-	kill_count = 3
+	kill_count = 5
 	fire_stacks = 3
+
+/obj/item/projectile/flamer_lob/check_penetrate(atom/A)
+	if(ismob(A))
+		if(iscarbon(A))
+			damage *= 0.9
+		return TRUE
 
 /obj/item/projectile/flamer_lob/Move(atom/A)
 	..()
@@ -291,7 +297,8 @@
 			T.hotspot_expose((T20C*2) + 380,500)
 
 /obj/item/projectile/flamer_lob/flamethrower
-	kill_count = 5
+	damage_types = list(BURN = 32)
+	kill_count = 7
 
 /obj/item/projectile/bullet/flare
 	name = "flare"
