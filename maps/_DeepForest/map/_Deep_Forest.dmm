@@ -2896,6 +2896,10 @@
 /obj/random/flora/small_jungle_tree,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/meadow)
+"dgo" = (
+/obj/item/device/lighting/glowstick/flare/torch,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/colony/exposedsun/crashed_shop/outsider)
 "dhy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -5059,6 +5063,11 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/dungeon/outside/prepper/vault/floor5)
+"fFA" = (
+/obj/structure/boulder,
+/obj/structure/barricade,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/colony/exposedsun/crashed_shop/outsider)
 "fFB" = (
 /obj/structure/flora/big/bush1,
 /obj/structure/flora/small/bushb3,
@@ -6022,10 +6031,6 @@
 /obj/structure/flora/big/bush2,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/meadow)
-"gEC" = (
-/obj/item/device/lighting/glowstick/flare/torch,
-/turf/simulated/floor/asteroid/dirt/dark,
-/area/colony/exposedsun/crashed_shop/outsider)
 "gFk" = (
 /obj/effect/gibspawner/human,
 /obj/random/gun_cheap/low_chance,
@@ -8329,11 +8334,6 @@
 /obj/structure/wire_splicing,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/dungeon/outside/prepper/vault/floor4)
-"jdr" = (
-/obj/structure/boulder,
-/obj/structure/barricade,
-/turf/simulated/floor/asteroid/dirt/dark,
-/area/colony/exposedsun/crashed_shop/outsider)
 "jdV" = (
 /obj/structure/flora/small/busha3,
 /obj/random/traps/low_chance,
@@ -54424,9 +54424,9 @@ daI
 daI
 daI
 daI
-jdr
+fFA
 jWe
-jdr
+fFA
 oMD
 daI
 daI
@@ -57772,7 +57772,7 @@ aZN
 mCD
 cfa
 mCD
-gEC
+dgo
 cfa
 daI
 daI

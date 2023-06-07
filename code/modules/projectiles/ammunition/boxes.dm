@@ -441,6 +441,32 @@
 	icon_state = "box50-si"
 	ammo_type = /obj/item/ammo_casing/kurtz_50/laser
 
+/obj/item/ammo_magazine/ammobox/kurtz_50/large
+	name = "ammunition box (12.7mm)"
+	desc = "A large box of regular 12.7mm rounds."
+	matter = list(MATERIAL_STEEL = 15)
+	w_class = ITEM_SIZE_BULKY
+	max_ammo = 150
+	icon_state = "magbox"
+
+/obj/item/ammo_magazine/ammobox/kurtz_50/large/lethal
+	name = "ammunition box (12.7mm  hollow-point)"
+	desc = "A large box of self defense grade 9mm hollow-point rounds."
+	ammo_type = /obj/item/ammo_casing/kurtz_50/lethal
+	icon_state = "magboxhp"
+
+/obj/item/ammo_magazine/ammobox/kurtz_50/large/rubber
+	name = "ammunition box (12.7mm rubber)"
+	desc = "A large box of police grade 12.7mm rubber rounds."
+	ammo_type = /obj/item/ammo_casing/kurtz_50/rubber
+	icon_state = "magboxrubber"
+
+/obj/item/ammo_magazine/ammobox/kurtz_50/large/hv
+	name = "ammunition box (12.7mm high-velocity)"
+	desc = "A large box of high velocity 12.7mm rounds"
+	ammo_type = /obj/item/ammo_casing/kurtz_50/hv
+	icon_state = "magboxhv"
+
 //// 14.5×114mm ////
 
 /obj/item/ammo_magazine/ammobox/antim

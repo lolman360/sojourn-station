@@ -121,6 +121,8 @@
 	var/alt_mode_lossrate = 0.5
 	var/alt_mode_sharp = FALSE
 
+	var/clickdelay_add = 0 //how much clickdelay do we add? useful for fast- or slow-swinging weapons
+
 /obj/item/Initialize()
 
 	for (var/upgrade_typepath in initialized_upgrades)

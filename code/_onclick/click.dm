@@ -181,9 +181,12 @@
 /mob/proc/gather_click_delay(mob/living/M as mob)
 	var/gathered = 0
 	if(ishuman(M))
-		var/mob/living/carbon/human/back_pack_checker = M
-		if(!back_pack_checker.back)
+		var/mob/living/carbon/human/delay_checker = M
+		if(!delay_checker.back)
 			gathered -= 1
+		var/obj/item/I = delay_checker.get_active_hand()
+		if(I)
+			gathered += I.clickdelay_add
 	gathered += click_delay_addition
 	return gathered
 
