@@ -1,9 +1,8 @@
-/obj/item/stalker_hand_annomlie
-	name = "Coder Annomlie"
-	desc = "Something not meant to be seen by the eyes of players, \
-	sad."
+/obj/item/stalker_anomaly
+	name = "Code Anomaly"
+	desc = "Something not meant to be seen by the eyes of players."
 	icon = 'modular_sojourn/annomlies/stalker_annomlies.dmi'
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_TINY
 	icon_state = "wow_this_is_trash"
 	item_state = "wow_this_is_trash"
 	var/annomlie_givith = FALSE

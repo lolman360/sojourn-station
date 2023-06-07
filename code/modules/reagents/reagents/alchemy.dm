@@ -259,8 +259,8 @@
 	M.add_chemical_effect(CE_TOXIN, 1)
 
 /datum/reagent/mind_exspander/affect_ingest(mob/living/carbon/M, alien, effect_multiplier)
-	M.stats.addTempStat(STAT_COG, STAT_LEVEL_ADEPT, STIM_TIME, "mind_exspander")
-	M.stats.addTempStat(STAT_BIO, STAT_LEVEL_ADEPT, STIM_TIME, "mind_exspander")
+	M.stats.addTempStat(STAT_COG, STAT_LEVEL_ADEPT, STIM_TIME, "mind_expander")
+	M.stats.addTempStat(STAT_BIO, STAT_LEVEL_ADEPT, STIM_TIME, "mind_expander")
 
 /datum/reagent/work_tonic
 	name = "Work Tonic"

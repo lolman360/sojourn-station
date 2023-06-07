@@ -99,7 +99,7 @@
 		deepmaint_entry_point = TRUE
 
 	if(deepmaint_entry_point) //so we can tell at a glace what is a deep maints borrow
-		desc = "There appears to be an entrance here, covered by rubble and dirt. Collapsing it would take some serious tools and time."
+		desc = "There appears to be a long, deep entrance here, covered by rubble and dirt. Collapsing it would take some serious tools and time."
 
 //Lets remove ourselves from the global list and cleanup any held references
 /obj/structure/burrow/Destroy()
@@ -466,7 +466,7 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 		name = "burrow"
 		desc = "Some sort of hole that leads inside a wall. It's full of hardened resin and secretions. Collapsing this would require some heavy digging tools."
 		if(deepmaint_entry_point)
-			desc = "Entrance hidden by bricks and rubble. Collapsing this would require some heavy digging tools."
+			desc = "A large, deep shaft, with its entrance hidden by bricks and rubble. Collapsing this would require some heavy digging tools."
 		var/turf/simulated/floor/F = loc
 		if (istype(F) && F.flooring)
 			//This should never be false

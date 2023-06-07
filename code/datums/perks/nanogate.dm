@@ -28,10 +28,14 @@
 
 /datum/perk/nanite_armor/assign(mob/living/carbon/human/H)
 	..()
-	holder.brute_mod_perk -= 0.20
+	holder.brute_mod_perk -= 0.2 // One third of subdermal armor
+	holder.mob_bomb_defense += 5
+	holder.falls_mod -= 0.2
 
 /datum/perk/nanite_armor/remove()
 	holder.brute_mod_perk += 0.20
+	holder.mob_bomb_defense -= 5
+	holder.falls_mod += 0.2
 	..()
 
 /datum/perk/nanite_metal_drinker
