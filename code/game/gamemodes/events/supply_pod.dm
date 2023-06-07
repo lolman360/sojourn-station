@@ -51,9 +51,8 @@
 		if(attempts < 2)
 			//Deep Jungel
 			forest = locate(/area/nadezhda/outside/meadow) in world
-			deep_forests = TRUE
 		for (var/turf/T in forest)
-			if (!(T.z in GLOB.maps_data.station_levels) && !deep_forests)
+			if (!(T.z in GLOB.maps_data.station_levels))
 				continue
 
 			if (locate(/obj/effect/shield) in T)
@@ -71,7 +70,7 @@
 
 	podturf = pickweight_mult(viable_turfs, 1)
 	if (podturf)
-		epicentre = T
+		epicentre = podturf
 	else
 		//Something is horribly wrong
 		kill()

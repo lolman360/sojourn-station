@@ -267,4 +267,4 @@
 	gripvars = list(/obj/item/part/gun/grip/black)
 	mechanismvar = /obj/item/part/gun/mechanism/autorifle/steel
 	barrelvars = list(/obj/item/part/gun/barrel/lrifle/steel, /obj/item/part/gun/barrel/srifle/steel)	//6.5mm or 7.62mm.
-	nra = FALSE		//This controls if the weapon checks for barrels or not. If you want a gun to have MULTIPLE calibers that it can be chambered in, put FALSE.
+	respect_parts_for_finalproduct = FALSE		//This controls if the weapon checks for barrels or not. If you want a gun to have MULTIPLE calibers that it can be chambered in, put FALSE.

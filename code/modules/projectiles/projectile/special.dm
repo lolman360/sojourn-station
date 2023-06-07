@@ -285,7 +285,7 @@
 /obj/item/projectile/flamer_lob/check_penetrate(atom/A)
 	if(ismob(A))
 		if(iscarbon(A))
-			damage *= 0.9
+			damage_types[BURN] *= 0.9
 		return TRUE
 
 /obj/item/projectile/flamer_lob/Move(atom/A)

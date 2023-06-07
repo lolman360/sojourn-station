@@ -232,7 +232,7 @@
 			list(name="Shells (20mm Explosive)", cost=500, path=/obj/item/ammo_casing/shotgun/payload/prespawned),
 			list(name="Shells (20mm Blank)", cost=100, path=/obj/item/ammo_casing/shotgun/blank/prespawned),
 			list(name="Shells (20mm Practice)", cost=100, path=/obj/item/ammo_casing/shotgun/practice/prespawned),
-		"20mm Magazines, Tubes and Drums"
+		"20mm Magazines, Tubes and Drums",
 			list(name="Loader Tube (20mm Slug)", cost = 500, path=/obj/item/ammo_magazine/speed_loader_shotgun),
 			list(name="Loader Tube (20mm Buckshot)", cost = 500, path=/obj/item/ammo_magazine/speed_loader_shotgun/pellet),
 			list(name="Loader Tube (20mm Beanbag)", cost = 500, path=/obj/item/ammo_magazine/speed_loader_shotgun/beanbag),

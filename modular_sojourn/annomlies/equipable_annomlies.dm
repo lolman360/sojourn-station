@@ -1,5 +1,5 @@
-/obj/item/stalker_anomaly
-	name = "Code Anomaly"
+/obj/item/stalker_artifact
+	name = "Code Artifact"
 	desc = "Something not meant to be seen by the eyes of players."
 	icon = 'modular_sojourn/annomlies/stalker_annomlies.dmi'
 	w_class = ITEM_SIZE_TINY
@@ -9,24 +9,24 @@
 	var/to_remove_givith = FALSE
 	slot_flags = SLOT_BELT
 
-/obj/item/stalker_hand_annomlie/dropped(var/mob/M)
+/obj/item/stalker_artifact/dropped(var/mob/M)
 	..()
-	update_annomlie(M)
+	update_artifact(M)
 
-/obj/item/stalker_hand_annomlie/equipped(var/mob/M)
+/obj/item/stalker_artifact/equipped(var/mob/M)
 	.=..()
-	update_annomlie(M)
+	update_artifact(M)
 
-/obj/item/stalker_hand_annomlie/proc/update_annomlie(mob/living/carbon/human/user)
+/obj/item/stalker_artifact/proc/update_artifact(mob/living/carbon/human/user)
 	return
 
-/obj/item/stalker_hand_annomlie/pillar
+/obj/item/stalker_artifact/pillar
 	name = "The pillar"
 	desc = "A smooth pilar made of black stone, It is well polished and seems very strong."
 	var/blood_difference = 60
 	var/punch_increase = 25 //IDK
 
-/obj/item/stalker_hand_annomlie/pillar/update_annomlie(mob/living/carbon/human/user)
+/obj/item/stalker_artifact/pillar/update_artifact(mob/living/carbon/human/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.belt == src && !annomlie_givith)
@@ -50,7 +50,7 @@
 			H.vessel.add_reagent("blood",blood_difference)
 			H.vessel.maximum_volume  += blood_difference
 
-/obj/item/stalker_hand_annomlie/camo_shard
+/obj/item/stalker_artifact/camo_shard
 	name = "The shard"
 	desc = "A smooth shard of black stone, its edges have been beveled down to smooth rounds."
 	icon_state = "shard"
@@ -59,7 +59,7 @@
 	var/health_to_take = 40 //IDK
 	var/camo_we_have = 255
 
-/obj/item/stalker_hand_annomlie/camo_shard/update_annomlie(mob/living/carbon/human/user)
+/obj/item/stalker_artifact/camo_shard/update_artifact(mob/living/carbon/human/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.belt == src && !annomlie_givith)
@@ -78,7 +78,7 @@
 			H.maxHealth += health_to_take
 			H.health += health_to_take
 
-/obj/item/stalker_hand_annomlie/star
+/obj/item/stalker_artifact/star
 	name = "The star"
 	desc = "A black stone star, it is well polished and smoothed, its center is small enough to hold in the palm of a hand."
 	icon_state = "star"
@@ -87,7 +87,7 @@
 	var/flash_help_givith = 2
 	var/hunger_strike = 0.1
 
-/obj/item/stalker_hand_annomlie/star/update_annomlie(mob/living/carbon/human/user)
+/obj/item/stalker_artifact/star/update_artifact(mob/living/carbon/human/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.belt == src && !annomlie_givith)
@@ -103,7 +103,7 @@
 			H.additional_darksight -= darksight_givith
 			H.movement_hunger_factors -= hunger_strike
 
-/obj/item/stalker_hand_annomlie/hand
+/obj/item/stalker_artifact/hand
 	name = "The hand"
 	desc = "A black stone hand, it is polished and appears to be marked as an avian hand, with feathers carved into it."
 	icon_state = "feather"
@@ -112,7 +112,7 @@
 	var/faction_allied = ""
 	var/faction_turner = "vox_tribe"
 
-/obj/item/stalker_hand_annomlie/hand/update_annomlie(mob/living/carbon/human/user)
+/obj/item/stalker_artifact/hand/update_artifact(mob/living/carbon/human/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.belt == src && !annomlie_givith)
@@ -128,7 +128,7 @@
 			H.faction = faction_allied
 			faction_allied = null
 
-/obj/item/stalker_hand_annomlie/dice
+/obj/item/stalker_artifact/dice
 	name = "The dice"
 	desc = "A smooth die, made of black stone, It is well polished and has no markings on its faces."
 	icon_state = "d201"
@@ -138,18 +138,18 @@
 	var/bread_won = 40
 	var/grain_loss = -80
 
-/obj/item/stalker_hand_annomlie/dice/update_annomlie(mob/living/carbon/human/user)
+/obj/item/stalker_artifact/dice/update_artifact(mob/living/carbon/human/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.belt == src && !annomlie_givith)
 			annomlie_givith = TRUE
 			to_remove_givith = TRUE
-			addtimer(CALLBACK(src, /obj/item/stalker_hand_annomlie/dice/proc/rngus, H), timer_to_mins MINUTES)
+			addtimer(CALLBACK(src, /obj/item/stalker_artifact/dice/proc/rngus, H), timer_to_mins MINUTES)
 		if(to_remove_givith && !(H.belt == src))
 			annomlie_givith = FALSE
 			to_remove_givith = FALSE
 
-/obj/item/stalker_hand_annomlie/dice/proc/rngus(mob/living/carbon/human/user)
+/obj/item/stalker_artifact/dice/proc/rngus(mob/living/carbon/human/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.belt == src && !H.isSynthetic())
