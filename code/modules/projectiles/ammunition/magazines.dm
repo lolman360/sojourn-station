@@ -1181,7 +1181,7 @@
 // SCI ammo
 /obj/item/ammo_magazine/rifle_223
 	name = "short carbine magazine"
-	desc = "A 20 round magazine marked for .223 Carbine laser ammunition."
+	desc = "A 20 round magazine marked for 5mm Carbine laser ammunition."
 	icon_state = "lsrifle"
 	mag_type = MAGAZINE
 	mag_well = MAG_WELL_LSRIFLE

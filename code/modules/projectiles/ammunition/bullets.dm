@@ -794,7 +794,7 @@
 
 /obj/item/ammo_casing/beam
 	name = "laser casing"
-	desc = "A laser casing thats cal is .223."
+	desc = "A 5mm bullet. Only the bullet's been replaced by a single-use microlaser, and the gunpowder's been replaced by a volatile capacitative compound."
 	caliber = CAL_SCI
 	projectile_type = /obj/item/projectile/beam/weak
 
@@ -802,11 +802,11 @@
 	projectile_type = null
 
 /obj/item/ammo_casing/beam/ap
-	desc = "A piercing laser casing. Meant for penetration of armor thats cal is .223."
+	desc = "A 5mm laser casing with a modified microlaser to produce armor-penetrating blasts."
 	projectile_type = /obj/item/projectile/beam/weak/ap
 
 /obj/item/ammo_casing/beam/lethal
-	desc = "A dence laser casing. Compact laser that is easily blocked by armor thats cal is .223."
+	desc = "A 5mm laser casing with a modified microlaser to produce killer blasts that are more dispersed by armor.."
 	projectile_type = /obj/item/projectile/beam/weak/lethal
 
 /obj/item/ammo_casing/beam/ap/spent
