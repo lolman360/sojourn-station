@@ -200,6 +200,9 @@
 /area/eris/maintenance/substation/section4
 	name = "Fourth Section Substation"
 
+/area/eris/maintenance/substation/section8
+	name = "Eighth Section Substation"
+
 /area/eris/maintenance/substation/bridge
 	name = "Bridge Substation"
 

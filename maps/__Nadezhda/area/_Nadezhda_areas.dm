@@ -419,8 +419,11 @@
 /area/nadezhda/maintenance/substation/cargo
 	name = "Cargo Substation"
 
-/area/nadezhda/maintenance/substation/servist
-	name = "Servist Substation"
+/area/nadezhda/maintenance/substation/service
+	name = "Service Substation"
+
+/area/nadezhda/maintenance/substation/maint
+	name = "Old Substation"
 
 /area/nadezhda/maintenance/substation/misc1
 	name = "MISC Substation 1"

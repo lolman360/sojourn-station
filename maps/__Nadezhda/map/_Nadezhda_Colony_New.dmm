@@ -3568,7 +3568,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "aRb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/random/scrap/sparse_even,
@@ -6783,7 +6783,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "bDw" = (
 /obj/random/scrap/sparse_even,
 /obj/random/mob/roaches/low_chance,
@@ -31085,7 +31085,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "gZm" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -34882,7 +34882,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "hRx" = (
 /obj/machinery/smartfridge,
 /obj/machinery/door/firedoor,
@@ -56001,7 +56001,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "mEf" = (
 /turf/simulated/shuttle/wall/escpod{
 	dir = 4;
@@ -65405,7 +65405,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "oBl" = (
 /obj/machinery/door/airlock{
 	name = "Church";
@@ -67188,7 +67188,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "oVA" = (
 /turf/simulated/wall/r_wall,
 /area/nadezhda/security/tactical_blackshield)
@@ -78173,7 +78173,7 @@
 /obj/effect/window_lwall_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating/under,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "rpY" = (
 /obj/machinery/light/floor,
 /obj/effect/decal/cleanable/dirt,
@@ -78881,7 +78881,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel/gray_perforated,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "ryn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 4
@@ -79126,7 +79126,7 @@
 	RCon_tag = "Service Substation Bypass"
 	},
 /turf/simulated/floor/plating,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "rBu" = (
 /obj/effect/floor_decal/industrial/road/straight2,
 /obj/effect/floor_decal/spline/plain{
@@ -81257,7 +81257,7 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "rZY" = (
 /obj/machinery/light{
 	dir = 8
@@ -91187,7 +91187,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "ugq" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 28
@@ -93571,7 +93571,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "uJg" = (
 /obj/machinery/light_switch{
 	pixel_y = 32
@@ -101243,7 +101243,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "wph" = (
 /obj/effect/floor_decal/spline/wood{
 	dir = 1
@@ -101541,7 +101541,7 @@
 /obj/random/common_oddities/low_chance,
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "wrb" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/cobweb2,
@@ -102794,7 +102794,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating/under,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "wGH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/network/colony_underground{
@@ -105370,7 +105370,7 @@
 /area/nadezhda/hallway/surface/section1)
 "xmy" = (
 /turf/simulated/wall/r_wall,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "xmD" = (
 /obj/random/furniture/pottedplant,
 /obj/item/contraband/poster/placed/generic/no_erp{
@@ -106455,7 +106455,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "xzr" = (
 /obj/machinery/computer/general_air_control/large_tank_control{
 	dir = 4;
@@ -107034,7 +107034,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint_panels,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "xFg" = (
 /obj/structure/catwalk,
 /obj/structure/reagent_dispensers/water_cooler,
@@ -108997,7 +108997,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/nadezhda/maintenance/substation/servist)
+/area/nadezhda/maintenance/substation/service)
 "yaU" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
