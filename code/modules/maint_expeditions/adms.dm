@@ -45,19 +45,15 @@
 		return
 
 	if(!use_cell_power())
-		system_error("Charge error")//If the battery is dead, shut it down
+		system_error("charge error")//If the battery is dead, shut it down
 		return
 
 	if(!inserted_disk)
-		system_error("No disk found")
-		return
-
-	if(locate(/turf/simulated/open) in range(5, src))
-		system_error("Surface unsteady")
+		system_error("no disk found")
 		return
 
 	if(inserted_disk.used_capacity >= inserted_disk.max_capacity)
-		system_error("Disk full")
+		system_error("disk full")
 		return
 
 	set_light(2,1)

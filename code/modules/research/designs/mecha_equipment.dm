@@ -61,25 +61,25 @@
 //Ballistic Mech Ammo
 
 /datum/design/research/item/mecha/ammo/hmg
-	name = "25mm HMG ammunition box"
+	name = "HMG ammunition box"
 	build_path = /obj/item/mech_ammo_box/hmg
 	starts_unlocked = TRUE
 	category = "Ammo"
 
 /datum/design/research/item/mecha/ammo/cannon
-	name = "60mm HEAD ammunition box"
+	name = "Autocannon ammunition box"
 	build_path = /obj/item/mech_ammo_box/cannon
 	starts_unlocked = TRUE
 	category = "Ammo"
 
 /datum/design/research/item/mecha/ammo/ultracannon
-	name = "30mm HEAD ammunition box"
+	name = "Ultra Autocannon ammunition box"
 	build_path = /obj/item/mech_ammo_box/ultracannon
 	starts_unlocked = TRUE
 	category = "Ammo"
 
 /datum/design/research/item/mecha/ammo/scattershot
-	name = "50mm HEAD ammunition box"
+	name = "LB-X Autocannon / Flak ammunition box"
 	build_path = /obj/item/mech_ammo_box/scattershot
 	starts_unlocked = TRUE
 	category = "Ammo"
@@ -88,32 +88,32 @@
 /datum/design/research/item/mecha/weapon
 
 /datum/design/research/item/mecha/weapon/hmg
-	name = "25mm Heavy Machinegun \"Liberator\""
+	name = "25mm Heavy Machinegun \"Lynx\""
 	build_path = /obj/item/mecha_parts/mecha_equipment/ranged_weapon/ballistic/hmg
 	starts_unlocked = TRUE
 
 /datum/design/research/item/mecha/weapon/flak
-	name = "50mm Flak Cannon \"Ox\""
+	name = "Flak Cannon \"Hippopotamus\""
 	build_path = /obj/item/mecha_parts/mecha_equipment/ranged_weapon/ballistic/flak
 	starts_unlocked = TRUE
 
 /datum/design/research/item/mecha/weapon/cannon
-	name = "60mm Ancient Autocannon \"Mule\""
+	name = "Ancient Autocannon \"Mule\""
 	build_path = /obj/item/mecha_parts/mecha_equipment/ranged_weapon/ballistic/cannon
 	starts_unlocked = TRUE
 
 /datum/design/research/item/mecha/weapon/cannon/military
-	name = "60mm Autocannon \"Valor\""
+	name = "Autocannon \"Soaring Eagle\""
 	build_path = /obj/item/mecha_parts/mecha_equipment/ranged_weapon/ballistic/cannon/military
 	starts_unlocked = TRUE
 
 /datum/design/research/item/mecha/weapon/ultracannon
-	name = "30mm Burst-Fire Autocannon \"Victory\""
+	name = "Ultra Autocannon \"Prowling Cougar\""
 	build_path = /obj/item/mecha_parts/mecha_equipment/ranged_weapon/ballistic/ultracannon
 	starts_unlocked = TRUE
 
 /datum/design/research/item/mecha/weapon/scattershot
-	name = "50mm Scatter-Shot Autocannon \"Liberty\""
+	name = "LB-X Autocannon \"Roaring Lion\""
 	build_path = /obj/item/mecha_parts/mecha_equipment/ranged_weapon/ballistic/scattershot
 
 

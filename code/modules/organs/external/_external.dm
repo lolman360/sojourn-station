@@ -292,17 +292,16 @@
 		module.activate(owner, src)
 
 /obj/item/organ/external/emp_act(severity)
-	var/rand_modifier = rand(1,3)
 	if(!BP_IS_ROBOTIC(src))
 		return
 
 	switch (severity)
 		if (1)
-			take_damage(8 * rand_modifier, BURN)
+			take_damage(20, BURN)
 		if (2)
-			take_damage(6 * rand_modifier, BURN)
+			take_damage(10, BURN)
 		if (3)
-			take_damage(4 * rand_modifier, BURN)
+			take_damage(5, BURN)
 
 /obj/item/organ/external/attack_self(var/mob/user)
 	if(!contents.len)

@@ -1,29 +1,17 @@
 import { resolveAsset } from '../../assets';
 import { useBackend } from '../../backend';
-import {
-  BlockQuote,
-  Image,
-  LabeledList,
-  ProgressBar,
-  Section,
-  Stack,
-} from '../../components';
+import { BlockQuote, Box, LabeledList, ProgressBar, Section, Stack } from '../../components';
 import { Window } from '../../layouts';
-import {
-  TRAIT_ASSET,
-  TRAIT_DESCRIPTION,
-  TRAIT_LABEL,
-  TRAIT_NAME,
-} from './constants';
+import { TRAIT_ASSET, TRAIT_DESCRIPTION, TRAIT_LABEL, TRAIT_NAME } from './constants';
 
 export const TraitBar = (props: TraitBarProps) => {
   const { maxValue, minValue, value, label } = props;
   const max = maxValue ? maxValue : 100;
 
   return (
-    <LabeledList.Item textAlign='right' label={label}>
+    <LabeledList.Item textAlign="right" label={label}>
       <ProgressBar
-        width='55vw'
+        width="55vw"
         value={value}
         minValue={minValue ? minValue : 0}
         maxValue={maxValue ? maxValue : 100}
@@ -44,11 +32,10 @@ export const TraitFluff = (props: TraitFluffProps) => {
       <Stack.Item
         grow
         style={{
-          overflow: 'hidden',
-          whiteSpace: 'wrap',
-          textOverflow: 'ellipsis',
-        }}
-      >
+          'overflow': 'hidden',
+          'white-space': 'wrap',
+          'text-overflow': 'ellipsis',
+        }}>
         <BlockQuote>{desc}</BlockQuote>
       </Stack.Item>
       <Stack.Item>{bar}</Stack.Item>
@@ -63,18 +50,17 @@ export const DesiresTraitFluff = (props: DesiresTraitFluffProps) => {
       <Stack.Item
         grow
         style={{
-          overflow: 'hidden',
-          whiteSpace: 'wrap',
-          textOverflow: 'ellipsis',
-        }}
-      >
+          'overflow': 'hidden',
+          'white-space': 'wrap',
+          'text-overflow': 'ellipsis',
+        }}>
         <BlockQuote>{desc}</BlockQuote>
       </Stack.Item>
       <Stack.Item />
       <Stack.Item>
         {active ? (
           <>
-            <LabeledList.Item label='Desires'>
+            <LabeledList.Item label="Desires">
               {desires.join(', ')}
             </LabeledList.Item>
             {bar}
@@ -91,9 +77,9 @@ export const Trait = (props: TraitProps) => {
   const { fluff, title, img } = props;
   return (
     <Section title={title}>
-      <Stack height='100px' fill>
+      <Stack height="100px" fill>
         <Stack.Item shrink>
-          <Image width='100px' src={resolveAsset(img)} />
+          <Box as="img" width="100px" src={resolveAsset(img)} />
         </Stack.Item>
         <Stack.Item grow basis={0}>
           {fluff}
@@ -103,13 +89,13 @@ export const Trait = (props: TraitProps) => {
   );
 };
 
-export const Sanity = props => {
-  const { data } = useBackend<SanityData>();
+export const Sanity = (props: any, context: any) => {
+  const { data } = useBackend<SanityData>(context);
   const { sanity, desires, insight } = data;
 
   return (
     <Window width={650} height={510}>
-      <Window.Content style={{ backgroundImage: 'none' }} scrollable>
+      <Window.Content style={{ 'background-image': 'none' }} scrollable>
         <Stack vertical>
           <Stack.Item>
             <Trait

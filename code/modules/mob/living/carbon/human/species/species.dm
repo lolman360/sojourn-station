@@ -425,5 +425,3 @@
 		H.add_language(LANGUAGE_MERP)
 	if(H.species.reagent_tag == IS_SLIME)
 		H.add_language(LANGUAGE_BLORP)
-	if(H.species.reagent_tag == IS_CINDARITE)
-		H.add_language(LANGUAGE_WEH)

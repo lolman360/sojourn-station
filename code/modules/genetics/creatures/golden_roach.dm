@@ -55,7 +55,6 @@
 	var/amount_grown = 0
 	snacker = TRUE
 	can_burrow = FALSE
-	faction = "neutral"
 	colony_friend = TRUE
 	friendly_to_colony = TRUE
 	inherent_mutations = list()

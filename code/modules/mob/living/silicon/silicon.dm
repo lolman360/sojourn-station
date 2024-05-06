@@ -55,7 +55,6 @@
 	add_language(LANGUAGE_SYNTHETIC)
 	add_language(LANGUAGE_MERP)
 	add_language(LANGUAGE_BLORP)
-	add_language(LANGUAGE_WEH)
 	init_id()
 	init_subsystems()
 

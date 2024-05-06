@@ -1,9 +1,8 @@
-import { BooleanLike } from '../../common/react';
-import { decodeHtmlEntities } from '../../common/string';
 import { useBackend, useSharedState } from '../backend';
 import { Box, Button, LabeledList, Section, Stack } from '../components';
 import { Window } from '../layouts';
-import { SearchBar } from './Fabrication/SearchBar';
+import { BooleanLike } from '../../common/react';
+import { decodeHtmlEntities } from '../../common/string';
 import {
   AutolatheItem,
   AutolatheQueue,
@@ -12,35 +11,35 @@ import {
   LoadedMaterials,
   MaterialData,
 } from './Matterforge';
+import { SearchBar } from './Fabrication/SearchBar';
 
 export type ReagentData = {
-  container: BooleanLike
-  reagents: { name: string; amount: number }[]
-}
+  container: BooleanLike;
+  reagents: { name: string; amount: number }[];
+};
 
-export const Reagents = (props: ReagentData) => {
-  const { act } = useBackend();
+export const Reagents = (props: ReagentData, context) => {
+  const { act } = useBackend(context);
 
   const { container, reagents } = props;
 
   return (
     <Section
-      height='100%'
-      title='Inserted beaker'
+      height="100%"
+      title="Inserted beaker"
       buttons={
         container ? (
           <Button
-            icon='eject'
-            tooltip='Eject Beaker'
+            icon="eject"
+            tooltip="Eject Beaker"
             onClick={() => act('eject_beaker')}
           />
         ) : null
-      }
-    >
+      }>
       {container ? (
         reagents.length > 0 ? (
           <LabeledList>
-            {reagents.map(reagent => (
+            {reagents.map((reagent) => (
               <LabeledList.Item key={reagent.name} label={reagent.name}>
                 {reagent.amount}
               </LabeledList.Item>
@@ -58,14 +57,14 @@ export const Reagents = (props: ReagentData) => {
 
 export type DiskData = {
   disk: {
-    name: string
-    license: number
-    read_only: BooleanLike
-  }
-}
+    name: string;
+    license: number;
+    read_only: BooleanLike;
+  };
+};
 
-export const Disk = (props: DiskData) => {
-  const { act } = useBackend();
+export const Disk = (props: DiskData, context) => {
+  const { act } = useBackend(context);
 
   const { disk } = props;
 
@@ -73,24 +72,23 @@ export const Disk = (props: DiskData) => {
     <Section>
       <LabeledList>
         <LabeledList.Item
-          label='Disk'
+          label="Disk"
           color={disk ? 'white' : 'grey'}
           buttons={
             disk ? (
               <Button
-                icon='eject'
-                tooltip='Eject Disk'
+                icon="eject"
+                tooltip="Eject Disk"
                 onClick={() => {
                   act('eject_disk');
                 }}
               />
             ) : null
-          }
-        >
+          }>
           {disk ? decodeHtmlEntities(disk.name) : 'Not inserted.'}
         </LabeledList.Item>
         {disk && disk.license > 0 ? (
-          <LabeledList.Item label='License Points'>
+          <LabeledList.Item label="License Points">
             {disk.license}
           </LabeledList.Item>
         ) : null}
@@ -103,23 +101,23 @@ type Data = MaterialData &
   ReagentData &
   DiskData &
   AutolatheQueueData & {
-    have_reagents: BooleanLike
-    have_materials: BooleanLike
-    have_design_selector: BooleanLike
-    designs: Design[]
-    error: string | null
-    paused: BooleanLike
-    speed: number
-    special_actions: { name: string; icon: string; action: string }[]
-    mat_efficiency: number
-    queue_max: number
-    have_disk: BooleanLike
-    categories: string[]
-    show_category: string
-  }
+    have_reagents: BooleanLike;
+    have_materials: BooleanLike;
+    have_design_selector: BooleanLike;
+    designs: Design[];
+    error: string | null;
+    paused: BooleanLike;
+    speed: number;
+    special_actions: { name: string; icon: string; action: string }[];
+    mat_efficiency: number;
+    queue_max: number;
+    have_disk: BooleanLike;
+    categories: string[];
+    show_category: string;
+  };
 
-export const Autolathe = props => {
-  const { act, data } = useBackend<Data>();
+export const Autolathe = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
 
   const {
     have_design_selector,
@@ -141,15 +139,18 @@ export const Autolathe = props => {
     special_actions,
     categories,
     show_category,
-    mat_efficiency,
   } = data;
 
-  const [searchText, setSearchText] = useSharedState('search_text', '');
+  const [searchText, setSearchText] = useSharedState(
+    context,
+    'search_text',
+    ''
+  );
 
   return (
     <Window width={720} height={700}>
       <Window.Content>
-        <Stack vertical height='100%'>
+        <Stack vertical height="100%">
           <Stack.Item>
             <Stack>
               {have_materials ? (
@@ -174,16 +175,15 @@ export const Autolathe = props => {
           ) : null}
           {special_actions ? (
             <Stack.Item>
-              <Section title='Special Actions'>
+              <Section title="Special Actions">
                 <Stack>
-                  {special_actions.map(action => (
+                  {special_actions.map((action) => (
                     <Stack.Item key={action.action}>
                       <Button
                         icon={action.icon}
                         onClick={() => {
                           act('special_action', { action: action.action });
-                        }}
-                      >
+                        }}>
                         {action.name}
                       </Button>
                     </Stack.Item>
@@ -196,14 +196,13 @@ export const Autolathe = props => {
             <Stack.Item>
               <Section>
                 <Stack>
-                  {categories.map(category => (
+                  {categories.map((category) => (
                     <Stack.Item key={category}>
                       <Button
                         selected={category === show_category}
                         onClick={() =>
                           act('switch_category', { category: category })
-                        }
-                      >
+                        }>
                         {category}
                       </Button>
                     </Stack.Item>
@@ -213,12 +212,12 @@ export const Autolathe = props => {
             </Stack.Item>
           ) : null}
           <Stack.Item grow>
-            <Stack height='95%'>
+            <Stack height="95%">
               {designs ? (
-                <Stack.Item grow height='100%'>
+                <Stack.Item grow height="100%">
                   {have_design_selector ? (
-                    <Section title='Recipes' fill>
-                      <Box style={{ paddingBottom: '8px' }}>
+                    <Section title="Recipes" fill>
+                      <Box style={{ 'padding-bottom': '8px' }}>
                         <SearchBar
                           searchText={searchText}
                           onSearchTextChanged={setSearchText}
@@ -227,35 +226,28 @@ export const Autolathe = props => {
                       </Box>
                       <Section
                         style={{
-                          paddingRight: '4px',
-                          paddingBottom: '30px',
+                          'padding-right': '4px',
+                          'padding-bottom': '30px',
                         }}
                         fill
-                        scrollable
-                      >
+                        scrollable>
                         <Stack vertical>
                           {searchText.length > 0
                             ? designs
-                                .filter(design =>
+                                .filter((design) =>
                                   design.name.toLowerCase().includes(searchText)
                                 )
-                                .map(design => {
+                                .map((design) => {
                                   return (
                                     <Stack.Item key={design.id + design.name}>
-                                      <AutolatheItem
-                                        design={design}
-                                        mat_efficiency={mat_efficiency}
-                                      />
+                                      <AutolatheItem design={design} />
                                     </Stack.Item>
                                   );
                                 })
-                            : designs.map(design => {
+                            : designs.map((design) => {
                                 return (
                                   <Stack.Item key={design.id + design.name}>
-                                    <AutolatheItem
-                                      design={design}
-                                      mat_efficiency={mat_efficiency}
-                                    />
+                                    <AutolatheItem design={design} />
                                   </Stack.Item>
                                 );
                               })}
@@ -263,7 +255,7 @@ export const Autolathe = props => {
                       </Section>
                     </Section>
                   ) : (
-                    <Section color='bad'>
+                    <Section color="bad">
                       This equipment is operated remotely.
                     </Section>
                   )}
@@ -278,7 +270,6 @@ export const Autolathe = props => {
                     progress={progress}
                     queue={queue}
                     queue_max={queue_max}
-                    mat_efficiency={mat_efficiency}
                   />
                 </Stack.Item>
               ) : null}
