@@ -31460,15 +31460,15 @@
 /obj/item/cell/medium/high{
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /obj/item/pc_part/drive/disk/design/nt_new_guns,
 /obj/item/pc_part/drive/disk/design/nt_old_guns,
 /obj/item/pc_part/drive/disk/design/guns/dominion,
@@ -49865,7 +49865,7 @@
 	})
 "jGZ" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/practice,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/practice,
 /obj/item/clothing/ears/earmuffs,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -74792,7 +74792,7 @@
 /obj/item/gun/projectile/mk58/wood,
 /obj/item/gun/projectile/mk58/wood,
 /obj/item/gun/projectile/mk58/wood,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/biomatter,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/biomatter,
 /turf/simulated/floor/tiled/dark/golden,
 /area/nadezhda/command/prime)
 "ouw" = (
@@ -85718,12 +85718,12 @@
 	},
 /obj/item/gun/projectile/revolver/tacticool_revolver,
 /obj/item/gun/projectile/revolver/rev10/mateba,
-/obj/item/ammo_magazine/speed_loader_kurtz_12/lethal,
-/obj/item/ammo_magazine/speed_loader_kurtz_12/lethal,
-/obj/item/ammo_magazine/speed_loader_pistol_10mm,
-/obj/item/ammo_magazine/speed_loader_pistol_10mm,
-/obj/item/ammo_magazine/ammobox/kurtz_12,
-/obj/item/ammo_magazine/ammobox/pistol_10mm,
+/obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal,
+/obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal,
+/obj/item/ammo_magazine/speed_loader_magnum_10mm,
+/obj/item/ammo_magazine/speed_loader_magnum_10mm,
+/obj/item/ammo_magazine/ammobox/kurtz_12mm,
+/obj/item/ammo_magazine/ammobox/magnum_10mm,
 /turf/simulated/floor/tiled/dark/gray_platform,
 /area/nadezhda/command/armory)
 "qEA" = (
@@ -97854,9 +97854,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /turf/simulated/floor/tiled/dark/techfloor_grid,
 /area/nadezhda/security/armory_blackshield)
 "sXy" = (

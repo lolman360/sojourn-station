@@ -95,7 +95,7 @@
 	rapid = 1
 	icon_state = "syndicateranged"
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
-	projectiletype = /obj/item/projectile/bullet/pistol_9mm
+	projectiletype = /obj/item/projectile/bullet/pistol_35
 
 	drop_items = list(/obj/item/gun/projectile/automatic/c20r)
 
@@ -325,7 +325,7 @@
 	rapid = 1
 	icon_state = "syndicate_stormtrooper_smg"
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
-	projectiletype = /obj/item/projectile/bullet/pistol_9mm
+	projectiletype = /obj/item/projectile/bullet/pistol_35
 	drop_items = list(/obj/item/gun/projectile/automatic/c20r)
 
 /mob/living/simple/hostile/elitemercenary/range/gunslinger
@@ -333,7 +333,7 @@
 	rapid = 0
 	icon_state = "syndicate_stormtrooper_pistol"
 	projectilesound = 'sound/weapons/guns/fire/revolver_fire.ogg'
-	projectiletype = /obj/item/projectile/bullet/kurtz_12
+	projectiletype = /obj/item/projectile/bullet/kurtz_12mm
 	drop_items = list(/obj/item/gun/projectile/revolver/mistral)
 
 /mob/living/simple/hostile/elitemercenary/range/space/heavy/shotgun

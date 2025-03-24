@@ -207,8 +207,8 @@ obj/item/storage/hcases/attackby(obj/item/W, mob/user)
 
 /obj/item/storage/hcases/ammo/ih/ranger_officer/populate_contents()
 	new /obj/item/handcuffs/advanced(src)
-	new /obj/item/ammo_magazine/speed_loader_kurtz_12/rubber(src)
-	new /obj/item/ammo_magazine/speed_loader_kurtz_12/rubber(src)
+	new /obj/item/ammo_magazine/speed_loader_kurtz_12mm/rubber(src)
+	new /obj/item/ammo_magazine/speed_loader_kurtz_12mm/rubber(src)
 	new /obj/item/device/lighting/toggleable/flashlight/seclite(src)
 	new /obj/item/clothing/accessory/badge/holo/inspector(src)
 	new /obj/item/cell/small/high(src)
@@ -492,7 +492,8 @@ obj/item/storage/hcases/attackby(obj/item/W, mob/user)
 		/obj/item/airalarm_electronics,
 		/obj/item/tool_upgrade,
 		/obj/item/cell,
-		/obj/item/part/gun
+		/obj/item/part/gun,
+		/obj/item/storage/makeshift_grinder
 		)
 
 /obj/item/storage/hcases/engi/scrap

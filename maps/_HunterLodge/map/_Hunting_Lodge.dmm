@@ -2617,14 +2617,14 @@
 /area/nadezhda/outside/forest/hunting_lodge_dark)
 "wd" = (
 /obj/structure/table/rack/shelf,
-/obj/item/ammo_magazine/ammobox/pistol_10mm{
+/obj/item/ammo_magazine/ammobox/magnum_10mm{
 	pixel_y = 10;
 	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammobox/pistol_10mm{
+/obj/item/ammo_magazine/ammobox/magnum_10mm{
 	pixel_y = 10
 	},
-/obj/item/ammo_magazine/ammobox/pistol_10mm{
+/obj/item/ammo_magazine/ammobox/magnum_10mm{
 	pixel_y = 10;
 	pixel_x = 6
 	},

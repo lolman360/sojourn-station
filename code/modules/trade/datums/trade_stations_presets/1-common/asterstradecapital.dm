@@ -110,8 +110,8 @@
 			/obj/item/gun/energy/gun,
 			/obj/item/ammo_magazine/pistol_9mm,
 			/obj/item/ammo_magazine/pistol_9mm/rubber,
-			/obj/item/ammo_magazine/pistol_10mm = custom_good_amount_range(list(-1, 3)),
-			/obj/item/ammo_magazine/pistol_10mm/rubber = custom_good_amount_range(list(-1, 5)),
+			/obj/item/ammo_magazine/magnum_10mm = custom_good_amount_range(list(-1, 3)),
+			/obj/item/ammo_magazine/magnum_10mm/rubber = custom_good_amount_range(list(-1, 5)),
 			/obj/item/ammo_magazine/ammobox/pistol_9mm,
 			/obj/item/ammo_magazine/ammobox/pistol_9mm/rubber
 		),

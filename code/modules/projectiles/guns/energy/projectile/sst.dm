@@ -47,7 +47,7 @@
 	can_dual = TRUE
 	damage_multiplier = 1.3
 	w_class = ITEM_SIZE_NORMAL
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/rubber/soporific
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/rubber/soporific
 	matter = list(MATERIAL_PLASTEEL = 18, MATERIAL_STEEL = 10,  MATERIAL_SILVER = 12, MATERIAL_PLATINUM = 0.2)
 	price_tag = 1600
 

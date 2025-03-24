@@ -29,7 +29,7 @@
 			/obj/item/ammo_magazine/c10x24 = custom_good_amount_range(list(1, 10)),
 			//obj/item/ammo_magazine/a75 = custom_good_amount_range(list(1, 10)),
 			/obj/item/ammo_magazine/heavy_rifle_86_drum = custom_good_amount_range(list(1, 10)),
-			/obj/item/ammo_magazine/drum_20/pellet = custom_good_amount_range(list(1, 10)),
+			/obj/item/ammo_magazine/drum_20mm/pellet = custom_good_amount_range(list(1, 10)),
 			/obj/item/ammo_casing/antim/lethal/prespawned = custom_good_amount_range(list(1, 10)),
 			/obj/item/ammo_casing/antim/incend/prespawned = custom_good_amount_range(list(1, 10)),
 
@@ -37,8 +37,8 @@
 			/obj/item/ammo_magazine/ammobox/rifle_762_small,
 			/obj/item/ammo_magazine/ammobox/light_rifle_65_small,
 			/obj/item/ammo_magazine/ammobox/shotgun,
-			/obj/item/ammo_magazine/ammobox/kurtz_12,
-			/obj/item/ammo_magazine/ammobox/pistol_10mm,
+			/obj/item/ammo_magazine/ammobox/kurtz_12mm,
+			/obj/item/ammo_magazine/ammobox/magnum_10mm,
 			/obj/item/ammo_magazine/ammobox/pistol_9mm
 		),
 		"Energy Weapons" = list(

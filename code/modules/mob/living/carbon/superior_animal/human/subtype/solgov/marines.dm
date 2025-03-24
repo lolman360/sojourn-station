@@ -77,19 +77,19 @@
 
 	armor = list(melee = 15, bullet = 17, energy = 12, bomb = 40, bio = 100, rad = 100)
 
-	casingtype = /obj/item/ammo_casing/pistol_10mm/spent
+	casingtype = /obj/item/ammo_casing/magnum_10mm/spent
 
 	//range/ammo stuff
 	rapid = TRUE
 	rapid_fire_shooting_amount = 3
 	comfy_range = 4
 	ranged_cooldown = 2
-	projectiletype = /obj/item/projectile/bullet/pistol_10mm
+	projectiletype = /obj/item/projectile/bullet/magnum_10mm
 	projectilesound = 'sound/weapons/guns/fire/vector_fire.ogg'
 	limited_ammo = TRUE
 	mag_drop = TRUE
 	rounds_left = 30
-	mag_type = /obj/item/ammo_magazine/smg_10mm/empty
+	mag_type = /obj/item/ammo_magazine/smg_magnum_10mm/empty
 	mags_left = 5 //1+5
 
 	melee_damage_lower = 15

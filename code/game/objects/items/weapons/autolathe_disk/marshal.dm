@@ -16,6 +16,7 @@
 		/datum/design/autolathe/sec/electropack,
 		/datum/design/autolathe/tool/tacknife,
 		/datum/design/autolathe/tool/combat_shovel,
+		/datum/design/autolathe/tool/militia_tomahawk,
 		/datum/design/autolathe/sec/beartrap,
 		/datum/design/autolathe/sec/hailer,
 		/datum/design/research/item/medical/autopsy_scanner,
@@ -92,10 +93,10 @@
 		/datum/design/autolathe/ammo/smg_rubber,
 		/datum/design/autolathe/ammo/smg_lethal,
 		/datum/design/autolathe/ammo/smg_practice = 0,
-		/datum/design/autolathe/ammo/pistol_9mm_drum,
-		/datum/design/autolathe/ammo/pistol_9mm_drum/empty = 0,
-		/datum/design/autolathe/ammo/pistol_9mm_drum/rubber,
-		/datum/design/autolathe/ammo/pistol_9mm_drum/lethal,
+		/datum/design/autolathe/ammo/pistol_35_drum,
+		/datum/design/autolathe/ammo/pistol_35_drum/empty = 0,
+		/datum/design/autolathe/ammo/pistol_35_drum/rubber,
+		/datum/design/autolathe/ammo/pistol_35_drum/lethal,
 		/datum/design/autolathe/ammo/magnum = 0,
 		/datum/design/autolathe/ammo/magnum_rubber,
 		/datum/design/autolathe/ammo/magnum_pepperball,
@@ -171,10 +172,10 @@
 	license = 12
 	designs = list(
 		/datum/design/autolathe/gun/freedom = 4,
-		/datum/design/autolathe/ammo/smg_10mm = 2,
-		/datum/design/autolathe/ammo/smg_10mm_rubber = 1,
-		/datum/design/autolathe/ammo/smg_10mm_lethal = 3,
-		/datum/design/autolathe/ammo/smg_10mm_practice = 0
+		/datum/design/autolathe/ammo/smg_magnum_10mm = 2,
+		/datum/design/autolathe/ammo/smg_magnum_10mm_rubber = 1,
+		/datum/design/autolathe/ammo/smg_magnum_10mm_lethal = 3,
+		/datum/design/autolathe/ammo/smg_magnum_10mm_practice = 0
 		)
 
 // 12mm Heavy Pistol

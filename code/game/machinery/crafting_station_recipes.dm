@@ -102,37 +102,37 @@ GLOBAL_LIST_EMPTY(all_crafting_station_recipes)
 /datum/recipe_crafting_station/ammo/nine_mm/scrap_ammo_pile
 	name = "Scrap 9mm ammo pile"
 	point_cost = 5
-	result = /obj/item/ammo_casing/pistol_9mm/scrap/prespawned
+	result = /obj/item/ammo_casing/pistol_35/scrap/prespawned
 
 /datum/recipe_crafting_station/ammo/nine_mm/scrap_speedloader
 	name = "Scrap 9mm speedloader"
 	point_cost = 3
-	result = /obj/item/ammo_magazine/speed_loader_pistol_9mm/scrap
+	result = /obj/item/ammo_magazine/speed_loader_pistol_35/scrap
 
 /datum/recipe_crafting_station/ammo/nine_mm/scrap_packet
 	name = "Scrap 9mm ammo packet"
 	point_cost = 12
-	result = /obj/item/ammo_magazine/ammobox/pistol_9mm/scrap
+	result = /obj/item/ammo_magazine/ammobox/pistol_35/scrap
 
 /datum/recipe_crafting_station/ammo/nine_mm/ammo_pile
 	name = "9mm ammo pile"
 	point_cost = 8
-	result = /obj/item/ammo_casing/pistol_9mm/prespawned
+	result = /obj/item/ammo_casing/pistol_35/prespawned
 
 /datum/recipe_crafting_station/ammo/nine_mm/ammo_packet
 	name = "9mm ammo packet"
 	point_cost = 18
-	result = /obj/item/ammo_magazine/ammobox/pistol_9mm
+	result = /obj/item/ammo_magazine/ammobox/pistol_35
 
 /datum/recipe_crafting_station/ammo/nine_mm/pistol_mag
 	name = "EMPTY 9mm pistol magazine"
 	point_cost = 5
-	result = /obj/item/ammo_magazine/pistol_9mm/empty
+	result = /obj/item/ammo_magazine/pistol_35/empty
 
 /datum/recipe_crafting_station/ammo/nine_mm/extended_mag
 	name = "EMPTY 9mm extended magazine"
 	point_cost = 7
-	result = /obj/item/ammo_magazine/highcap_pistol_9mm/empty
+	result = /obj/item/ammo_magazine/highcap_pistol_35/empty
 
 /datum/recipe_crafting_station/ammo/nine_mm/smg_mag
 	name = "EMPTY 9mm SMG magazine"
@@ -147,57 +147,57 @@ GLOBAL_LIST_EMPTY(all_crafting_station_recipes)
 /datum/recipe_crafting_station/ammo/ten_mm/scrap_ammo_pile
 	name = "Scrap 10mm ammo pile"
 	point_cost = 3
-	result = /obj/item/ammo_casing/pistol_10mm/scrap/prespawned
+	result = /obj/item/ammo_casing/magnum_10mm/scrap/prespawned
 
 /datum/recipe_crafting_station/ammo/ten_mm/scrap_speedloader
 	name = "Scrap 10mm speedloader"
 	point_cost = 5
-	result = /obj/item/ammo_magazine/speed_loader_pistol_10mm/scrap
+	result = /obj/item/ammo_magazine/speed_loader_magnum_10mm/scrap
 
 /datum/recipe_crafting_station/ammo/ten_mm/scrap_ammo_packet
 	name = "Scrap 10mm ammo packet"
 	point_cost = 15
-	result = /obj/item/ammo_magazine/ammobox/pistol_10mm/scrap
+	result = /obj/item/ammo_magazine/ammobox/magnum_10mm/scrap
 
 /datum/recipe_crafting_station/ammo/ten_mm/ammo_pile
 	name = "10mm magnum ammo pile"
 	point_cost = 7
-	result = /obj/item/ammo_casing/pistol_10mm/prespawned
+	result = /obj/item/ammo_casing/magnum_10mm/prespawned
 
 /datum/recipe_crafting_station/ammo/ten_mm/ammo_packet
 	name = "10mm ammo packet"
 	point_cost = 26
-	result = /obj/item/ammo_magazine/ammobox/pistol_10mm
+	result = /obj/item/ammo_magazine/ammobox/magnum_10mm
 
 /datum/recipe_crafting_station/ammo/ten_mm/pistol_mag
 	name = "EMPTY 10mm pistol magazine"
 	point_cost = 7
-	result = /obj/item/ammo_magazine/pistol_10mm/empty
+	result = /obj/item/ammo_magazine/magnum_10mm/empty
 
 // 12mm
 /datum/recipe_crafting_station/ammo/twelve_mm
 	category = "Small Arms Ammo"
-	subcategory = CAL_HEAVY_PISTOL
+	subcategory = CAL_KURTZ
 
 /datum/recipe_crafting_station/ammo/twelve_mm/ammo_pile
 	name = "12mm ammo pile"
 	point_cost = 8
-	result = /obj/item/ammo_casing/kurtz_12/prespawned
+	result = /obj/item/ammo_casing/kurtz_12mm/prespawned
 
 /datum/recipe_crafting_station/ammo/twelve_mm/speed_loader
 	name = "12mm speedloader"
 	point_cost = 10
-	result = /obj/item/ammo_magazine/speed_loader_kurtz_12
+	result = /obj/item/ammo_magazine/speed_loader_kurtz_12mm
 
 /datum/recipe_crafting_station/ammo/twelve_mm/ammo_box
 	name = "12mm ammo box"
 	point_cost = 26
-	result = /obj/item/ammo_magazine/ammobox/kurtz_12
+	result = /obj/item/ammo_magazine/ammobox/kurtz_12mm
 
 /datum/recipe_crafting_station/ammo/twelve_mm/mag
 	name = "EMPTY 12mm heavy pistol magazine"
 	point_cost = 8
-	result = /obj/item/ammo_magazine/kurtz_12/empty
+	result = /obj/item/ammo_magazine/kurtz_12mm/empty
 
 // shotgun
 /datum/recipe_crafting_station/ammo/shotgun

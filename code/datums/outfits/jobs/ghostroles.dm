@@ -8,7 +8,7 @@
 
 /decl/hierarchy/outfit/escapedprisoner/hobo
 	belt = /obj/item/gun/projectile/revolver/handmade
-	l_pocket = /obj/item/ammo_casing/pistol_10mm/scrap/prespawned
+	l_pocket = /obj/item/ammo_casing/magnum_10mm/scrap/prespawned
 
 /obj/effect/mob_spawn/human/prisoner_transport/hobo
 	outfit = /decl/hierarchy/outfit/escapedprisoner/hobo
@@ -183,7 +183,7 @@
 	back = /obj/item/storage/backpack/satchel
 	r_pocket = /obj/item/clothing/accessory/holster/leg
 	l_pocket = /obj/item/storage/pouch/ammo
-	backpack_contents = list(/obj/item/modular_computer/tablet/lease/preset/command = 1, /obj/item/gun/projectile/silvereye = 1, /obj/item/ammo_magazine/kurtz_12/hv = 5, /obj/item/clothing/head/helmet/mercenary = 1, /obj/item/clothing/mask/gas  = 1)
+	backpack_contents = list(/obj/item/modular_computer/tablet/lease/preset/command = 1, /obj/item/gun/projectile/silvereye = 1, /obj/item/ammo_magazine/kurtz_12mm/hv = 5, /obj/item/clothing/head/helmet/mercenary = 1, /obj/item/clothing/mask/gas  = 1)
 	id_slot = slot_wear_id
 	id_type =  /obj/item/card/id/syndicate/ert/prospector_ert
 
@@ -198,7 +198,7 @@
 	gloves = /obj/item/clothing/gloves/thick/brown
 	shoes = /obj/item/clothing/shoes/jackboots
 	back = /obj/item/storage/backpack/satchel/security
-	backpack_contents = list(/obj/item/ammo_magazine/ammobox/heavy_rifle_86_small = 2, /obj/item/ammo_magazine/ammobox/kurtz_12 = 2, /obj/item/device/binoculars = 1, \
+	backpack_contents = list(/obj/item/ammo_magazine/ammobox/heavy_rifle_86_small = 2, /obj/item/ammo_magazine/ammobox/kurtz_12mm = 2, /obj/item/device/binoculars = 1, \
 	/obj/item/device/radio = 1, /obj/item/tool_upgrade/productivity/ergonomic_grip = 1, /obj/item/tool_upgrade/refinement/laserguide = 1, /obj/item/clothing/accessory/holster/leg = 1, \
 	/obj/item/tool/knife/boot = 1, /obj/item/reagent_containers/snacks/openable/mre = 1, /obj/item/clothing/mask/gas = 1)
 	l_pocket = /obj/item/storage/pouch/ammo
@@ -258,7 +258,7 @@
 	/obj/item/storage/firstaid/adv = 1,
 	/obj/item/tool/medmultitool = 1,
 	/obj/item/gun/projectile/ladon = 1,
-	/obj/item/ammo_magazine/pistol_10mm/hv = 3,
+	/obj/item/ammo_magazine/magnum_10mm/hv = 3,
 	/obj/item/clothing/accessory/holster/leg = 1
 	)
 	id_slot = slot_wear_id

@@ -34,11 +34,11 @@ var/global/blackshield_max_energy //Maximaum combined energy of all teleporters
 	var/list/parts_list = list(
 		//Ammo
 		/obj/item/ammo_casing/flare/old = 10, //Rng colour for cheap! - dont want to add a spam list of every type ever
-		/obj/item/ammo_magazine/highcap_pistol_9mm = 15, //Idea with this is your sending up the mag more then ammo
-		/obj/item/ammo_magazine/highcap_pistol_9mm/drum = 125,
+		/obj/item/ammo_magazine/highcap_pistol_35 = 15, //Idea with this is your sending up the mag more then ammo
+		/obj/item/ammo_magazine/highcap_pistol_35/drum = 125,
 		/obj/item/ammo_magazine/smg_9mm = 35,
-		/obj/item/ammo_magazine/pistol_10mm = 40,
-		/obj/item/ammo_magazine/kurtz_12 = 60,
+		/obj/item/ammo_magazine/magnum_10mm = 40,
+		/obj/item/ammo_magazine/kurtz_12mm = 60,
 		/obj/item/ammo_magazine/speed_loader_light_rifle_65 = 15,
 		/obj/item/ammo_magazine/speed_loader_rifle_762 = 15, //More or less for ammo rather then speedloader
 		/obj/item/ammo_magazine/light_rifle_65 = 30,
@@ -47,9 +47,9 @@ var/global/blackshield_max_energy //Maximaum combined energy of all teleporters
 		/obj/item/ammo_magazine/rifle_762_linked_box/empty = 65, // Empty linked mag for balance, making the Heroic actually usable if ordered.
 		/obj/item/ammo_magazine/heavy_rifle_86 = 50,
 		/obj/item/ammo_magazine/sbaw = 50,
-		/obj/item/ammo_magazine/ammobox/pistol_9mm = 75,
-		/obj/item/ammo_magazine/ammobox/pistol_10mm = 150,
-		/obj/item/ammo_magazine/ammobox/kurtz_12 = 200,
+		/obj/item/ammo_magazine/ammobox/pistol_35 = 75,
+		/obj/item/ammo_magazine/ammobox/magnum_10mm = 150,
+		/obj/item/ammo_magazine/ammobox/kurtz_12mm = 200,
 		/obj/item/ammo_magazine/ammobox/shotgun = 500,
 		/obj/item/ammo_magazine/ammobox/light_rifle_65 = 300,
 		/obj/item/ammo_magazine/ammobox/rifle_762 = 400,
@@ -94,7 +94,7 @@ var/global/blackshield_max_energy //Maximaum combined energy of all teleporters
 
 /obj/machinery/blackshield_teleporter/Destroy()
 	blackshield_teleporters -= src
-	RefreshParts() // To avoid energy overfills if a teleporter gets destroyed
+	// RefreshParts() // To avoid energy overfills if a teleporter gets destroyed // CFW - Disabled for now 'cause it created divide by 0
 	.=..()
 
 /obj/machinery/blackshield_teleporter/RefreshParts()

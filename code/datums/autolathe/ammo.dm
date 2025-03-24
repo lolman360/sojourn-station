@@ -74,23 +74,23 @@
 	name = "20mm loader tube (empty)"
 	build_path = /obj/item/ammo_magazine/speed_loader_shotgun/empty
 
-/datum/design/autolathe/ammo/drum_20empty
+/datum/design/autolathe/ammo/drum_20mmempty
 	name = "20mm ammo drum (empty)"
-	build_path = /obj/item/ammo_magazine/drum_20/empty
+	build_path = /obj/item/ammo_magazine/drum_20mm/empty
 
-/datum/design/autolathe/ammo/drum_20beanbag
+/datum/design/autolathe/ammo/drum_20mmbeanbag
 	name = "ammo drum (20mm beanbag)"
-	build_path = /obj/item/ammo_magazine/drum_20/beanbag
+	build_path = /obj/item/ammo_magazine/drum_20mm/beanbag
 	materials = list(MATERIAL_STEEL = 8)
 
-/datum/design/autolathe/ammo/drum_20pellet
+/datum/design/autolathe/ammo/drum_20mmpellet
 	name = "ammo drum (20mm pellet)"
-	build_path = /obj/item/ammo_magazine/drum_20/pellet
+	build_path = /obj/item/ammo_magazine/drum_20mm/pellet
 	materials = list(MATERIAL_STEEL = 8)
 
-/datum/design/autolathe/ammo/drum_20slug
+/datum/design/autolathe/ammo/drum_20mmslug
 	name = "ammo drum (20mm slug)"
-	build_path = /obj/item/ammo_magazine/drum_20
+	build_path = /obj/item/ammo_magazine/drum_20mm
 	materials = list(MATERIAL_STEEL = 8)
 
 /datum/design/autolathe/ammo/sbaw_slug
@@ -121,44 +121,44 @@
 
 /datum/design/autolathe/ammo/pistol
 	name = "standard magazine (9mm)"
-	build_path = /obj/item/ammo_magazine/pistol_9mm
+	build_path = /obj/item/ammo_magazine/pistol_35
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/pistol_rubber
 	name = "standard magazine (9mm rubber)"
-	build_path = /obj/item/ammo_magazine/pistol_9mm/rubber
+	build_path = /obj/item/ammo_magazine/pistol_35/rubber
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/pistol_practice
 	name = "standard magazine (9mm practice)"
-	build_path = /obj/item/ammo_magazine/pistol_9mm/practice
+	build_path = /obj/item/ammo_magazine/pistol_35/practice
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/pistol_lethal
 	name = "standard magazine (9mm hollow-point)"
-	build_path = /obj/item/ammo_magazine/pistol_9mm/lethal
+	build_path = /obj/item/ammo_magazine/pistol_35/lethal
 	materials = list(MATERIAL_STEEL = 1)
 
 // 9mm Highcap
 
 /datum/design/autolathe/ammo/hpistol
 	name = "high cap magazine (9mm)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/hpistol_rubber
 	name = "high cap magazine (9mm rubber)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/rubber
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/rubber
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/hpistol_practice
 	name = "high cap magazine (9mm practice)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/practice
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/practice
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/hpistol_lethal
 	name = "high cap magazine (9mm hollow-point)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/lethal
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/lethal
 	materials = list(MATERIAL_STEEL = 2)
 
 //9mm SMG
@@ -183,28 +183,28 @@
 	materials = list(MATERIAL_STEEL = 6)
 
 //9mm drum
-/datum/design/autolathe/ammo/pistol_9mm_drum
+/datum/design/autolathe/ammo/pistol_35_drum
 	name = "standard drum (9mm)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/drum
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/drum
 	materials = list(MATERIAL_STEEL = 18)
 
-/datum/design/autolathe/ammo/pistol_9mm_drum/empty
+/datum/design/autolathe/ammo/pistol_35_drum/empty
 	name = "standard drum (9mm empty)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/drum/empty
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/drum/empty
 
-/datum/design/autolathe/ammo/pistol_9mm_drum/rubber
+/datum/design/autolathe/ammo/pistol_35_drum/rubber
 	name = "standard drum (9mm rubber)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/drum/rubber
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/drum/rubber
 	materials = list(MATERIAL_STEEL = 18)
 
-/datum/design/autolathe/ammo/pistol_9mm_drum/hv
+/datum/design/autolathe/ammo/pistol_35_drum/hv
 	name = "standard drum (9mm high-velocity)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/drum/hv
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/drum/hv
 	materials = list(MATERIAL_STEEL = 18)
 
-/datum/design/autolathe/ammo/pistol_9mm_drum/lethal
+/datum/design/autolathe/ammo/pistol_35_drum/lethal
 	name = "standard drum (9mm hollow-point)"
-	build_path = /obj/item/ammo_magazine/highcap_pistol_9mm/drum/lethal
+	build_path = /obj/item/ammo_magazine/highcap_pistol_35/drum/lethal
 	materials = list(MATERIAL_STEEL = 18)
 
 
@@ -212,70 +212,70 @@
 
 /datum/design/autolathe/ammo/slpistol_practice
 	name = "speed loader (9mm practice)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_9mm/practice
+	build_path = /obj/item/ammo_magazine/speed_loader_pistol_35/practice
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slpistol_rubber
 	name = "speed loader (9mm rubber)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_9mm/rubber
+	build_path = /obj/item/ammo_magazine/speed_loader_pistol_35/rubber
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slpistol
 	name = "speed loader (9mm)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_9mm
+	build_path = /obj/item/ammo_magazine/speed_loader_pistol_35
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slpistol_lethal
 	name = "speed loader (9mm hollow point)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_9mm/lethal
+	build_path = /obj/item/ammo_magazine/speed_loader_pistol_35/lethal
 	materials = list(MATERIAL_STEEL = 1)
 
 // 9mm ammobox
 
 /datum/design/autolathe/ammo/pistol_ammobox
 	name = "ammunition box (9mm)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35
 	materials = list(MATERIAL_STEEL = 6)
 
 /datum/design/autolathe/ammo/pistol_ammobox_rubber
 	name = "ammunition box (9mm rubber)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/rubber
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/rubber
 	materials = list(MATERIAL_STEEL = 6)
 
 /datum/design/autolathe/ammo/pistol_ammobox_practice
 	name = "ammunition box (9mm practice)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/practice
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/practice
 	materials = list(MATERIAL_STEEL = 6)
 
 /datum/design/autolathe/ammo/pistol_ammobox_lethal
 	name = "ammunition box (9mm hollow-point)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/lethal
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/lethal
 	materials = list(MATERIAL_STEEL = 6)
 
 /datum/design/autolathe/ammo/pistol_ammobox_biomatter
 	name = "ammunition box (9mm Caustic)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/biomatter
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/biomatter
 	materials = list(MATERIAL_BIOMATTER = 20)
 
 //9mm large box
 /datum/design/autolathe/ammo/pistol_ammobox/large
 	name = "large ammunition box(9mm)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/large
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/large
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/pistol_ammobox/largelethal
 	name = "large ammunition box(9mm hollow point)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/large/lethal
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/large/lethal
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/pistol_ammobox/largerubber
 	name = "large ammunition box(9mm rubber)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/large/rubber
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/large/rubber
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/pistol_ammobox/largehv
 	name = "large ammunition box(9mm high-velocity)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_9mm/large/hv
+	build_path = /obj/item/ammo_magazine/ammobox/pistol_35/large/hv
 	materials = list(MATERIAL_STEEL = 12)
 
 // 10mm Speed Loaders + mags
@@ -283,27 +283,27 @@
 
 /datum/design/autolathe/ammo/slmagnum_practice
 	name = "speed loader (10mm Magnum practice)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_10mm/practice
+	build_path = /obj/item/ammo_magazine/speed_loader_magnum_10mm/practice
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slmagnum_rubber
 	name = "speed loader (10mm Magnum rubber)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_10mm/rubber
+	build_path = /obj/item/ammo_magazine/speed_loader_magnum_10mm/rubber
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slmagnum
 	name = "speed loader (10mm Magnum)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_10mm
+	build_path = /obj/item/ammo_magazine/speed_loader_magnum_10mm
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slmagnum_lethal
 	name = "speed loader (10mm Magnum hollow-point)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_10mm/lethal
+	build_path = /obj/item/ammo_magazine/speed_loader_magnum_10mm/lethal
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slmagnum_hv
 	name = "speed loader (10mm Magnum high-velocity)"
-	build_path = /obj/item/ammo_magazine/speed_loader_pistol_10mm/highvelocity
+	build_path = /obj/item/ammo_magazine/speed_loader_magnum_10mm/highvelocity
 	materials = list(MATERIAL_STEEL = 1)
 
 
@@ -311,113 +311,113 @@
 
 /datum/design/autolathe/ammo/magnum_practice
 	name = "magazine (10mm Auto-Mag practice)"
-	build_path = /obj/item/ammo_magazine/pistol_10mm/practice
+	build_path = /obj/item/ammo_magazine/magnum_10mm/practice
 	materials = list(MATERIAL_STEEL = 3)
 
 /datum/design/autolathe/ammo/magnum_rubber
 	name = "magazine (10mm Auto-Mag rubber)"
-	build_path = /obj/item/ammo_magazine/pistol_10mm/rubber
+	build_path = /obj/item/ammo_magazine/magnum_10mm/rubber
 	materials = list(MATERIAL_STEEL = 3)
 
 /datum/design/autolathe/ammo/magnum_pepperball
 	name = "magazine (10mm Auto-Mag pepperspray)"
-	build_path = /obj/item/ammo_magazine/pistol_10mm/rubber/pepperball
+	build_path = /obj/item/ammo_magazine/magnum_10mm/rubber/pepperball
 	materials = list(MATERIAL_STEEL = 3, MATERIAL_PLASTIC = 2)
 	chemicals = list("condensedcapsaicin" = 5)
 
 
 /datum/design/autolathe/ammo/magnum
 	name = "magazine (10mm Auto-Mag)"
-	build_path = /obj/item/ammo_magazine/pistol_10mm
+	build_path = /obj/item/ammo_magazine/magnum_10mm
 	materials = list(MATERIAL_STEEL = 3)
 
 /datum/design/autolathe/ammo/magnum_lethal
 	name = "magazine (10mm Auto-Mag hollow point)"
-	build_path = /obj/item/ammo_magazine/pistol_10mm/lethal
+	build_path = /obj/item/ammo_magazine/magnum_10mm/lethal
 	materials = list(MATERIAL_STEEL = 3)
 
 /datum/design/autolathe/ammo/magnum_hv
 	name = "magazine (10mm Auto-Mag high-velocity)"
-	build_path = /obj/item/ammo_magazine/pistol_10mm/hv
+	build_path = /obj/item/ammo_magazine/magnum_10mm/hv
 	materials = list(MATERIAL_STEEL = 3)
 
 //10mm boxes
 /datum/design/autolathe/ammo/magnum_ammobox
 	name = "ammunition box (10mm Auto-Mag)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm
 	materials = list(MATERIAL_STEEL = 9)
 
 /datum/design/autolathe/ammo/magnum_ammobox_lethal
 	name = "ammunition box (10mm Auto-Mag hollow point)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/lethal
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/lethal
 	materials = list(MATERIAL_STEEL = 9)
 
 /datum/design/autolathe/ammo/magnum_ammobox_rubber
 	name = "ammunition box (10mm Auto-Mag rubber)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/rubber
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/rubber
 	materials = list(MATERIAL_STEEL = 9)
 
 /datum/design/autolathe/ammo/magnum_ammobox_pepperball
 	name = "ammunition box (10mm Auto-Mag pepperspray)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/rubber/pepperball
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/rubber/pepperball
 	materials = list(MATERIAL_PLASTIC = 9)
 	chemicals = list("condensedcapsaicin" = 150)
 
 /datum/design/autolathe/ammo/magnum_ammobox_practice
 	name = "ammunition box (10mm Auto-Mag practice)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/practice
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/practice
 	materials = list(MATERIAL_STEEL = 9)
 
 /datum/design/autolathe/ammo/magnum_ammobox_biomatter
 	name = "ammunition box (10mm Auto-Mag Caustic)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/biomatter
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/biomatter
 	materials = list(MATERIAL_BIOMATTER = 25)
 
 // 10mm magnum large boxes
 /datum/design/autolathe/ammo/magnum_ammobox/large
 	name = "large ammunition box (10mm Auto-Mag)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/large
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/large
 	materials = list(MATERIAL_STEEL = 15)
 
 /datum/design/autolathe/ammo/magnum_ammobox/largehp
 	name = "large ammunition box (10mm Auto-Mag hollow-point)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/large/lethal
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/large/lethal
 	materials = list(MATERIAL_STEEL = 15)
 
 /datum/design/autolathe/ammo/magnum_ammobox/largerubber
 	name = "large ammunition box (10mm Auto-Mag rubber)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/large/rubber
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/large/rubber
 	materials = list(MATERIAL_STEEL = 15)
 
 /datum/design/autolathe/ammo/magnum_ammobox/largehv
 	name = "large ammunition box (10mm Auto-Mag high-velocity)"
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/large/hv
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/large/hv
 	materials = list(MATERIAL_STEEL = 15)
 
 //10mm Magnum SMG
-/datum/design/autolathe/ammo/smg_10mm
+/datum/design/autolathe/ammo/smg_magnum_10mm
 	name = "SMG magazine (10mm Magnum)"
-	build_path = /obj/item/ammo_magazine/smg_10mm
+	build_path = /obj/item/ammo_magazine/smg_magnum_10mm
 	materials = list(MATERIAL_STEEL = 12)
 
-/datum/design/autolathe/ammo/smg_10mm_rubber
+/datum/design/autolathe/ammo/smg_magnum_10mm_rubber
 	name = "SMG magazine (10mm Magnum rubber)"
-	build_path = /obj/item/ammo_magazine/smg_10mm/rubber
+	build_path = /obj/item/ammo_magazine/smg_magnum_10mm/rubber
 	materials = list(MATERIAL_STEEL = 12)
 
-/datum/design/autolathe/ammo/smg_10mm_practice
+/datum/design/autolathe/ammo/smg_magnum_10mm_practice
 	name = "SMG magazine (10mm Magnum practice)"
-	build_path = /obj/item/ammo_magazine/smg_10mm/practice
+	build_path = /obj/item/ammo_magazine/smg_magnum_10mm/practice
 	materials = list(MATERIAL_STEEL = 12)
 
-/datum/design/autolathe/ammo/smg_10mm_lethal
+/datum/design/autolathe/ammo/smg_magnum_10mm_lethal
 	name = "SMG magazine (10mm Magnum hollow-point)"
-	build_path = /obj/item/ammo_magazine/smg_10mm/lethal
+	build_path = /obj/item/ammo_magazine/smg_magnum_10mm/lethal
 	materials = list(MATERIAL_STEEL = 12)
 
-/datum/design/autolathe/ammo/smg_10mm_empty
+/datum/design/autolathe/ammo/smg_magnum_10mm_empty
 	name = "SMG magazine (10mm Magnum Empty)"
-	build_path = /obj/item/ammo_magazine/smg_10mm/empty
+	build_path = /obj/item/ammo_magazine/smg_magnum_10mm/empty
 	materials = list(MATERIAL_STEEL = 12)
 
 
@@ -427,27 +427,27 @@
 
 /datum/design/autolathe/ammo/kurtz_rubber
 	name = "magazine (12mm rubber)"
-	build_path = /obj/item/ammo_magazine/kurtz_12/rubber
+	build_path = /obj/item/ammo_magazine/kurtz_12mm/rubber
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz
 	name = "magazine (12mm)"
-	build_path = /obj/item/ammo_magazine/kurtz_12
+	build_path = /obj/item/ammo_magazine/kurtz_12mm
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz_lethal
 	name = "magazine (12mm hollow point)"
-	build_path = /obj/item/ammo_magazine/kurtz_12/lethal
+	build_path = /obj/item/ammo_magazine/kurtz_12mm/lethal
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz_practice
 	name = "magazine (12mm practice)"
-	build_path = /obj/item/ammo_magazine/kurtz_12/practice
+	build_path = /obj/item/ammo_magazine/kurtz_12mm/practice
 	materials = list(MATERIAL_STEEL = 2)
 
 /datum/design/autolathe/ammo/kurtz_hv
 	name = "magazine (12mm high-velocity)"
-	build_path = /obj/item/ammo_magazine/kurtz_12/hv
+	build_path = /obj/item/ammo_magazine/kurtz_12mm/hv
 	materials = list(MATERIAL_STEEL = 2)
 
 
@@ -455,53 +455,53 @@
 
 /datum/design/autolathe/ammo/slkurtz_rubber
 	name = "speed loader (12mm rubber)"
-	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12/rubber
+	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12mm/rubber
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz
 	name = "speed loader (12mm Kurtz)"
-	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12
+	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12mm
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz_lethal
 	name = "speed loader (12mm hollow point)"
-	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12/lethal
+	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz_practice
 	name = "speed loader (12mm practice)"
-	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12/practice
+	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12mm/practice
 	materials = list(MATERIAL_STEEL = 1)
 
 /datum/design/autolathe/ammo/slkurtz_hv
 	name = "speed loader (12mm high-velocity)"
-	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12/highvelocity
+	build_path = /obj/item/ammo_magazine/speed_loader_kurtz_12mm/highvelocity
 	materials = list(MATERIAL_STEEL = 1)
 
 //12mm Kurtz boxes
 /datum/design/autolathe/ammo/kurtz_ammobox
 	name = "ammunition box (12mm)"
-	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12
+	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12mm
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_rubber
 	name = "ammunition box (12mm rubber)"
-	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12/rubber
+	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12mm/rubber
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_practice
 	name = "ammunition box (12mm practice)"
-	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12/practice
+	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12mm/practice
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_hv
 	name = "ammunition box (12mm high-velocity)"
-	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12/hv
+	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12mm/hv
 	materials = list(MATERIAL_STEEL = 12)
 
 /datum/design/autolathe/ammo/kurtz_ammobox_lethal
 	name = "ammunition box (12mm hollow point)"
-	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12/lethal
+	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12mm/lethal
 	materials = list(MATERIAL_STEEL = 12)
 
 

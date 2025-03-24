@@ -484,9 +484,9 @@
 	new /obj/item/clothing/glasses/powered/night(src)
 	new /obj/item/clothing/glasses/powered/thermal(src)
 	new /obj/item/device/lighting/toggleable/flashlight/heavy(src)
-	new /obj/item/ammo_magazine/kurtz_12/hv(src)
-	new /obj/item/ammo_magazine/kurtz_12/hv(src)
-	new /obj/item/ammo_magazine/ammobox/kurtz_12/hv(src)
+	new /obj/item/ammo_magazine/kurtz_12mm/hv(src)
+	new /obj/item/ammo_magazine/kurtz_12mm/hv(src)
+	new /obj/item/ammo_magazine/ammobox/kurtz_12mm/hv(src)
 	new /obj/item/device/binoculars(src)
 
 /obj/item/storage/belt/security/tactical/opifex

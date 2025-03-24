@@ -12559,9 +12559,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /turf/simulated/floor/tiled/dark/techfloor_grid,
 /area/nadezhda/security/armory_blackshield)
 "cwN" = (
@@ -25058,15 +25058,15 @@
 /obj/item/cell/medium/high{
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /obj/item/pc_part/drive/disk/design/nt/mk58,
 /obj/item/pc_part/drive/disk/design/nt/plasma_shells,
 /obj/item/pc_part/drive/disk/design/nt/counselor,
@@ -41114,6 +41114,9 @@
 "hNT" = (
 /obj/machinery/light,
 /obj/structure/table/bar_special,
+/obj/item/reagent_containers/snacks/warcake{
+	pixel_y = 6
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/nadezhda/crew_quarters/bar)
 "hNV" = (
@@ -44812,12 +44815,12 @@
 	},
 /obj/item/gun/projectile/revolver/tacticool_revolver,
 /obj/item/gun/projectile/revolver/rev10,
-/obj/item/ammo_magazine/speed_loader_kurtz_12/lethal,
-/obj/item/ammo_magazine/speed_loader_kurtz_12/lethal,
-/obj/item/ammo_magazine/speed_loader_pistol_10mm,
-/obj/item/ammo_magazine/speed_loader_pistol_10mm,
-/obj/item/ammo_magazine/ammobox/kurtz_12,
-/obj/item/ammo_magazine/ammobox/pistol_10mm,
+/obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal,
+/obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal,
+/obj/item/ammo_magazine/speed_loader_magnum_10mm,
+/obj/item/ammo_magazine/speed_loader_magnum_10mm,
+/obj/item/ammo_magazine/ammobox/kurtz_12mm,
+/obj/item/ammo_magazine/ammobox/magnum_10mm,
 /turf/simulated/floor/tiled/dark/gray_platform,
 /area/nadezhda/command/armory)
 "iyi" = (
@@ -60969,7 +60972,7 @@
 /area/nadezhda/absolutism/bioreactor)
 "lIp" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/practice,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/practice,
 /turf/simulated/floor/tiled/dark/cargo,
 /area/nadezhda/security/range)
 "lIr" = (
@@ -122626,7 +122629,7 @@
 /obj/item/gun/projectile/mk58/wood,
 /obj/item/gun/projectile/mk58/wood,
 /obj/item/gun/projectile/mk58/wood,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/biomatter,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/biomatter,
 /turf/simulated/floor/tiled/dark/golden,
 /area/nadezhda/command/prime)
 "xhL" = (

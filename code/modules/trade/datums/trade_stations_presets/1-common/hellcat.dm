@@ -53,8 +53,8 @@
 			/obj/item/ammo_magazine/ammobox/rifle_762_small,
 			/obj/item/ammo_magazine/ammobox/light_rifle_65_small,
 			/obj/item/ammo_magazine/ammobox/shotgun,
-			/obj/item/ammo_magazine/ammobox/kurtz_12,
-			/obj/item/ammo_magazine/ammobox/pistol_10mm,
+			/obj/item/ammo_magazine/ammobox/kurtz_12mm,
+			/obj/item/ammo_magazine/ammobox/magnum_10mm,
 			/obj/item/ammo_magazine/ammobox/pistol_9mm
 		),
 		"Armor" = list(

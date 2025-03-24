@@ -108,7 +108,7 @@
 			ranged = TRUE
 		if(TOOL_GUN)
 			drop1 = /obj/item/gun/projectile/spring
-			possible_ranged_attack.Add(/obj/item/projectile/bullet/pistol_9mm)
+			possible_ranged_attack.Add(/obj/item/projectile/bullet/pistol_35)
 			ranged = TRUE
 		if(TOOL_BOMB)
 			drop1 = /obj/item/plastique // Plastic Explosives.
@@ -159,7 +159,7 @@
 		if(istype(W, /obj/item/tool))
 			T = W
 
-		if(QUALITY_WELDING in T.tool_qualities)
+		if(QUALITY_WELDING in T?.tool_qualities)
 			if(health < maxHealth)
 				if(T.use_tool(user, src, WORKTIME_NORMAL, QUALITY_WELDING, FAILCHANCE_EASY, required_stat = STAT_MEC))
 					user.visible_message(

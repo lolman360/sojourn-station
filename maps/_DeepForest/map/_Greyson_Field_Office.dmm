@@ -1427,7 +1427,7 @@
 /area/nadezhda/outside/one_star/fo_outside)
 "lJ" = (
 /obj/machinery/light/floor,
-/obj/item/ammo_casing/pistol_10mm/spent,
+/obj/item/ammo_casing/magnum_10mm/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "lK" = (
@@ -1762,7 +1762,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/os_cash/random,
-/obj/item/ammo_casing/pistol_10mm/spent,
+/obj/item/ammo_casing/magnum_10mm/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "oF" = (
@@ -2117,7 +2117,7 @@
 /area/nadezhda/outside/one_star/fo_internal)
 "rl" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/pistol_10mm/spent,
+/obj/item/ammo_casing/magnum_10mm/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "rm" = (
@@ -2196,7 +2196,7 @@
 /obj/machinery/light/floor,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/pistol_10mm/spent,
+/obj/item/ammo_casing/magnum_10mm/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "rO" = (
@@ -4218,7 +4218,7 @@
 /obj/item/trash/mre/os,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/pistol_10mm/spent,
+/obj/item/ammo_casing/magnum_10mm/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "Hb" = (
@@ -5161,7 +5161,7 @@
 "OT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/pistol_10mm/spent,
+/obj/item/ammo_casing/magnum_10mm/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "OU" = (
@@ -5835,7 +5835,7 @@
 /turf/simulated/mineral/planet,
 /area/nadezhda/outside/one_star/fo_outside)
 "Up" = (
-/obj/item/ammo_casing/pistol_10mm/spent,
+/obj/item/ammo_casing/magnum_10mm/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "Us" = (

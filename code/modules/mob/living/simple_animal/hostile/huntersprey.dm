@@ -362,7 +362,7 @@
 	var/zoomeye = 7
 	see_invisible = 15
 	old_y = 0
-	projectiletype = /obj/item/projectile/bullet/pistol_9mm
+	projectiletype = /obj/item/projectile/bullet/pistol_35
 	default_pixel_x = -16
 	pixel_x = -16
 	pixel_y = 0
@@ -399,7 +399,7 @@
 		shooter.OpenFire(targetDD)
 		visible_emote("fires an armor piercing shot!")
 		playsound(src, 'sound/weapons/guns/fire/sniper_fire.ogg', 30, 1, -3)
-		projectiletype = /obj/item/projectile/bullet/pistol_9mm
+		projectiletype = /obj/item/projectile/bullet/pistol_35
 		rapid = 1
 		loaded_ammo = 0
 		icon_state = "excelatomiton_unpowered"
@@ -414,7 +414,7 @@
 		visible_emote("fires a spout of fire!")
 		playsound(src, 'sound/items/Welder2.ogg', 30, 1, -3)
 		rapid = 1
-		projectiletype = /obj/item/projectile/bullet/pistol_9mm
+		projectiletype = /obj/item/projectile/bullet/pistol_35
 		loaded_ammo = 0
 		icon_state = "excelatomiton_unpowered"
 		icon_living = "excelatomiton_unpowered"
@@ -448,7 +448,7 @@
 		shooter.OpenFire(get_step_rand(targetDD))
 		shooter.OpenFire(get_step_rand(targetDD))
 		shooter.OpenFire(get_step_rand(targetDD))
-		projectiletype = /obj/item/projectile/bullet/pistol_9mm
+		projectiletype = /obj/item/projectile/bullet/pistol_35
 		loaded_ammo = 0
 		speed = setspeed
 		icon_state = "excelatomiton_unpowered"

@@ -25,7 +25,7 @@
 
 		if("guns")
 			new /obj/item/gun/projectile/revolver(src)
-			new /obj/item/ammo_magazine/speed_loader_pistol_10mm(src)
+			new /obj/item/ammo_magazine/speed_loader_magnum_10mm(src)
 			new /obj/item/card/emag(src)
 			new /obj/item/plastique(src)
 			new /obj/item/plastique(src)
@@ -178,8 +178,8 @@
 
 /obj/item/storage/box/syndie_kit/pistol/populate_contents()
 	new /obj/item/gun/projectile/silenced(src)
-	new /obj/item/ammo_magazine/pistol_10mm/hv(src)
-	new /obj/item/ammo_magazine/pistol_10mm/hv(src)
+	new /obj/item/ammo_magazine/magnum_10mm/hv(src)
+	new /obj/item/ammo_magazine/magnum_10mm/hv(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/mask/balaclava(src)
 
@@ -190,8 +190,8 @@
 
 /obj/item/storage/box/syndie_kit/hpistol/populate_contents()
 	new /obj/item/gun/projectile/lamia/socom(src)
-	new /obj/item/ammo_magazine/kurtz_12/hv(src)
-	new /obj/item/ammo_magazine/kurtz_12/hv(src)
+	new /obj/item/ammo_magazine/kurtz_12mm/hv(src)
+	new /obj/item/ammo_magazine/kurtz_12mm/hv(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/mask/balaclava(src)
 
@@ -201,9 +201,9 @@
 
 /obj/item/storage/box/syndie_kit/painrevolver/populate_contents()
 	new /obj/item/gun/projectile/revolver/hornet(src)
-	new /obj/item/ammo_magazine/speed_loader_kurtz_12/rubber(src)
-	new /obj/item/ammo_magazine/speed_loader_kurtz_12/lethal(src)
-	new /obj/item/ammo_magazine/speed_loader_kurtz_12/highvelocity(src)
+	new /obj/item/ammo_magazine/speed_loader_kurtz_12mm/rubber(src)
+	new /obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal(src)
+	new /obj/item/ammo_magazine/speed_loader_kurtz_12mm/highvelocity(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/mask/balaclava(src)
 
@@ -221,7 +221,7 @@
 
 /obj/item/storage/box/syndie_kit/revolver/populate_contents()
 	new /obj/item/gun/projectile/revolver/mistral(src)
-	new /obj/item/ammo_magazine/speed_loader_pistol_10mm(src)
+	new /obj/item/ammo_magazine/speed_loader_magnum_10mm(src)
 
 /obj/item/storage/box/syndie_kit/sts
 	name = "assault rifle box"
@@ -243,7 +243,7 @@
 
 /obj/item/storage/box/syndie_kit/pug/populate_contents()
 	new /obj/item/gun/projectile/shotgun/pug(src)
-	new /obj/item/ammo_magazine/drum_20/pellet(src)
+	new /obj/item/ammo_magazine/drum_20mm/pellet(src)
 
 /obj/item/storage/box/syndie_kit/antimateriel_rifle
 	name = "sniper rifle box"

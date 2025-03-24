@@ -88,75 +88,75 @@
 
 //// 10mm ////
 
-/obj/item/ammo_casing/pistol_10mm
+/obj/item/ammo_casing/magnum_10mm
 	desc = "A 10mm Magnum bullet casing."
 	icon_state = "magnum_c_l"
 	spent_icon = "magnum_c_l-spent"
 	caliber = CAL_MAGNUM
 	shell_color = "l"
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm
 	maxamount = 6
 
-/obj/item/ammo_casing/pistol_10mm/prespawned
+/obj/item/ammo_casing/magnum_10mm/prespawned
 	amount = 6
 
-/obj/item/ammo_casing/pistol_10mm/practice
+/obj/item/ammo_casing/magnum_10mm/practice
 	desc = "A 10mm Magnum practice bullet casing."
 	icon_state = "magnum_c_p"
 	spent_icon = "magnum_c_p-spent"
 	shell_color = "p"
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/practice
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/practice
 
-/obj/item/ammo_casing/pistol_10mm/hv
+/obj/item/ammo_casing/magnum_10mm/hv
 	desc = "A 10mm Magnum high-velocity bullet casing."
 	icon_state = "magnum_c_hv"
 	spent_icon = "magnum_c_hv-spent"
 	shell_color = "hv"
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/hv
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/hv
 
-/obj/item/ammo_casing/pistol_10mm/rubber
+/obj/item/ammo_casing/magnum_10mm/rubber
 	desc = "A 10mm Magnum rubber bullet casing."
 	icon_state = "magnum_c_r"
 	spent_icon = "magnum_c_r-spent"
 	shell_color = "r"
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/rubber
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/rubber
 
-/obj/item/ammo_casing/pistol_10mm/rubber/pepperball
+/obj/item/ammo_casing/magnum_10mm/rubber/pepperball
 	desc = "A 10mm Magnum pepper-ball projectile casing."
 	icon_state = "magnum_c_pepper"
 	spent_icon = "magnum_c_pepper-spent"
 	shell_color = "l"
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/rubber/pepperball
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/rubber/pepperball
 
-/obj/item/ammo_casing/pistol_10mm/lethal
+/obj/item/ammo_casing/magnum_10mm/lethal
 	desc = "A 10mm Magnum hollow point bullet casing."
 	icon_state = "magnum_c_l"
 	spent_icon = "magnum_c_l-spent"
 	shell_color = "l"
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/lethal
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/lethal
 
-/obj/item/ammo_casing/pistol_10mm/laser
+/obj/item/ammo_casing/magnum_10mm/laser
 	desc = "A 10mm Magnum laser casing."
-	projectile_type = /obj/item/projectile/beam/weak/pistol_10mm
+	projectile_type = /obj/item/projectile/beam/weak/magnum_10mm
 
-/obj/item/ammo_casing/pistol_10mm/scrap
+/obj/item/ammo_casing/magnum_10mm/scrap
 	desc = "An old 10mm Magnum bullet casing."
 	icon_state = "magnum_c_s"
 	spent_icon = "magnum_c_s-spent"
 	shell_color = "s"
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/scrap
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/scrap
 
-/obj/item/ammo_casing/pistol_10mm/scrap/prespawned
+/obj/item/ammo_casing/magnum_10mm/scrap/prespawned
 	amount = 6
 
-/obj/item/ammo_casing/pistol_10mm/biomatter
+/obj/item/ammo_casing/magnum_10mm/biomatter
 	desc = "A caseless 10mm Magnum Caustic."
-	projectile_type = /obj/item/projectile/bullet/pistol_10mm/biomatter
+	projectile_type = /obj/item/projectile/bullet/magnum_10mm/biomatter
 	icon_state = "clrifle_c_p"
 	shell_color = "s"
 	is_caseless = TRUE
 
-/obj/item/ammo_casing/pistol_10mm/spent
+/obj/item/ammo_casing/magnum_10mm/spent
 	projectile_type = null
 
 //// 6.5 carbine ////
@@ -423,58 +423,58 @@
 
 // 12mm HEAVY PISTOL
 
-/obj/item/ammo_casing/kurtz_12
+/obj/item/ammo_casing/kurtz_12mm
 	desc = "A 12mm bullet casing."
-	caliber = CAL_HEAVY_PISTOL
-	projectile_type = /obj/item/projectile/bullet/kurtz_12
+	caliber = CAL_KURTZ
+	projectile_type = /obj/item/projectile/bullet/kurtz_12mm
 	shell_color = "l"
 	icon_state = "lrifle_c_l"
 	spent_icon = "lrifle_c_l-spent"
 
-/obj/item/ammo_casing/kurtz_12/prespawned
+/obj/item/ammo_casing/kurtz_12mm/prespawned
 	amount = 6
 
-/obj/item/ammo_casing/kurtz_12/rubber
+/obj/item/ammo_casing/kurtz_12mm/rubber
 	desc = "A 12mm rubber bullet casing."
-	caliber = CAL_HEAVY_PISTOL
-	projectile_type = /obj/item/projectile/bullet/kurtz_12/rubber
+	caliber = CAL_KURTZ
+	projectile_type = /obj/item/projectile/bullet/kurtz_12mm/rubber
 	shell_color = "r"
 	icon_state = "lrifle_c_r"
 	spent_icon = "lrifle_c_r-spent"
 
-/obj/item/ammo_casing/kurtz_12/rubber/pepperball
+/obj/item/ammo_casing/kurtz_12mm/rubber/pepperball
 	desc = "A 12mm pepper-ball projectile casing."
 	icon_state = "lrifle_c_pepper"
 	spent_icon = "lrifle_c_pepper-spent"
 	shell_color = "l"
-	projectile_type = /obj/item/projectile/bullet/kurtz_12/rubber/pepperball
+	projectile_type = /obj/item/projectile/bullet/kurtz_12mm/rubber/pepperball
 
-/obj/item/ammo_casing/kurtz_12/practice
+/obj/item/ammo_casing/kurtz_12mm/practice
 	desc = "A 12mm practice bullet casing."
-	caliber = CAL_HEAVY_PISTOL
-	projectile_type = /obj/item/projectile/bullet/kurtz_12/practice
+	caliber = CAL_KURTZ
+	projectile_type = /obj/item/projectile/bullet/kurtz_12mm/practice
 	shell_color = "p"
 	icon_state = "lrifle_c_p"
 	spent_icon = "lrifle_c_p-spent"
 
-/obj/item/ammo_casing/kurtz_12/hv
+/obj/item/ammo_casing/kurtz_12mm/hv
 	desc = "A 12mm high-velocity bullet casing."
-	caliber = CAL_HEAVY_PISTOL
-	projectile_type = /obj/item/projectile/bullet/kurtz_12/hv
+	caliber = CAL_KURTZ
+	projectile_type = /obj/item/projectile/bullet/kurtz_12mm/hv
 	shell_color = "hv"
 	icon_state = "lrifle_c_hv"
 	spent_icon = "lrifle_c_hv-spent"
 
-/obj/item/ammo_casing/kurtz_12/lethal
+/obj/item/ammo_casing/kurtz_12mm/lethal
 	desc = "A 12mm hollow point bullet casing."
-	caliber = CAL_HEAVY_PISTOL
+	caliber = CAL_KURTZ
 	shell_color = "l"
-	projectile_type = /obj/item/projectile/bullet/kurtz_12/lethal
+	projectile_type = /obj/item/projectile/bullet/kurtz_12mm/lethal
 
-/obj/item/ammo_casing/kurtz_12/laser
+/obj/item/ammo_casing/kurtz_12mm/laser
 	desc = "A 12mm laser casing."
-	caliber = CAL_HEAVY_PISTOL
-	projectile_type = /obj/item/projectile/beam/weak/kurtz_12
+	caliber = CAL_KURTZ
+	projectile_type = /obj/item/projectile/beam/weak/kurtz_12mm
 
 //// .60-06 ////
 /obj/item/ammo_casing/antim

@@ -1673,9 +1673,9 @@
 "fc" = (
 /obj/structure/table/rack/shelf,
 /obj/item/gun/projectile/boltgun/lever,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/hv,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/lethal,
-/obj/item/ammo_magazine/ammobox/pistol_10mm,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/hv,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/lethal,
+/obj/item/ammo_magazine/ammobox/magnum_10mm,
 /turf/simulated/floor/wood/wild3,
 /area/nadezhda/outside/forest/hunting_lodge_dark)
 "fd" = (

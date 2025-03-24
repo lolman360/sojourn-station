@@ -36577,9 +36577,9 @@
 	name = "pistol crate"
 	},
 /obj/item/gun/projectile/revolver/minstral,
-/obj/item/ammo_magazine/ammobox/kurtz_12,
-/obj/item/ammo_magazine/speed_loader_kurtz_12/lethal,
-/obj/item/ammo_magazine/speed_loader_kurtz_12/lethal,
+/obj/item/ammo_magazine/ammobox/kurtz_12mm,
+/obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal,
+/obj/item/ammo_magazine/speed_loader_kurtz_12mm/lethal,
 /turf/simulated/floor/tiled/dark/gray_platform,
 /area/nadezhda/command/armory)
 "bPd" = (

@@ -133,7 +133,7 @@
 /area/nadezhda/outside/one_star)
 "cN" = (
 /obj/structure/table/rack/shelf,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /obj/item/ammo_magazine/ammobox/pistol_9mm/large,
 /obj/item/ammo_magazine/highcap_pistol_9mm,
 /turf/simulated/floor/tiled/derelict/airless,
@@ -339,7 +339,7 @@
 "ht" = (
 /obj/structure/table/onestar,
 /obj/item/gun/projectile/rivet,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /turf/simulated/floor/tiled/derelict/airless,
 /area/nadezhda/outside/one_star)
 "hB" = (
@@ -1476,7 +1476,7 @@
 /area/nadezhda/outside/one_star)
 "Dd" = (
 /obj/structure/table/rack/shelf,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /obj/item/tool_upgrade/augment/ai_tool,
 /turf/simulated/floor/tiled/derelict/airless,
 /area/nadezhda/outside/one_star)
@@ -1666,7 +1666,7 @@
 /area/space)
 "Hc" = (
 /obj/structure/table/rack/shelf,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /obj/item/ammo_magazine/highcap_pistol_9mm,
 /turf/simulated/floor/tiled/derelict/airless,
 /area/nadezhda/outside/one_star)
@@ -2450,7 +2450,7 @@
 /area/nadezhda/outside/one_star)
 "Ww" = (
 /obj/structure/table/rack/shelf,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/magnum_10mm,
 /turf/simulated/floor/tiled/derelict/airless,
 /area/nadezhda/outside/one_star)
 "Wz" = (
@@ -2489,8 +2489,8 @@
 /area/nadezhda/outside/one_star)
 "Xa" = (
 /obj/structure/table/onestar,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large,
-/obj/item/ammo_magazine/pistol_10mm,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large,
+/obj/item/ammo_magazine/magnum_10mm,
 /turf/simulated/floor/tiled/derelict/airless,
 /area/nadezhda/outside/one_star)
 "Xc" = (
@@ -2566,7 +2566,7 @@
 /area/nadezhda/outside/one_star)
 "Yg" = (
 /obj/structure/table/onestar,
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large,
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large,
 /turf/simulated/floor/tiled/derelict/airless,
 /area/nadezhda/outside/one_star)
 "Yq" = (

@@ -440,7 +440,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "blue_cane"
 	item_state = "stick"
-	caliber = CAL_HEAVY_PISTOL //Cant be caseless do to bugs oh well
+	caliber = CAL_KURTZ //Cant be caseless do to bugs oh well
 	matter = list(MATERIAL_PLASTEEL = 10, MATERIAL_SILVER = 5, MATERIAL_PLATINUM = 3)
 	price_tag = 1980
 	gun_parts = null

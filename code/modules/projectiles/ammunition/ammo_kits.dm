@@ -61,18 +61,18 @@
 			"9 points: EMPTY 9mm SMG magazine" = list(12, /obj/item/ammo_magazine/smg_9mm/empty)
 			),
 		CAL_MAGNUM = list(
-			"3 points, 6 ammo: Scrap 10mm ammo pile" = list(3, /obj/item/ammo_casing/pistol_10mm/scrap/prespawned),
-			"15 points, 30 ammo: Scrap 10mm ammo box" = list(15, /obj/item/ammo_magazine/ammobox/pistol_10mm/scrap),
-			"5 points, 6 ammo: Scrap 10mm speedloader" = list(5, /obj/item/ammo_magazine/speed_loader_pistol_10mm/scrap),
-			"7 points, 6 ammo: 10mm magnum ammo pile" = list(7, /obj/item/ammo_casing/pistol_10mm/prespawned),
-			"26 points, 30 ammo: 10mm ammo box" = list(26, /obj/item/ammo_magazine/ammobox/pistol_10mm),
-			"7 points: EMPTY 10mm pistol magazine" = list(7, /obj/item/ammo_magazine/pistol_10mm/empty)
+			"3 points, 6 ammo: Scrap 10mm ammo pile" = list(3, /obj/item/ammo_casing/magnum_10mm/scrap/prespawned),
+			"15 points, 30 ammo: Scrap 10mm ammo box" = list(15, /obj/item/ammo_magazine/ammobox/magnum_10mm/scrap),
+			"5 points, 6 ammo: Scrap 10mm speedloader" = list(5, /obj/item/ammo_magazine/speed_loader_magnum_10mm/scrap),
+			"7 points, 6 ammo: 10mm magnum ammo pile" = list(7, /obj/item/ammo_casing/magnum_10mm/prespawned),
+			"26 points, 30 ammo: 10mm ammo box" = list(26, /obj/item/ammo_magazine/ammobox/magnum_10mm),
+			"7 points: EMPTY 10mm pistol magazine" = list(7, /obj/item/ammo_magazine/magnum_10mm/empty)
 			),
-		CAL_HEAVY_PISTOL = list(
-			"8 points, 6 ammo: 12mm ammo pile" = list(8, /obj/item/ammo_casing/kurtz_12/prespawned),
-			"8 points: EMPTY 12mm heavy pistol magazine" = list(8, /obj/item/ammo_magazine/kurtz_12/empty),
-			"10 points, 6 ammo: 12mm speedloader" = list(10, /obj/item/ammo_magazine/speed_loader_kurtz_12),
-			"26 points, 24 ammo: 12mm ammo box" = list(26, /obj/item/ammo_magazine/ammobox/kurtz_12) // Same price for all packets, except 4 less ammo
+		CAL_KURTZ = list(
+			"8 points, 6 ammo: 12mm ammo pile" = list(8, /obj/item/ammo_casing/kurtz_12mm/prespawned),
+			"8 points: EMPTY 12mm heavy pistol magazine" = list(8, /obj/item/ammo_magazine/kurtz_12mm/empty),
+			"10 points, 6 ammo: 12mm speedloader" = list(10, /obj/item/ammo_magazine/speed_loader_kurtz_12mm),
+			"26 points, 24 ammo: 12mm ammo box" = list(26, /obj/item/ammo_magazine/ammobox/kurtz_12mm) // Same price for all packets, except 4 less ammo
 			),
 		CAL_SHOTGUN = list(
 			"3 points, 5 ammo: Scrap beanbags pile" = list(3, /obj/item/ammo_casing/shotgun/beanbag/scrap/prespawned),
@@ -336,16 +336,16 @@
 
 	if(piles)
 		for(var/j = 1 to piles)
-			new /obj/item/ammo_casing/pistol_10mm/scrap/prespawned(user.loc)
+			new /obj/item/ammo_casing/magnum_10mm/scrap/prespawned(user.loc)
 	if(boxxes)
 		for(var/j = 1 to boxxes)
-			new /obj/item/ammo_magazine/ammobox/pistol_10mm/scrap(user.loc)
+			new /obj/item/ammo_magazine/ammobox/magnum_10mm/scrap(user.loc)
 	if(mags)
 		for(var/j = 1 to mags)
-			new /obj/item/ammo_magazine/pistol_10mm/old(user.loc)
+			new /obj/item/ammo_magazine/magnum_10mm/old(user.loc)
 	if(speedy)
 		for(var/j = 1 to speedy)
-			new /obj/item/ammo_magazine/speed_loader_pistol_10mm/scrap(user.loc)
+			new /obj/item/ammo_magazine/speed_loader_magnum_10mm/scrap(user.loc)
 
 
 //////////////////////////////////////////////////////////////////////////////////////

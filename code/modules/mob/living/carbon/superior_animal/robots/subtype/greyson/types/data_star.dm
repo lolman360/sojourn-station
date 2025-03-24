@@ -224,12 +224,12 @@ This monster is borderline unkillable and will make players upset
 		return
 
 	if(data_count >= 500)
-		projectiletype = /obj/item/projectile/beam/weak/pistol_10mm
+		projectiletype = /obj/item/projectile/beam/weak/magnum_10mm
 		able_to_build = TRUE
 		return
 
 	if(data_count >= 100)
-		projectiletype = /obj/item/projectile/beam/weak/pistol_9mm
+		projectiletype = /obj/item/projectile/beam/weak/pistol_35
 		rapid = TRUE
 		able_to_build = TRUE
 		return

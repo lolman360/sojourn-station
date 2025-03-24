@@ -121,85 +121,85 @@
 
 //// 10mm ////
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm
+/obj/item/ammo_magazine/ammobox/magnum_10mm
 	name = "ammunition packet (10mm Magnum)"
 	icon_state = "magnum"
 	matter = list(MATERIAL_CARDBOARD = 1)
 	caliber = CAL_MAGNUM
-	ammo_type = /obj/item/ammo_casing/pistol_10mm
+	ammo_type = /obj/item/ammo_casing/magnum_10mm
 	max_ammo = 30
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/scrap
+/obj/item/ammo_magazine/ammobox/magnum_10mm/scrap
 	name = "ammunition packet (old 10mm Magnum)"
 	icon_state = "magnum_s"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/scrap
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/scrap
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/practice
+/obj/item/ammo_magazine/ammobox/magnum_10mm/practice
 	name = "ammunition packet (10mm Magnum practice)"
 	icon_state = "magnum_p"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/practice
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/practice
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/hv
+/obj/item/ammo_magazine/ammobox/magnum_10mm/hv
 	name = "ammunition packet (10mm Magnum high-velocity)"
 	icon_state = "magnum_hv"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/hv
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/hv
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/rubber
+/obj/item/ammo_magazine/ammobox/magnum_10mm/rubber
 	desc = "Gun ammunition stored in a shiny new box. You can see caliber information on the label. It contains a lengthy warning label clearly stating it is a less-lethal round and declaring the manufacturer is not responsible for damages done."
 	name = "ammunition packet (10mm Magnum rubber)"
 	icon_state = "magnum_r"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/rubber
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/rubber
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/rubber/pepperball
+/obj/item/ammo_magazine/ammobox/magnum_10mm/rubber/pepperball
 	name = "ammunition packet (10mm Magnum pepperball)"
 	desc = "A box of police grade 10mm pepperball type rounds; complete with CO2 cartraiges."
 	icon_state = "magnum_pepper"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/rubber/pepperball
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/rubber/pepperball
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/lethal
+/obj/item/ammo_magazine/ammobox/magnum_10mm/lethal
 	name = "ammunition packet (10mm Magnum hollow-point)"
 	desc = "A box of self-defense grade 10mm Auto-Mag hollow-points."
 	icon_state = "magnum_l"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/lethal
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/lethal
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/laser
+/obj/item/ammo_magazine/ammobox/magnum_10mm/laser
 	name = "ammunition packet (10mm Magnum Laser)"
 	icon_state = "magnum_si"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/laser
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/laser
 	matter = list(MATERIAL_CARDBOARD = 1)
 	max_ammo = 70
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/biomatter
+/obj/item/ammo_magazine/ammobox/magnum_10mm/biomatter
 	name = "ammunition packet (10mm Magnum Caustic)"
 	desc = "A box of caustic caseless 10mm Magnum."
 	icon_state = "magnum_bio"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/biomatter
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/biomatter
 
 //10mm big boxes
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large
 	name = "ammunition box (10mm Magnum)"
 	icon_state = "magbox"
 	matter = list(MATERIAL_STEEL = 15)
 	w_class = ITEM_SIZE_BULKY
 	caliber = CAL_MAGNUM
-	ammo_type = /obj/item/ammo_casing/pistol_10mm
+	ammo_type = /obj/item/ammo_casing/magnum_10mm
 	max_ammo = 150
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large/lethal
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large/lethal
 	name = "ammunition box (10mm Magnum hollow-point)"
 	icon_state = "magboxhp"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/lethal
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/lethal
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large/rubber
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large/rubber
 	name = "ammunition box (10mm Magnum rubber)"
 	desc = "Gun ammunition stored in a shiny new box. You can see caliber information on the label. It contains a lengthy warning label clearly stating it is a less-lethal round and declaring the manufacturer is not responsible for damages done."
 	icon_state = "magboxrubber"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/rubber
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/rubber
 
-/obj/item/ammo_magazine/ammobox/pistol_10mm/large/hv
+/obj/item/ammo_magazine/ammobox/magnum_10mm/large/hv
 	name = "ammunition box (10mm Magnum high-velocity)"
 	icon_state = "magboxhv"
-	ammo_type = /obj/item/ammo_casing/pistol_10mm/hv
+	ammo_type = /obj/item/ammo_casing/magnum_10mm/hv
 
 
 //// 6.5 carbine ////
@@ -439,46 +439,46 @@
 */
 //// 12mm heavy pistol
 
-/obj/item/ammo_magazine/ammobox/kurtz_12
+/obj/item/ammo_magazine/ammobox/kurtz_12mm
 	name = "ammunition box (12mm)"
 	icon_state = "box50"
 	matter = list(MATERIAL_CARDBOARD = 1)
-	caliber = CAL_HEAVY_PISTOL
-	ammo_type = /obj/item/ammo_casing/kurtz_12
+	caliber = CAL_KURTZ
+	ammo_type = /obj/item/ammo_casing/kurtz_12mm
 	max_ammo = 24
 
-/obj/item/ammo_magazine/ammobox/kurtz_12/rubber
+/obj/item/ammo_magazine/ammobox/kurtz_12mm/rubber
 	name = "ammunition box (12mm rubber)"
 	desc = "A box of riot supression 12mm pistol ammunition. You can see caliber information on the label. It contains a lengthy warning label clearly stating it is a less-lethal round and declaring the manufacturer is not responsible for damages done"
 	icon_state = "box50-rubber"
-	ammo_type = /obj/item/ammo_casing/kurtz_12/rubber
+	ammo_type = /obj/item/ammo_casing/kurtz_12mm/rubber
 
-/obj/item/ammo_magazine/ammobox/kurtz_12/rubber/pepperball
+/obj/item/ammo_magazine/ammobox/kurtz_12mm/rubber/pepperball
 	name = "ammunition box (12mm pepperball)"
 	desc = "A box of police grade 12mm pepperball type rounds; complete with CO2 cartriage casings."
 	icon_state = "box50-pepper"
-	ammo_type = /obj/item/ammo_casing/kurtz_12/rubber/pepperball
+	ammo_type = /obj/item/ammo_casing/kurtz_12mm/rubber/pepperball
 
-/obj/item/ammo_magazine/ammobox/kurtz_12/practice
+/obj/item/ammo_magazine/ammobox/kurtz_12mm/practice
 	name = "ammunition box (12mm practice)"
 	icon_state = "box50-practice"
-	ammo_type = /obj/item/ammo_casing/kurtz_12/practice
+	ammo_type = /obj/item/ammo_casing/kurtz_12mm/practice
 
-/obj/item/ammo_magazine/ammobox/kurtz_12/hv
+/obj/item/ammo_magazine/ammobox/kurtz_12mm/hv
 	name = "ammunition box (12mm high-velocity)"
 	icon_state = "box50-hv"
-	ammo_type = /obj/item/ammo_casing/kurtz_12/hv
+	ammo_type = /obj/item/ammo_casing/kurtz_12mm/hv
 
-/obj/item/ammo_magazine/ammobox/kurtz_12/lethal
+/obj/item/ammo_magazine/ammobox/kurtz_12mm/lethal
 	name = "ammunition box (12mm hollow-point)"
 	desc = "A box of self-defense grade 12mm hollow-points."
 	icon_state = "box50-lethal"
-	ammo_type = /obj/item/ammo_casing/kurtz_12/lethal
+	ammo_type = /obj/item/ammo_casing/kurtz_12mm/lethal
 
-/obj/item/ammo_magazine/ammobox/kurtz_12/laser
+/obj/item/ammo_magazine/ammobox/kurtz_12mm/laser
 	name = "ammunition box (12mm laser)"
 	icon_state = "box50-si"
-	ammo_type = /obj/item/ammo_casing/kurtz_12/laser
+	ammo_type = /obj/item/ammo_casing/kurtz_12mm/laser
 	matter = list(MATERIAL_CARDBOARD = 1)
 	max_ammo = 50
 

@@ -63,7 +63,7 @@
 /mob/living/carbon/superior/human/voidwolf/elite/c20r
 	icon_state = "reaver_bulldog"
 	projectilesound = 'sound/weapons/guns/fire/smg_fire.ogg'
-	projectiletype = /obj/item/projectile/bullet/pistol_9mm
+	projectiletype = /obj/item/projectile/bullet/pistol_35
 	drop_items = list(/obj/item/gun/projectile/automatic/c20r/reaver_modded)
 
 	rapid_fire_shooting_amount = 8 // WE FIRE REALLY GODDAMN FAST
@@ -72,7 +72,7 @@
 	mag_type = /obj/item/ammo_magazine/smg_9mm/empty
 	mags_left = 6 //since we fire. FAST
 
-	casingtype = /obj/item/ammo_casing/pistol_9mm/spent
+	casingtype = /obj/item/ammo_casing/pistol_35/spent
 	melee_sharp = FALSE
 	armor_divisor = 1
 
@@ -84,17 +84,17 @@
 		if(armor)
 			armor /= 0.6 //this is are sorta default
 		if(armor >= 7) //Bullet proof armor is typically like this
-			projectiletype = /obj/item/projectile/bullet/pistol_9mm/hv
-			casingtype = /obj/item/ammo_casing/pistol_9mm/spent/hv
+			projectiletype = /obj/item/projectile/bullet/pistol_35/hv
+			casingtype = /obj/item/ammo_casing/pistol_35/spent/hv
 			visible_message(SPAN_DANGER("<b>[src]</b> loads in a HV magazine!"))
 			return
 		if(armor < 3)
-			projectiletype = /obj/item/projectile/bullet/pistol_9mm/lethal
-			casingtype = /obj/item/ammo_casing/pistol_9mm/spent/lethal
+			projectiletype = /obj/item/projectile/bullet/pistol_35/lethal
+			casingtype = /obj/item/ammo_casing/pistol_35/spent/lethal
 			visible_message(SPAN_DANGER("<b>[src]</b> loads in a HP magazine!"))
 			return
-		projectiletype = /obj/item/projectile/bullet/pistol_9mm
-		casingtype = /obj/item/ammo_casing/pistol_9mm/spent
+		projectiletype = /obj/item/projectile/bullet/pistol_35
+		casingtype = /obj/item/ammo_casing/pistol_35/spent
 
 
 /obj/item/gun/projectile/automatic/c20r/reaver_modded

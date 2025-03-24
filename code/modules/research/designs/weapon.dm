@@ -230,7 +230,7 @@
 /datum/design/research/item/ammo/magum_laser
 	name = "Magnum 10mm, laser case"
 	desc = "Magnum 10mm cases fitted with a one time use laser payload."
-	build_path = /obj/item/ammo_magazine/ammobox/pistol_10mm/laser
+	build_path = /obj/item/ammo_magazine/ammobox/magnum_10mm/laser
 	materials = list(MATERIAL_STEEL = 7, MATERIAL_GLASS = 7, MATERIAL_GOLD = 3.5)
 
 /datum/design/research/item/ammo/light_rifle_65
@@ -254,7 +254,7 @@
 /datum/design/research/item/ammo/kurtz_laser
 	name = "Specialized 12mm, laser cases"
 	desc = "12mm cases fitted with a one time use laser payload."
-	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12/laser
+	build_path = /obj/item/ammo_magazine/ammobox/kurtz_12mm/laser
 	materials = list(MATERIAL_STEEL = 5, MATERIAL_GLASS = 2.5, MATERIAL_GOLD = 2.5)
 
 /datum/design/research/item/ammo/laser_mag

@@ -8,12 +8,12 @@
 /datum/uplink_item/item/ammo/pistol
 	name = "9mm HV box"
 	item_cost = 1
-	path = /obj/item/ammo_magazine/ammobox/pistol_9mm/hv
+	path = /obj/item/ammo_magazine/ammobox/pistol_35/hv
 
 /datum/uplink_item/item/ammo/hpistol
 	name = "9mm HV high-capacity mag"
 	item_cost = 1
-	path = /obj/item/ammo_magazine/highcap_pistol_9mm/highvelocity
+	path = /obj/item/ammo_magazine/highcap_pistol_35/highvelocity
 
 /datum/uplink_item/item/ammo/smg
 	name = "9mm HV SMG mag"
@@ -28,12 +28,12 @@
 /datum/uplink_item/item/ammo/magnum
 	name = "10mm HV Magnum Mag"
 	item_cost = 1
-	path = /obj/item/ammo_magazine/pistol_10mm/hv
+	path = /obj/item/ammo_magazine/magnum_10mm/hv
 
 /datum/uplink_item/item/ammo/slmagnum
 	name = "10mm HV Magnum Speed Loader"
 	item_cost = 1
-	path = /obj/item/ammo_magazine/speed_loader_pistol_10mm/highvelocity
+	path = /obj/item/ammo_magazine/speed_loader_magnum_10mm/highvelocity
 
 /datum/uplink_item/item/ammo/lrifle
 	name = "6.5x39mm HV Carbine Clip"
@@ -51,29 +51,29 @@
 	path = /obj/item/ammo_magazine/heavy_rifle_86/hv
 
 /datum/uplink_item/item/ammo/drum_20mm
-	name = "12-round shotgun drum with slugs"
+	name = "M12 shotgun mag with slugs"
 	item_cost = 2
-	path = /obj/item/ammo_magazine/drum_20
+	path = /obj/item/ammo_magazine/drum_20mm
 
 /datum/uplink_item/item/ammo/drum_20mm/beanbag
-	name = "12-round shotgun drum with beanbag"
+	name = "M12 shotgun mag with beanbag"
 	item_cost = 2
-	path = /obj/item/ammo_magazine/drum_20/beanbag
+	path = /obj/item/ammo_magazine/drum_20mm/beanbag
 
 /datum/uplink_item/item/ammo/drum_20mm/pellet
-	name = "12-round shotgun drum with buckshot"
+	name = "M12 shotgun mag with buckshot"
 	item_cost = 2
-	path = /obj/item/ammo_magazine/drum_20/pellet
+	path = /obj/item/ammo_magazine/drum_20mm/pellet
 
 /datum/uplink_item/item/ammo/drum_20mm
-	name = "12-round shotgun drum with slugs"
+	name = "M12 shotgun mag with slugs"
 	item_cost = 2
-	path = /obj/item/ammo_magazine/drum_20
+	path = /obj/item/ammo_magazine/drum_20mm
 
 /datum/uplink_item/item/ammo/drum_20mm/empty
-	name = "empty 12-round shotgun drum"
+	name = "empty M12 shotgun mag"
 	item_cost = 1
-	path = /obj/item/ammo_magazine/drum_20/empty
+	path = /obj/item/ammo_magazine/drum_20mm/empty
 
 /datum/uplink_item/item/ammo/sniperammo
 	name = "14.5x114mm AP"

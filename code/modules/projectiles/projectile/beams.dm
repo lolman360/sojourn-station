@@ -108,12 +108,12 @@ In pvp they also have more lasting damages, such as infections, pain form burns,
 	armor_divisor = 4
 	recoil = 10
 
-/obj/item/projectile/beam/weak/pistol_10mm
+/obj/item/projectile/beam/weak/magnum_10mm
 	damage_types = list(BURN = 19)
 	armor_divisor = 3
 	recoil = 4.5
 
-/obj/item/projectile/beam/weak/kurtz_12
+/obj/item/projectile/beam/weak/kurtz_12mm
 	damage_types = list(BURN = 23.5)
 	armor_divisor = 3
 	recoil = 8

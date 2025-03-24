@@ -5,7 +5,7 @@
 	icon_state = "lamia"
 	item_state = "lamia"
 	fire_sound = 'sound/weapons/guns/fire/hpistol_fire.ogg'
-	caliber = CAL_HEAVY_PISTOL
+	caliber = CAL_KURTZ
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
 	can_dual = TRUE
 	load_method = SINGLE_CASING|MAGAZINE

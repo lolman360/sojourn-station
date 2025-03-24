@@ -18,8 +18,8 @@
 		new /obj/item/ammo_magazine/speed_loader_rifle_762(src)
 		new /obj/item/ammo_magazine/speed_loader_rifle_762(src)
 		new /obj/item/gun/projectile/colt/ten(src)
-		new /obj/item/ammo_magazine/pistol_10mm(src)
-		new /obj/item/ammo_magazine/pistol_10mm(src)
+		new /obj/item/ammo_magazine/magnum_10mm(src)
+		new /obj/item/ammo_magazine/magnum_10mm(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 		new /obj/item/clothing/suit/armor/platecarrier/militia(src)
 		new /obj/item/clothing/head/helmet/ballistic/militia(src)
@@ -142,11 +142,11 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/automatic/drozd/NM_colony(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
 
 /obj/item/storage/box/bs_kit/ekaterina
 	name = "\improper Ekaterina SMG Primary Kit"
@@ -167,11 +167,11 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/automatic/triage(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
-		new /obj/item/ammo_magazine/smg_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
+		new /obj/item/ammo_magazine/smg_magnum_10mm(src)
 
 
 /obj/item/storage/box/bs_kit/bounty
@@ -209,8 +209,8 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/colt/ten(src)
-		new /obj/item/ammo_magazine/pistol_10mm(src)
-		new /obj/item/ammo_magazine/pistol_10mm(src)
+		new /obj/item/ammo_magazine/magnum_10mm(src)
+		new /obj/item/ammo_magazine/magnum_10mm(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 
 /obj/item/storage/box/bs_kit/rex10
@@ -220,9 +220,9 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/revolver/rev10/rex10(src)
-		new /obj/item/ammo_magazine/speed_loader_pistol_9mm/hv(src)
-		new /obj/item/ammo_magazine/speed_loader_pistol_9mm/hv(src)
-		new /obj/item/ammo_magazine/ammobox/pistol_9mm/hv(src)
+		new /obj/item/ammo_magazine/speed_loader_pistol_35/hv(src)
+		new /obj/item/ammo_magazine/speed_loader_pistol_35/hv(src)
+		new /obj/item/ammo_magazine/ammobox/pistol_35/hv(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 
 /obj/item/storage/box/bs_kit/pilgrim
@@ -233,7 +233,7 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/revolver/lemant(src)
-		new /obj/item/ammo_magazine/ammobox/pistol_10mm/biomatter(src)
+		new /obj/item/ammo_magazine/ammobox/magnum_10mm/biomatter(src)
 		new /obj/item/ammo_casing/shotgun/pellet/prespawned(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 
@@ -243,8 +243,8 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/makarov(src)
-		new /obj/item/ammo_magazine/highcap_pistol_9mm(src) //Highcaps
-		new /obj/item/ammo_magazine/highcap_pistol_9mm(src)
+		new /obj/item/ammo_magazine/highcap_pistol_35(src) //Highcaps
+		new /obj/item/ammo_magazine/highcap_pistol_35(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 
 /obj/item/storage/box/bs_kit/martin
@@ -286,8 +286,8 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/revolver/rev10/mateba(src)
-		new /obj/item/ammo_magazine/speed_loader_kurtz_12(src)
-		new /obj/item/ammo_magazine/speed_loader_kurtz_12(src)
+		new /obj/item/ammo_magazine/speed_loader_kurtz_12mm(src)
+		new /obj/item/ammo_magazine/speed_loader_kurtz_12mm(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 
 /obj/item/storage/box/bs_kit/gemini
@@ -296,8 +296,8 @@
 
 	populate_contents()
 		new /obj/item/gun/projectile/lamia/gemini(src)
-		new /obj/item/ammo_magazine/kurtz_12(src)
-		new /obj/item/ammo_magazine/kurtz_12(src)
+		new /obj/item/ammo_magazine/kurtz_12mm(src)
+		new /obj/item/ammo_magazine/kurtz_12mm(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 
 // Armor Kits

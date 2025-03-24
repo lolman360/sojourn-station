@@ -2704,7 +2704,7 @@
 /obj/structure/bed/chair/custom/onestar/red,
 /obj/item/gun/projectile/rivet,
 /obj/item/remains,
-/obj/item/ammo_magazine/pistol_10mm/hv,
+/obj/item/ammo_magazine/magnum_10mm/hv,
 /mob/living/carbon/superior/xenomorph/runner,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)

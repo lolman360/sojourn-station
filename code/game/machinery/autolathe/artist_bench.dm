@@ -239,7 +239,7 @@
 				R.penetration_multiplier = 1
 
 			if("heavy pistol")
-				R.caliber = pick(CAL_HEAVY_PISTOL)
+				R.caliber = pick(CAL_KURTZ)
 				R.damage_multiplier = 1.5 + rand(-1,5)/10
 				R.penetration_multiplier = 1.5 + (rand(-1,5)/10)
 				R.max_shells = rand(3,6)

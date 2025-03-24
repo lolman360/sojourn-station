@@ -16,12 +16,12 @@
 	rapid = 1
 	rapid_fire_shooting_amount = 3
 	ranged_cooldown = 3
-	projectiletype = /obj/item/projectile/bullet/pistol_9mm
+	projectiletype = /obj/item/projectile/bullet/pistol_35
 	projectilesound = 'sound/weapons/guns/fire/9mm_pistol.ogg'
 	limited_ammo = TRUE
 	mag_drop = TRUE
 	rounds_left = 16
-	mag_type = /obj/item/ammo_magazine/highcap_pistol_9mm/empty
+	mag_type = /obj/item/ammo_magazine/highcap_pistol_35/empty
 	mags_left = 2 //2+1
 
 	melee_damage_lower = 10
@@ -65,11 +65,11 @@
 
 /mob/living/carbon/superior/human/excelsior/excel_ppsh
 	icon_state = "excel_ppsh"
-	projectiletype = /obj/item/projectile/bullet/pistol_9mm
+	projectiletype = /obj/item/projectile/bullet/pistol_35
 	drop_items = list(/obj/item/gun/projectile/automatic/ppsh)
 	projectilesound = 'sound/weapons/guns/fire/grease_fire.ogg'
 	rounds_left = 71
-	mag_type = /obj/item/ammo_magazine/highcap_pistol_9mm/drum/empty
+	mag_type = /obj/item/ammo_magazine/highcap_pistol_35/drum/empty
 	mags_left = 2 //2+1
 
 /mob/living/carbon/superior/human/excelsior/excel_ak
@@ -93,11 +93,11 @@
 
 /mob/living/carbon/superior/human/excelsior/excel_drozd
 	icon_state = "excel_drozd"
-	projectiletype = /obj/item/projectile/bullet/pistol_10mm
+	projectiletype = /obj/item/projectile/bullet/magnum_10mm
 	drop_items = list(/obj/item/gun/projectile/automatic/drozd)
 	projectilesound = 'sound/weapons/guns/fire/smg_fire.ogg'
 	rounds_left = 32
-	mag_type = /obj/item/ammo_magazine/smg_10mm/empty
+	mag_type = /obj/item/ammo_magazine/smg_magnum_10mm/empty
 	mags_left = 2 //2+1
 
 /mob/living/carbon/superior/human/excelsior/death(gibbed, deathmessage = "drops its weapon as it explodes in a shower of gore when their death implant detonates!")
